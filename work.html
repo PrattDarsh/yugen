@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <title>Our Work</title>
+</head>
+
+
+<body style="background-color: #2a9d8f; font-family: 'Nanum Pen Script', cursive;">
+    <a href="index.html"><img src="images/logo.svg" class="z-50 h-32 lg:h-72 absolute top-0" alt=""></a>
+    <img src="images/work.svg" class="absolute top-0 left-0 md:right-32 max-w-xs lg:max-w-xl " alt="">
+    <div class="grid max-w-7xl mx-auto grid-cols-1 lg:grid-cols-2 mt-56 px-4">
+        <div class="text-3xl">
+            <p>
+                We believe that quality education is essential to reforming lives and equipping children to grow into
+                thriving individuals with the potential to leave a great impact on their communities. But in our rush to
+                reform education, we simply cannot forget the layers that are very close to student learning – the adult
+                community in schools. Learn more about the work we do to realize our mission here.
+            </p>
+            <div class="mt-12 mb-4 space-x-8">
+                <button onclick="show1()" id="but1" class="border-white border-b-4 text-white">Our Work</button>
+                <button onclick="show2()" id="but2" class="border-white">Our Theory of Change</button>
+                <button onclick="show3()" id="but3" class="border-white">Gallery</button>
+            </div>
+            <div id="vid1" class="relative h-full w-full overflow-hidden pt-32"> <iframe
+                    class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/id8p9zGqxVU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+
+            <div id="vid2" class="hidden relative h-full w-full overflow-hidden pt-32">
+                <iframe width="560" height="315" class="absolute top-0 left-0 w-full h-full "
+                    src="https://www.youtube.com/embed/bYxzOZj0NTY" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="hidden relative h-full w-full overflow-hidden pt-32" id="vid3">
+                <iframe width="560" height="315" class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/1wK6D2KQ07E" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+
+        </div>
+        <div class="order-first h-72"></div>
+    </div>
+    <script>
+        function show1() {
+            document.getElementById('but1').classList.add('text-white')
+            document.getElementById('but1').classList.add('border-b-4')
+            document.getElementById('but2').classList.remove('text-white')
+            document.getElementById('but3').classList.remove('text-white')
+            document.getElementById('but2').classList.remove('border-b-4')
+            document.getElementById('but3').classList.remove('border-b-4')
+            document.getElementById('vid1').classList.remove('hidden')
+            document.getElementById('vid2').classList.add('hidden')
+            document.getElementById('vid3').classList.add('hidden')
+
+        }
+        function show2() {
+            document.getElementById('but2').classList.add('text-white')
+            document.getElementById('but2').classList.add('border-b-4')
+            document.getElementById('but1').classList.remove('text-white')
+            document.getElementById('but3').classList.remove('text-white')
+            document.getElementById('but1').classList.remove('border-b-4')
+            document.getElementById('but3').classList.remove('border-b-4')
+            document.getElementById('vid2').classList.remove('hidden')
+            document.getElementById('vid1').classList.add('hidden')
+            document.getElementById('vid3').classList.add('hidden')
+        }
+        function show3() {
+            document.getElementById('but3').classList.add('text-white')
+            document.getElementById('but3').classList.add('border-b-4')
+            document.getElementById('but1').classList.remove('text-white')
+            document.getElementById('but2').classList.remove('text-white')
+            document.getElementById('but1').classList.remove('border-b-4')
+            document.getElementById('but2').classList.remove('border-b-4')
+            document.getElementById('vid3').classList.remove('hidden')
+            document.getElementById('vid1').classList.add('hidden')
+            document.getElementById('vid2').classList.add('hidden')
+        }
+    </script>
+</body>
+
+</html>
