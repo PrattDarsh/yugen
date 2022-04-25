@@ -9,23 +9,23 @@
     <title>Yugen</title>
 </head>
 
-<body class="text-white transition duration-700">
+<body class="text-white bg-black transition duration-700">
     <div class="flex items-center  justify-center h-screen section1">
         <div class="text-center text-5xl mx-auto leading-relaxed">
             <div class="relative">
-                <img src="images/logo.svg" class=" mx-auto" alt="">
-                <div class="border-2 left-72 animate-spin  p-64 absolute top-0 border-black"
+                <img src="images/logo.svg" class="bg-white rounded-full  mx-auto" alt="">
+                <div class="border-2 left-72 animate-spin  p-64 absolute top-0 border-white"
                     style=" border-radius: 90% 70% 90% 60%;"></div>
-                <div class="border-2 left-72 animate-spin  p-64 absolute top-0 border-black"
+                <div class="border-2 left-72 animate-spin  p-64 absolute top-0 border-white"
                     style=" border-radius: 60% 90% 70% 90%;"></div>
                 <!-- <div class="border-2 left-72 animate-spin  p-64 absolute top-0 border-black"
                     style=" border-radius: 70% 80% 90% 90%;"></div> -->
             </div>
 
-            <p class=" landing text-black">Creating equitable, innovative and
+            <p class=" landing ">Creating equitable, innovative and
                 lifelong
             </p>
-            <p class="landing text-black"> learning
+            <p class="landing "> learning
                 communities
                 for teachers and
                 school
@@ -147,13 +147,16 @@
             }
         })
 
-        about.from('.about', { x: 100, stagger: 0.1, onStart: () => changeBg(), onReverseComplete: () => changeBg() })
+        about.from('.about', {
+            x: 100, stagger: 0.1,
+            // onStart: () => changeBg(), onReverseComplete: () => changeBg()
+        })
 
-        function changeBg() {
+        // function changeBg() {
 
-            document.body.classList.toggle('bg-black')
+        //     document.body.classList.toggle('bg-black')
 
-        }
+        // }
 
         let aboutVids = gsap.timeline({
             scrollTrigger: {
