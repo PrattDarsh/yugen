@@ -6,53 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
     <title>Our Work</title>
 </head>
 
 
-<body style="background-color: #2a9d8f; font-family: 'Nanum Pen Script', cursive;">
-    <a href="index.html"><img src="images/logo.svg" class="z-50 h-32 lg:h-72 absolute top-0" alt=""></a>
-    <img src="images/work.svg" class="absolute top-0 left-0 md:right-32 max-w-xs lg:max-w-xl " alt="">
-    <div class="grid max-w-7xl mx-auto grid-cols-1 lg:grid-cols-2 mt-56 px-4">
-        <div class="text-3xl">
-            <p>
-                We believe that quality education is essential to reforming lives and equipping children to grow into
-                thriving individuals with the potential to leave a great impact on their communities. But in our rush to
-                reform education, we simply cannot forget the layers that are very close to student learning – the adult
-                community in schools. Learn more about the work we do to realize our mission here.
+<body class="bg-black text-white">
+    <a href="index.html">
+        <div class="fixed rounded-full bg-white top-12 left-12"><img src="images/logo.svg" class="h-48" alt=""></div>
+    </a>
+    <section class="h-screen flex items-center justify-center">
+        <div class="text-center text-5xl">Our Work</div>
+
+    </section>
+    <section class="py-32 section2">
+        <div class="max-w-7xl mx-auto">
+
+            <p class="text-2xl about"> our work.</p>
+            <p class="text-5xl leading-relaxed about">We believe that quality education is essential to reforming
             </p>
-            <div class="mt-12 mb-4 space-x-8">
-                <button onclick="show1()" id="but1" class="border-white border-b-4 text-white">Our Work</button>
-                <button onclick="show2()" id="but2" class="border-white">Our Theory of Change</button>
-                <button onclick="show3()" id="but3" class="border-white">Gallery</button>
-            </div>
-            <div id="vid1" class="relative h-full w-full overflow-hidden pt-32"> <iframe
-                    class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/id8p9zGqxVU"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe></div>
-
-            <div id="vid2" class="hidden relative h-full w-full overflow-hidden pt-32">
-                <iframe width="560" height="315" class="absolute top-0 left-0 w-full h-full "
-                    src="https://www.youtube.com/embed/bYxzOZj0NTY" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="hidden relative h-full w-full overflow-hidden pt-32" id="vid3">
-                <iframe width="560" height="315" class="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/1wK6D2KQ07E" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-
-
+            <p class="about text-5xl leading-relaxed">lives
+                and equipping children to grow into thriving </p>
+            <p class="about text-5xl leading-relaxed">individuals with the potential to
+                leave a great impact on </p>
+            <p class="about text-5xl leading-relaxed">their communities. But in our rush to reform education, </p>
+            <p class="about text-5xl leading-relaxed"> we
+                simply cannot forget the layers that are very close to </p>
+            <p class="about text-5xl leading-relaxed">student learning – the
+                adult community in schools. </p>
+            <p class="about text-5xl leading-relaxed"> Learn more about the work we do to realize our mission
+                here. </p>
         </div>
-        <div class="order-first h-72"></div>
+    </section>
+    <div class="px-4 md:px-12 grid grid-cols-2 grid-rows-2 gap-12 h-screen aboutVids">
+        <div id="vid1" class="relative h-full w-full overflow-hidden pt-32 avid"> <iframe
+                class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/qx6wf-SUZc8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+        <div id="vid2" class="relative h-full w-full overflow-hidden pt-32 avid"> <iframe
+                class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/gLoHGjC45Hs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+        <div class="avid">
+            <p class="text-2xl md:text-5xl leading-relaxed max-w-lg"> Sneak a peek into what we believe in to learn
+                more
+                about us!
+            </p>
+        </div>
+        <div id="vid3" class="relative h-full w-full overflow-hidden pt-32 avid"> <iframe
+                class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/FIyGqQzLZmM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
     </div>
+    <div class=""><img src="images/community.png" class="mx-auto" alt=""></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script>
+
+        let about = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.section2',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        })
+
+        about.from('.about', {
+            x: 100, stagger: 0.1, opacity: 0
+            // onStart: () => changeBg(), onReverseComplete: () => changeBg()
+        })
+
+        // function changeBg() {
+
+        //     document.body.classList.toggle('bg-black')
+
+        // }
+
+        let aboutVids = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.aboutVids',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        })
+        aboutVids.from('.avid', { opacity: 0, rotate: 10, stagger: 0.1 })
         function show1() {
             document.getElementById('but1').classList.add('text-white')
             document.getElementById('but1').classList.add('border-b-4')

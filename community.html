@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="bg-black text-white">
+    <a href="index.html">
+        <div class="fixed rounded-full bg-white top-12 left-12"><img src="images/logo.svg" class="h-48" alt=""></div>
+    </a>
+    <section class="h-screen flex items-center justify-center">
+        <div class="text-center text-5xl">Our Community.</div>
+
+    </section>
+    <section class="py-32 max-w-6xl mx-auto" id="team">
+        <div class="flex items-left justify-between  space-x-12 ">
+            <div class="">
+                <p class="text-2xl core">the team</p>
+                <p class="text-7xl mt-12 core">Our Core<br> Team.</p>
+            </div>
+            <div class="max-w-md text-2xl leading-relaxed coreDesc">Lorem ipsum dolor sit amet consectetur
+                adipisicing
+                elit.
+                Maxime et commodi
+                unde
+                laboriosam,
+                harum ipsum ut, consequuntur aspernatur officiis perspiciatis repudiandae autem ab aliquam soluta sequi
+                exercitationem consectetur praesentium sit.</div>
+        </div>
+        <div class="grid grid-cols-3 mt-32 "><img src="images/pic.jpeg" class="rounded-b-full coreTeam" alt=""><img
+                src="images/pic.jpeg" class="rounded-b-full coreTeam" alt=""><img src="images/pic.jpeg"
+                class="rounded-b-full coreTeam" alt=""><img src="images/pic.jpeg" class="rounded-b-full coreTeam"
+                alt=""><img src="images/pic.jpeg" class="rounded-b-full coreTeam" alt=""><img src="images/pic.jpeg"
+                class="rounded-b-full coreTeam" alt=""></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script>
+
+        let team = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#team',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        })
+        team.from('.core', { x: 30, stagger: 0.1, opacity: 0 })
+            .from('.coreTeam', { y: 100, stagger: 0.1, opacity: 0, rotate: 15 })
+    </script>
+</body>
+
+</html>
