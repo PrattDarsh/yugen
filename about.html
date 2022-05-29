@@ -6,126 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
     <title>About</title>
 </head>
 
 
-<body class="bg-black text-white">
-    <a href="index.html">
-        <div class="fixed rounded-full bg-white top-12 left-12"><img src="images/logo.svg" class="h-48" alt=""></div>
-    </a>
-    <section class="h-screen flex items-center justify-center">
-        <div class="text-center text-5xl">About Us.</div>
-
-    </section>
-    <section class="py-32 section2">
-        <div class="max-w-7xl mx-auto">
-
-            <p class="text-2xl about"> about us.</p>
-            <p class="text-5xl leading-relaxed about">We're an organization that was born from a lifetime of work,
-            </p>
-            <p class="about text-5xl leading-relaxed">learning
-                & passion for
-                education and we translate this to</p>
-            <p class="about text-5xl leading-relaxed">creating life-long learning communities with the adult</p>
-            <p class="about text-5xl leading-relaxed">groups in
-                schools.</p>
-
+<body class="bg-black">
+    <section class="bg-gray-900 py-32 px-12 mx-6 mt-6 rounded-3xl relative">
+        <p class="tracking-widest text-purple-400 text-2xl mb-12">ABOUT US</p>
+        <p class="text-6xl text-purple-400 leading-normal max-w-7xl">
+            Yugen is an organization that was born from a <i>lifetime of work</i>, learning & passion for education and
+            we
+            translate this to creating <i>life-long learning communities</i> with the adult groups in schools. Sneak a
+            peek
+            into what we believe in to learn more about us! </p>
+        <div class="absolute bottom-6 right-6">
+            <svg class="h-20 text-purple-400 animate-bounce fill-current transform rotate-90" clip-rule="evenodd"
+                stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m16.843 10.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291 1.002-1.299 3.044-3.945 4.243-5.498z" />
+            </svg>
         </div>
     </section>
-    <div class="px-4 md:px-12 grid grid-cols-2 grid-rows-2 gap-12 h-screen aboutVids">
-        <div id="vid1" class="relative h-full w-full overflow-hidden pt-32 avid"> <iframe
-                class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/qx6wf-SUZc8"
-                title="YouTube video player" frameborder="0"
+
+    <section class=" mx-auto mt-6 grid grid-cols-2 sec2">
+        <div class="bg-gray-900 py-6 px-6 mx-6 rounded-3xl left"> <iframe class="rounded-3xl w-full h-full"
+                src="https://www.youtube.com/embed/1wK6D2KQ07E" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe></div>
-        <div id="vid2" class="relative h-full w-full overflow-hidden pt-32 avid"> <iframe
-                class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/gLoHGjC45Hs"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></div>
-        <div class="avid">
-            <p class="text-2xl md:text-5xl leading-relaxed max-w-lg"> Sneak a peek into what we believe in to learn
-                more
-                about us!
-            </p>
+        <div class=" right bg-purple-400 flex items-center justify-center w-full text-5xl rounded-3xl py-56">How it all
+            started
         </div>
-        <div id="vid3" class="relative h-full w-full overflow-hidden pt-32 avid"> <iframe
-                class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/FIyGqQzLZmM"
-                title="YouTube video player" frameborder="0"
+    </section>
+
+    <section class=" mx-auto mt-6 grid grid-cols-2 sec3">
+        <div class="bg-purple-400 flex items-center justify-center w-full text-5xl rounded-3xl py-56 left z-10">What
+            happened
+            in
+            2019
+        </div>
+        <div class="bg-gray-900 py-6 px-6 mx-6 rounded-3xl right"> <iframe class="rounded-3xl w-full h-full"
+                src="https://www.youtube.com/embed/1wK6D2KQ07E" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe></div>
-    </div>
-    <div class=""><img src="images/community.png" class="mx-auto" alt=""></div>
-    </div>
+
+    </section>
+
+    <section class=" mx-auto mt-6 grid grid-cols-2 sec4">
+        <div class="bg-gray-900 py-6 px-6 mx-6 rounded-3xl left"> <iframe class="rounded-3xl w-full h-full"
+                src="https://www.youtube.com/embed/1wK6D2KQ07E" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+        <div class="right bg-purple-400 flex items-center justify-center w-full text-5xl rounded-3xl py-56">Our Values
+        </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script>
-
-        let about = gsap.timeline({
+        let tl = gsap.timeline({
             scrollTrigger: {
-                trigger: '.section2',
+                trigger: '.sec2',
                 toggleActions: 'play none none pause',
                 scrub: true,
-                start: 'top bottom'
+                start: 'top center'
             }
-        })
-
-        about.from('.about', {
-            x: 100, stagger: 0.1, opacity: 0
-            // onStart: () => changeBg(), onReverseComplete: () => changeBg()
-        })
-
-        // function changeBg() {
-
-        //     document.body.classList.toggle('bg-black')
-
-        // }
-
-        let aboutVids = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.aboutVids',
-                toggleActions: 'play none none pause',
-                scrub: true,
-                start: 'top bottom'
-            }
-        })
-        aboutVids.from('.avid', { opacity: 0, rotate: 10, stagger: 0.1 })
-        function show1() {
-            document.getElementById('but1').classList.add('text-white')
-            document.getElementById('but1').classList.add('border-b-4')
-            document.getElementById('but2').classList.remove('text-white')
-            document.getElementById('but3').classList.remove('text-white')
-            document.getElementById('but2').classList.remove('border-b-4')
-            document.getElementById('but3').classList.remove('border-b-4')
-            document.getElementById('vid1').classList.remove('hidden')
-            document.getElementById('vid2').classList.add('hidden')
-            document.getElementById('vid3').classList.add('hidden')
-
         }
-        function show2() {
-            document.getElementById('but2').classList.add('text-white')
-            document.getElementById('but2').classList.add('border-b-4')
-            document.getElementById('but1').classList.remove('text-white')
-            document.getElementById('but3').classList.remove('text-white')
-            document.getElementById('but1').classList.remove('border-b-4')
-            document.getElementById('but3').classList.remove('border-b-4')
-            document.getElementById('vid2').classList.remove('hidden')
-            document.getElementById('vid1').classList.add('hidden')
-            document.getElementById('vid3').classList.add('hidden')
-        }
-        function show3() {
-            document.getElementById('but3').classList.add('text-white')
-            document.getElementById('but3').classList.add('border-b-4')
-            document.getElementById('but1').classList.remove('text-white')
-            document.getElementById('but2').classList.remove('text-white')
-            document.getElementById('but1').classList.remove('border-b-4')
-            document.getElementById('but2').classList.remove('border-b-4')
-            document.getElementById('vid3').classList.remove('hidden')
-            document.getElementById('vid1').classList.add('hidden')
-            document.getElementById('vid2').classList.add('hidden')
-        }
+
+        )
+        tl.from('.left', { x: 200, stagger: 0.1, })
+            .from('.right', { x: -200, stagger: 0.1 }, '-=0.5')
     </script>
 </body>
 

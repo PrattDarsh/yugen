@@ -6,122 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
     <title>Yugen</title>
 </head>
-<style>
-
-</style>
-
-<body class="overflow-x-hidden bg-black transition duration-700">
 
 
-    <section class="flex items-center justify-center h-screen">
-        <div class="border-2 border-black rounded-full p-6">
-            <div class="border-2 border-black rounded-full p-6"><img src="images/logo.svg"
-                    class=" bg-white rounded-full z-50" alt="">
-            </div>
+<body class="overflow-x-hidden text-white bg-black transition duration-700">
+
+
+    <section class=" h-screen space-y-32">
+        <p class="text-9xl mt-12 ml-12 relative">
+            <span class="caption">Equitable,</span>
+            <span class="caption">innovative &</span>
+            <span class="caption"> life-long</span>
+            <span class="caption"> learning communities.</span><br>
+
+        </p>
+        <p class="absolute top-96 text-7xl left-56 caption" style="font-family: 'Square Peg', cursive;">for teachers<br>
+            and school leaders</p>
+        <div class="flex items-end justify-end  mr-12">
+            <img class=" bg-white rounded-full logoCircle" src="images/logo.png" alt="">
+
         </div>
 
 
     </section>
-    <section class="py-32 section2">
-        <div class="max-w-7xl mx-auto">
-            <div class="md:flex items-center justify-center space-x-12">
-                <div class="text-5xl text-right text-white">
-                    <p class=" about">Enabling students is an</p>
-                    <p class="about">absolute joy.</p>
-                </div>
-                <div class="max-w-2xl relative">
-                    <div class="border-2 border-white p-12 absolute rounded-full -right-32 supportCircle"></div>
-                    <img src="images/Tarit's drawings.png" class="bg-white rounded-full p-12 art" alt="">
-                </div>
+
+    <section class="text-9xl relative ">
+        <img src="images/meena.jpeg" class="absolute top-0 transform rotate-12 right-0 aboutPic  max-w-2xl" alt="">
+        <img src="images/community.png" class="absolute top-0 transform rotate-12 right-0 comPic  max-w-2xl" alt="">
+        <img src="images/pic.jpeg" class="absolute top-0 transform rotate-12 right-0 workPic  max-w-2xl" alt="">
+        <img src="images/bigTree.png" class="absolute top-0 transform rotate-12 right-0 eventPic  max-w-2xl" alt="">
+        <a href="about.html">
+            <div class="border-t  py-12 hover:bg-white hover:text-black transition delay-45"
+                onmouseover="aboutTl.play()" onmouseleave="aboutTl.reverse()">
+                About Us</div>
+
+
+
+        </a>
+        <a href="work.html">
+            <div class="border-t  py-12 hover:bg-white hover:text-black transition delay-45" onmouseover="workTl.play()"
+                onmouseleave="workTl.reverse()">Our Work</div>
+
+        </a>
+        <a href="community.html">
+            <div class="border-t  py-12 hover:bg-white hover:text-black transition delay-45" onmouseover="comTl.play()"
+                onmouseleave="comTl.reverse()">Our Community</div>
+        </a>
+        <a href="about.html">
+            <div class="border-t border-b  py-12 hover:bg-white hover:text-black transition delay-45"
+                onmouseover="eventTl.play()" onmouseleave="eventTl.reverse()">Events and Blogs
             </div>
-            <div class="md:flex items-center justify-center space-x-12">
-                <div class="max-w-2xl p-4 border-2 border-white rounded-full relative">
-                    <div class="absolute p-12 -left-32 rounded-full bg-white supportCircle"></div>
-                    <img src="images/bigTree.png" class="bg-white rounded-full p-8 art" alt="">
-                </div>
-                <div class="text-5xl  text-white">
-                    <p class=" about">But enabling teachers</p>
-                    <p class="about">creates a bigger</p>
-                </div>
-
-            </div>
-
-
-        </div>
-    </section>
-    <section class="text-white py-32 bigSection">
-        <p class="text-5xl leading-relaxed text-center caption">That's why we do what we do. </p>
-        <p class="text-5xl leading-relaxed text-center caption">"Create equitable,
-            lifelong</p>
-        <p class="text-5xl leading-relaxed text-center caption">learning communities</p>
-        <p class="text-5xl leading-relaxed text-center caption">for teachers and school leaders."</p>
-
-    </section>
-
-
-    <section class="mx-32 py-32 text-white anatomy">
-
-        <p class="text-9xl text-gray-500 font-bold anatomyTitle">Our Project Anatomy</p>
-        <div class="grid grid-cols-4 mt-32 gap-y-32  relative">
-            <!-- <div class="h-screen p-px bg-white absolute left-1/2"></div> -->
-
-            <div class="space-y-2 ">
-                <h3 class="text-5xl point1">Design Thinking</h3>
-                <p class="text-3xl text-gray-500 point1">Empathy Driven</p>
-            </div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-
-            <div class="space-y-2 ">
-                <h3 class="text-5xl point1">Innovation</h3>
-                <p class="text-3xl point1 text-gray-500">Scalable solutions</p>
-            </div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-
-            <div class="space-y-2 ">
-                <h3 class="text-5xl point1">Current Projects</h3>
-                <p class="text-3xl point1 text-gray-500">SEL for Teachers.Bridging math learning gaps</p>
-            </div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="space-y-2">
-                <h3 class="text-5xl point1">Aligned with UN-SDG 4</h3>
-                <p class="text-3xl text-gray-500 point1">Quality Education</p>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="bg-black">
-        <div class="flex items-center justify-center">
-            <div class="space-y-12">
-                <a href="about.html">
-                    <div class="rounded-full border-2 border-white text-white px-16 py-32 text-5xl">About Us</div>
-                </a>
-                <a href="work.html">
-                    <div class="rounded-full border-2 border-white text-white px-16 py-32 text-5xl">Our Work</div>
-                </a>
-            </div>
-
-            <div class=""> <img src="images/community.png" alt=""></div>
-            <div class="space-y-12">
-                <a href="community.html">
-                    <div class="rounded-full border-2 border-white text-white px-16 py-32 text-5xl">Community</div>
-                </a>
-                <div class="rounded-full border-2 border-white text-white px-16 py-32 text-5xl">About Us</div>
-            </div>
-        </div>
-
+        </a>
     </section>
 
 
@@ -129,48 +68,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
 
     <script>
+        gsap.from('.logoCircle', { scale: 2 })
+        gsap.from('.caption', { opacity: 0, stagger: 0.1, duration: 5 })
 
-        gsap.from('.landing', { opacity: 0, x: 30, stagger: 0.1 })
+        let aboutTl = gsap.timeline().pause()
+            .from('.aboutPic', { opacity: 0, x: 100, rotate: 30 })
 
-        let about = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.section2',
-                toggleActions: 'play none none pause',
-                scrub: true,
-                start: 'top bottom'
-            }
-        })
+        let workTl = gsap.timeline().pause()
+            .from('.workPic', { opacity: 0, x: 100, rotate: 30 })
 
-        about.from('.about', { x: 100, stagger: 0.1, opacity: 0 })
-            .from('.art', { opacity: 0, rotate: 30 }, '-=0.7')
-            .from('.supportCircle', { opacity: 0, scale: 2.5 }, '-=0.7')
-        // function changeBg() {
+        let comTl = gsap.timeline().pause()
+            .from('.comPic', { opacity: 0, x: 100, rotate: 30 })
 
-        //     document.body.classList.toggle('bg-black')
-
-        // }
-
-        let anatomy = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.anatomy',
-                toggleActions: 'play none none pause',
-                scrub: true,
-                start: 'top bottom'
-            }
-        })
-
-        anatomy.from('.point1', { x: 100, stagger: 0.1 })
-
-        let bigSection = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.caption',
-                toggleActions: 'play none none pause',
-                scrub: true,
-                start: 'top bottom'
-            }
-        })
-
-        bigSection.from('.caption', { x: 100, stagger: 0.1 })
+        let eventTl = gsap.timeline().pause()
+            .from('.eventPic', { opacity: 0, x: 100, rotate: 30 })
 
     </script>
 </body>
