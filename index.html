@@ -16,37 +16,26 @@
 <body class="overflow-x-hidden text-white bg-black transition duration-700">
 
 
-    <section class=" md:h-screen space-y-32">
-        <p class="text-6xl md:text-9xl mt-12 ml-4 md:ml-12 relative">
-            <span class="caption">Equitable,</span>
-            <span class="caption">innovative &</span>
-            <span class="caption"> life-long</span>
-            <span class="caption"> learning communities.</span><br>
-
-        </p>
-        <p class="absolute top-72 left-12  md:top-96 text-2xl md:text-7xl md:left-56 caption"
-            style="font-family: 'Square Peg', cursive;">for
-            teachers<br>
-            and school leaders</p>
-        <div class="flex items-end justify-end  mr-12">
-            <img class="h-32 md:h-full bg-white rounded-full logoCircle" src="images/logo.png" alt="">
-
+    <section class="flex items-center justify-center  md:h-screen space-y-32">
+        <div class="space-y-12">
+            <img class="mx-auto bg-white rounded-full logoCircle" src="images/logo.png" alt="">
+            <p class="caption text-center text-3xl">Equitable, innovative & life-long learning communities</p>
         </div>
 
 
     </section>
 
-    <section class="text-4xl md:text-9xl relative py-12 md:px-12 px-4">
+    <section class="text-4xl md:text-6xl relative py-12 md:px-12 px-4" id="menu">
         <img src="images/meena.jpeg"
-            class="hidden md:block absolute top-0 transform rotate-12 right-0 aboutPic  max-w-2xl" alt="">
+            class="z-50 hidden md:block absolute top-0 transform rotate-12 right-0 aboutPic  max-w-lg" alt="">
         <img src="images/community.png"
-            class="absolute hidden md:block top-0 transform rotate-12 right-0 comPic  max-w-2xl" alt="">
-        <img src="images/pic.jpeg" class="absolute top-0 transform hidden md:block rotate-12 right-0 workPic  max-w-2xl"
-            alt="">
+            class="z-50 absolute hidden md:block top-0 transform rotate-12 right-0 comPic  max-w-lg" alt="">
+        <img src="images/pic.jpeg"
+            class="z-50 absolute top-0 transform hidden md:block rotate-12 right-0 workPic  max-w-lg" alt="">
         <img src="images/bigTree.png"
-            class="absolute top-0 transform rotate-12 hidden md:block right-0 eventPic  max-w-2xl" alt="">
+            class=" z-50 absolute top-0 transform rotate-12 hidden md:block right-0 eventPic  max-w-lg" alt="">
         <a href="about.html">
-            <div class="my-12 bg-gray-900 px-8 md:px-12 py-12 hover:bg-white hover:text-black transition delay-45"
+            <div class="menuCard bg-gray-900 my-12 bg-gradient-to-r hover:from-indigo-500 px-8 md:px-12 py-12"
                 style="border-radius:48px;" onmouseover="aboutTl.play()" onmouseleave="aboutTl.reverse()">
                 About Us</div>
 
@@ -54,17 +43,17 @@
 
         </a>
         <a href="work.html">
-            <div class="my-12 bg-gray-900  px-8 md:px-12 py-12 hover:bg-white hover:text-black transition delay-45"
+            <div class="menuCard my-12 bg-gray-900 bg-gradient-to-r hover:from-pink-500  px-8 md:px-12 py-12  "
                 style="border-radius:48px;" onmouseover="workTl.play()" onmouseleave="workTl.reverse()">Our Work</div>
 
         </a>
-        <a href="community.html">
-            <div class="my-12 bg-gray-900  px-8 md:px-12 py-12 hover:bg-white hover:text-black transition delay-45"
-                style="border-radius:48px;" onmouseover="comTl.play()" onmouseleave="comTl.reverse()">Our Community
+        <a href="">
+            <div class="menuCard my-12 bg-gray-900 bg-gradient-to-r hover:from-yellow-500  px-8 md:px-12 py-12  "
+                style="border-radius:48px;" onmouseover="comTl.play()" onmouseleave="comTl.reverse()">Get Involved
             </div>
         </a>
         <a href="about.html">
-            <div class="my-12 bg-gray-900  px-8 md:px-12 py-12 hover:bg-white hover:text-black transition delay-45"
+            <div class="my-12 menuCard bg-gray-900 bg-gradient-to-r hover:from-green-500  px-8 md:px-12 py-12   "
                 style="border-radius:48px;" onmouseover="eventTl.play()" onmouseleave="eventTl.reverse()">Events and
                 Blogs
             </div>
@@ -199,6 +188,20 @@
 
         let eventTl = gsap.timeline().pause()
             .from('.eventPic', { opacity: 0, x: 100, rotate: 30 })
+
+
+        let menu = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#menu',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        }
+
+        )
+
+        menu.from('.menuCard', { x: 100, stagger: 0.1 })
 
     </script>
 </body>
