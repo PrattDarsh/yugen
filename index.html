@@ -36,14 +36,14 @@
                 About Us</div>
 
             <img src="images/meena.jpeg"
-                class="z-50 hidden md:block absolute top-0 transform rotate-12 right-0 aboutPic  max-w-lg" alt="">
+                class="z-50 hidden md:block absolute top-0 transform rotate-12 right-0 aboutPic  max-w-md" alt="">
 
         </a>
         <a href="work.html" class="relative">
             <div class="menuCard my-6 bg-gray-900 bg-gradient-to-r hover:from-pink-500  px-8 md:px-12 py-12  "
                 style="border-radius:48px;" onmouseover="workTl.play()" onmouseleave="workTl.reverse()">Our Work</div>
             <img src="images/pic.jpeg"
-                class="z-50 absolute top-0 transform hidden md:block rotate-12 right-0 workPic  max-w-lg" alt="">
+                class="z-50 absolute -top-32 transform hidden md:block rotate-12 right-0 workPic  max-w-md" alt="">
 
         </a>
         <a href="" class="relative">
@@ -51,7 +51,7 @@
                 style="border-radius:48px;" onmouseover="comTl.play()" onmouseleave="comTl.reverse()">Get Involved
             </div>
             <img src="images/community.png"
-                class="z-50 absolute hidden md:block top-0 transform rotate-12 right-0 comPic  max-w-lg" alt="">
+                class="z-50 absolute hidden md:block -top-32 transform rotate-12 right-0 comPic  max-w-md" alt="">
         </a>
         <a href="about.html" class="relative">
             <div class="my-6 menuCard bg-gray-900 bg-gradient-to-r hover:from-green-500  px-8 md:px-12 py-12   "
@@ -59,7 +59,7 @@
                 Blogs
             </div>
             <img src="images/bigTree.png"
-                class=" z-50 absolute top-0 transform rotate-12 hidden md:block right-0 eventPic  max-w-lg" alt="">
+                class=" z-50 absolute -top-32 transform rotate-12 hidden md:block right-0 eventPic  max-w-md" alt="">
         </a>
     </section>
 
@@ -220,7 +220,7 @@
 
         )
 
-        menu.from('.menuCard', { x: 100, stagger: 0.1 })
+        menu.from('.menuCard', { x: 200, stagger: 0.1 })
 
     </script>
 </body>
