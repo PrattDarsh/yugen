@@ -100,56 +100,33 @@
         </section>
 
     </section>
-    <section class="bg-gray-900 py-32   mx-6 mt-6" style="border-radius:48px">
-        <!-- <p class="tracking-widest text-white text-lg md:text-2xl mb-12 uppercase">Get in touch</p> -->
-
-        <p class="text-3xl md:text-6xl text-white md:leading-normal max-w-7xl px-8 md:px-12">
-            Subscribe to our Newsletter</p>
-        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-12"></div>
-        <p class="max-w-6xl mt-6 text-gray-400 text-xl px-8 md:px-12">Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Vel
-            quas
-            ea
-            doloribus! Earum
-            accusantium natus est
-            facere corporis nobis consequuntur saepe praesentium sed soluta? Odit, nihil itaque. Consectetur, quam quis.
-        </p>
-
-    </section>
-
-
-    <section class="px-8">
-        <form action="" id="myForm">
-            <div class="grid grid-cols-1 md:grid-cols-4  mt-6 gap-4">
-
-                <div class="col-span-3">
-                    <input type="text"
-                        class="bg-gray-900 py-12 rounded-full  focus:ring focus:ring-white focus:ring-0  w-full  bg-transparent text-2xl px-12"
-                        placeholder="Name" name="name" id="name">
-                </div>
-                <button type="submit" id="submit" style="border-radius:48px"
-                    class="order-last row-span-2 md:order-none bg-white transition transform ease-in-out hover:scale-95  justify-center text-black flex items-center">
-                    <div class="">
-                        <div class=""><svg class="h-20 md:h-28" clip-rule="evenodd" fill-rule="evenodd"
-                                stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                    fill-rule="nonzero" />
-                            </svg>
-                        </div>
+    <section class="max-w-7xl mx-auto py-32">
+        <p class="uppercase font-bold">Sign up to our newsletter</p>
+        <form action="" id="myForm" class="">
+            <div class="flex items-center ">
+                <input type="text"
+                    class="font-bold focus:outline-none py-12 border-b-2 border-gray-700 bg-transparent placeholder-gray-700  text-7xl"
+                    placeholder="your@mail.com" name="name" id="name">
+                <button type="submit">
+                    <div class="bg-gray-700 rounded-full p-4">
+                        <svg clip-rule="evenodd" class="h-12 fill-current text-white" fill-rule="evenodd"
+                            stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
+                                fill-rule="nonzero" />
+                        </svg>
                     </div>
                 </button>
-                <div class="col-span-3">
-                    <input type="text"
-                        class="bg-gray-900 py-12 rounded-full  focus:ring focus:ring-white focus:ring-0  w-full  bg-transparent text-2xl px-12"
-                        placeholder="Mail" name="mail" id="mail">
-                </div>
 
             </div>
+
         </form>
-        <!-- <div class="bg-gray-900 py-32 px-8 md:px-12" style="border-radius: 48px;">Your form has been submitted. We will get back to you shortly.</div> -->
+        <div id="message" class="hidden text-7xl font-bold text-gray-700 mt-32">Thanks for Subscribing!</div>
     </section>
+
+
+
 
 
 
