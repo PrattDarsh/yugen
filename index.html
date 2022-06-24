@@ -70,17 +70,26 @@
 
     </section>
 
-    <section class="py-32 relative">
+    <section class="py-32 relative story">
 
-        <p class="text-gray-700 text-9xl absolute top-0 right-12" style="font-family: 'Square Peg', cursive;">Once upon
+        <p class="text-gray-700 text-9xl absolute top-0 right-12 ouat" style="font-family: 'Square Peg', cursive;">Once
+            upon
             a
             time
         </p>
-        <section class="flex items-center max-w-6xl mx-auto  text-white py-32">
-            <div class="w-full">
-                <div class=" text-7xl about">Share<br> a Story.</div>
+        <div class="flex items-center justify-center   text-white">
+            <div class="">
+                <div class=" text-7xl  text-center titleStory">Share<br> a <span class="font-bold"> Story.</span>
+                </div>
+                <div
+                    class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 mx-auto storyLine">
+                </div>
                 <div class=" space-x-12 mt-20">
-                    <div class="max-w-xl about text-xl leading-normal">Yugen is an organization that was born from a
+                    <div class="max-w-xl mx-auto text-center about text-xl leading-normal storyContent">Yugen is an
+                        organization that
+                        was
+                        born
+                        from a
                         lifetime of
                         work,
                         learning &
@@ -92,18 +101,81 @@
 
                 </div>
                 <div class="mt-32"> <input type="text"
-                        class="border-2 py-12 w-1/2 rounded-full bg-transparent text-4xl px-12"
+                        class="border-2 py-12 w-full  rounded-full bg-transparent text-4xl px-12"
                         placeholder="Once Upon A Time...." name="mail" id="mail"
                         style="font-family: 'Square Peg', cursive;"></div>
+
+
+
+
+
             </div>
-
-
-
-
-        </section>
-
+        </div>
     </section>
 
+    <section class="py-32 relative">
+        <img src="images/book2-01.png" class="absolute top-0 max-w-lg book" alt="">
+        <div class="flex items-center justify-center   text-white">
+            <div class="">
+                <div class=" text-7xl text-center about">Buy us<br> a <span class="font-bold"> Book.</span></div>
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 mx-auto"></div>
+                <div class=" space-x-12 mt-20">
+                    <div class="max-w-xl mx-auto text-center about text-xl leading-normal">Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Sequi ad eius cumque saepe possimus amet quas similique nam
+                        quidem in quam, necessitatibus culpa vel. Ratione quaerat incidunt voluptas sint quos. </div>
+
+                </div>
+                <div class="mt-32"> <input type="text"
+                        class="border-2 py-12 w-full  rounded-full bg-transparent text-4xl px-12"
+                        placeholder="Enter book name" name="mail" id="mail" style="font-family: 'Square Peg', cursive;">
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 relative">
+
+
+        <div class="flex items-center justify-center   text-white">
+            <div class="">
+                <div class=" text-7xl text-center about">Join our<br> <span class="font-bold"> Team.</span></div>
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 mx-auto"></div>
+                <div class=" space-x-12 mt-20">
+                    <div class="max-w-xl mx-auto text-center about text-xl leading-normal">Yugen is an organization that
+                        was
+                        born
+                        from a
+                        lifetime of
+                        work,
+                        learning &
+                        passion
+                        for
+                        education and we translate this to creating life-long learning communities with the adult groups
+                        in
+                        schools. Sneak a peek into what we believe in to learn more about us! </div>
+
+                </div>
+                <div class="grid md:grid-cols-2 space-x-12 mt-12">
+                    <div
+                        class="transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-center rounded-3xl bg-gradient-to-br from-blue-700 via-blue-800 to-gray-900 text-4xl p-32">
+                        as an<br><span class="text-6xl font-bold">Intern.</span> </div>
+                    <div
+                        class="transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-center rounded-3xl bg-gradient-to-br from-gray-700 via-gray-900 to-black text-4xl p-32">
+                        as an<br> <span class="text-6xl font-bold">Employee.</span></div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
     <section class="max-w-6xl mx-auto py-32">
         <p class="uppercase font-bold">Sign up to our newsletter</p>
         <form action="" id="myForm" class="">
@@ -112,7 +184,8 @@
                     class="font-bold focus:outline-none py-12 border-b-2 border-gray-700 bg-transparent placeholder-gray-700  text-6xl"
                     placeholder="your@mail.com" name="name" id="name">
                 <button type="submit">
-                    <div class="bg-gray-700 rounded-full p-4">
+                    <div
+                        class="bg-gray-700 rounded-full p-4 transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                         <svg clip-rule="evenodd" class="h-12 fill-current text-white" fill-rule="evenodd"
                             stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -215,8 +288,31 @@
 
         )
 
-        menu.from('.menuCard', { x: 200, stagger: 0.1 })
+        menu.from('.menuCard', {
+            x: 200, stagger: 0.1,
+            // onComplete: () => red()
+        })
+        // function red() {
+        //     document.body.classList.remove('bg-black')
+        //     document.body.classList.add('bg-red-300')
+        // }
 
+
+        let story = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.story',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        }
+
+        )
+
+        story.from('.ouat', { x: 100, opacity: 0 })
+            .from('.titleStory', { scale: 1.5 }, '-=0.7')
+            .from('.storyLine', { scale: -1 }, '-=0.7')
+            .from('.storyContent', { opacity: 0, x: -100 }, '-=0.7')
     </script>
 </body>
 
