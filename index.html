@@ -14,7 +14,28 @@
 
 
 <body class="overflow-x-hidden text-white bg-black transition duration-700">
+    <div class="fixed w-full z-50 navbar">
+        <div class="flex justify-between px-32 items-center space-x-12 text-white py-12 z-50">
+            <div class="">
+                <a href="index.html">
+                    <img src="images/logo.png" class="h-36 bg-white rounded-full" alt="">
 
+                </a>
+
+            </div>
+
+
+            <div class="">
+                <div class=""><svg class="fill-current text-white h-12" clip-rule="evenodd" fill-rule="evenodd"
+                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
+                            fill-rule="nonzero" />
+                    </svg></div>
+            </div>
+        </div>
+    </div>
 
     <section class="flex items-center justify-center  md:h-screen space-y-32">
         <div class="space-y-12">
@@ -114,7 +135,7 @@
     </section>
 
     <section class="py-32 relative">
-        <img src="images/book2-01.png" class="absolute top-0 max-w-lg book" alt="">
+
         <div class="flex items-center justify-center   text-white">
             <div class="">
                 <div class=" text-7xl text-center about">Buy us<br> a <span class="font-bold"> Book.</span></div>
@@ -290,12 +311,17 @@
 
         menu.from('.menuCard', {
             x: 200, stagger: 0.1,
+            onStart: () => showMenu.play(),
+            onReverseComplete: () => showMenu.reverse()
             // onComplete: () => red()
         })
         // function red() {
         //     document.body.classList.remove('bg-black')
         //     document.body.classList.add('bg-red-300')
         // }
+
+        let showMenu = gsap.timeline().pause()
+        showMenu.from('.navbar', { opacity: 0 })
 
 
         let story = gsap.timeline({
