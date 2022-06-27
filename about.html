@@ -11,17 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
     <title>About</title>
 </head>
+<style>
+    .cursive {
+        font-family: 'square peg';
+    }
 
+</style>
 
 <body class="bg-black overflow-x-hidden">
-    <a href="index.html">
-        <div class="absolute top-12 right-12 "><img src="images/logo.png" class="h-36 bg-white rounded-full" alt="">
+    <div class="fixed w-full">
+        <div class="flex justify-between px-32 items-center space-x-12 text-white py-12 z-50">
+            <div class="">
+                <a href="index.html">
+                    <img src="images/logo.png" class="h-36 bg-white rounded-full" alt="">
+
+                </a>
+
+            </div>
+
+
+            <div class="">
+                <div class=""><svg class="fill-current text-white h-12" clip-rule="evenodd" fill-rule="evenodd"
+                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
+                            fill-rule="nonzero" />
+                    </svg></div>
+            </div>
         </div>
-    </a>
+    </div>
+
+
     <section class="flex items-center max-w-7xl mx-auto h-screen text-white py-32">
 
         <div class="w-full">
-            <div class=" text-7xl about">About Us.</div>
+            <div class=" text-7xl about">About <span class="cursive text-8xl">Us.</span> </div>
+            <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 "></div>
             <div class=" space-x-12 mt-20">
                 <div class="max-w-xl about text-xl leading-normal transform">Yugen is an organization that was born
                     from a
@@ -35,14 +61,7 @@
 
             </div>
         </div>
-        <div class="space-y-6">
-            <div class=" bg-white p-2 rounded-full ball"></div>
-            <div class=" bg-white p-2 rounded-full ball"></div>
-            <div class=" bg-white p-2 rounded-full ball"></div>
-            <div class=" bg-white p-2 rounded-full ball"></div>
-            <div class=" bg-white p-2 rounded-full ball"></div>
-            <div class=" bg-white p-2 rounded-full ball"></div>
-        </div>
+
 
 
 
@@ -56,7 +75,7 @@
                 allowfullscreen></iframe>
         </div>
 
-        <div class="text-white text-2xl space-y-6 ">
+        <div class="text-white text-xl space-y-4 ">
             <button onclick="playVid(1)" class="border-b w-full text-left">
                 <p class="pl-4 py-8 ">Our theory of change</p>
             </button>
@@ -78,6 +97,14 @@
         </div>
     </section>
 
+    <section class="flex items-center justify-center text-white py-32 text-7xl space-x-12">
+        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 "></div>
+        <div class="">
+            <p>Our <span class="text-9xl cursive">Community</span> <br></p>
+        </div>
+        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 "></div>
+    </section>
+
     <section class="relative h-screen flex items-center justify-center space-x-12" id="comm">
 
         <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 rotate-6 transform mem1" alt="">
@@ -86,7 +113,7 @@
         <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 -rotate-6 transform mem4" alt="">
 
         <div class="text-white absolute bottom-32 right-32 max-w-xl">
-            <p class="text-5xl mb-6  one">Name</p>
+            <p class="text-6xl mb-6  one cursive ">Name</p>
             <p class="text-xl leading-normal max-w-md  one">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Ipsam
                 beatae
@@ -96,7 +123,7 @@
                 nulla repellat cum.</p>
         </div>
         <div class="text-white absolute bottom-32 right-32 max-w-xl ">
-            <p class="text-5xl mb-6 two">Name</p>
+            <p class="text-6xl mb-6 two cursive">Name</p>
             <p class="text-xl leading-normal  max-w-md two">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Ipsam
                 beatae
@@ -106,7 +133,7 @@
                 nulla repellat cum.</p>
         </div>
         <div class="text-white absolute bottom-32 right-32 max-w-xl ">
-            <p class="text-5xl mb-6 three">Name</p>
+            <p class="text-6xl mb-6 three cursive">Name</p>
             <p class="text-xl leading-normal  max-w-md three">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Ipsam
                 beatae
@@ -116,7 +143,7 @@
                 nulla repellat cum.</p>
         </div>
         <div class="text-white absolute bottom-32 right-32 max-w-xl four">
-            <p class="text-5xl mb-6 four">Name</p>
+            <p class="text-6xl mb-6 four cursive">Name</p>
             <p class="text-xl leading-normal  max-w-md four">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Ipsam
                 beatae
@@ -131,8 +158,9 @@
 
 
 
-    <section class="volunteers  text-white text-4xl py-32 leading-normal">
-        <p class="text-9xl px-4 text-gray-500 mb-28 title">Meet out volunteers</p>
+    <section class="volunteers  text-white text-3xl py-32 leading-normal">
+        <p class="text-7xl px-4 text-center title">Meet out <span class="text-9xl cursive">volunteers</span> </p>
+        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mb-28  w-72 mt-12 mx-auto"></div>
         <div class=" flex flex-wrap items-center space-x-12">
             <div class="ml-12 row1">Maria T. Jones</div>
             <div class="bg-white row1  w-4 transform rotate-45 h-4"></div>
@@ -233,7 +261,7 @@
             // }
         }
 
-        gsap.from('.ball', { opacity: 0, y: 100, stagger: 0.1, })
+
         gsap.from('.about', { opacity: 0, x: 30, stagger: 0.1, duration: 5 })
 
         let volunteers = gsap.timeline({
@@ -273,7 +301,7 @@
                 trigger: '#comm',
                 toggleActions: 'play none none pause',
                 pin: true,
-                scrub: 2,
+                scrub: 5,
 
             }
         }
@@ -295,6 +323,9 @@
             .from('.four', { opacity: 0, x: 30, stagger: 0.1 })
             .to('.mem1', { opacity: 0 })
             .to('.four', { opacity: 0, x: 30 })
+
+
+
     </script>
 </body>
 
