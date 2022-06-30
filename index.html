@@ -12,8 +12,15 @@
     <title>Yugen</title>
 </head>
 
+<style>
+    .cursive {
+        font-family: 'square peg';
+    }
+
+</style>
 
 <body class="overflow-x-hidden text-white bg-black transition duration-700">
+
     <div class="fixed w-full z-50 navbar">
         <div class="flex justify-between px-32 items-center space-x-12 text-white py-6 z-50">
             <div class="">
@@ -46,182 +53,127 @@
 
     </section>
 
-    <section class="text-2xl md:text-4xl relative py-12 md:px-12 px-4" id="menu">
+    <section>
+        <div class="w-px h-screen bg-gradient-to-b from-purple-300 to-purple-700 mx-auto line1"></div>
+    </section>
 
+    <section class="flex items-center justify-center h-screen" id="about">
+        <div class="p-2 bg-purple-300 rounded-full absolute aboutCircle z-30"></div>
+        <div class="text-center text-purple-700 z-50">
+            <p class="text-7xl aboutTitle"><span class="cursive text-9xl">About</span> Us</p>
+            <div class="h-1 bg-purple-700 aboutLine"></div>
+            <p class="max-w-2xl leading-loose text-2xl mt-12 mb-24">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Unde
+                laborum
+                praesentium minus
+                eveniet eos,
+                atque incidunt inventore tenetur suscipit, excepturi obcaecati ea recusandae qui facilis. Ratione minima
+                quasi et nobis!</p>
+            <a href="about.html"
+                class="border-2 border-purple-700 rounded-full py-12 px-32 text-2xl transform transition delay-45  hover:bg-purple-700 hover:text-white">Know
+                More</a>
 
-        <div class="grid grid-cols-2 gap-x-4">
-            <a href="about.html" class="relative">
-                <div style="border-radius:48px"
-                    class="menuCard relative  bg-gray-900   my-6 bg-gradient-to-r hover:from-indigo-500 px-8 md:px-12 py-12"
-                    onmouseover="aboutTl.play()" onmouseleave="aboutTl.reverse()">
-                    About Us</div>
-
-                <img src="images/meena.jpeg"
-                    class="z-50 hidden md:block absolute top-0 transform rotate-12 right-0 aboutPic  max-w-xs" alt="">
-
-            </a>
-            <a href="work.html" class="relative">
-                <div style="border-radius:48px"
-                    class="menuCard my-6 bg-gray-900 bg-gradient-to-r hover:from-pink-500  px-8 md:px-12 py-12  "
-                    onmouseover="workTl.play()" onmouseleave="workTl.reverse()">Our Work</div>
-                <img src="images/pic.jpeg"
-                    class="z-50 absolute -top-32 transform hidden md:block rotate-12 right-0 workPic  max-w-xs" alt="">
-
-            </a>
-            <a href="" class="relative">
-                <div style="border-radius:48px"
-                    class="menuCard my-6 bg-gray-900 bg-gradient-to-r hover:from-yellow-500  px-8 md:px-12 py-12  "
-                    onmouseover="comTl.play()" onmouseleave="comTl.reverse()">Get Involved
-                </div>
-                <img src="images/community.png"
-                    class="z-50 absolute hidden md:block -top-32 transform rotate-12 right-0 comPic  max-w-xs" alt="">
-            </a>
-            <a href="about.html" class="relative">
-                <div style="border-radius:48px"
-                    class="my-6 menuCard bg-gray-900 bg-gradient-to-r hover:from-green-500  px-8 md:px-12 py-12   "
-                    onmouseover="eventTl.play()" onmouseleave="eventTl.reverse()">Events and
-                    Blogs
-                </div>
-                <img src="images/bigTree.png"
-                    class=" z-50 absolute -top-32 transform rotate-12 hidden md:block right-0 eventPic  max-w-xs"
-                    alt="">
-            </a>
         </div>
-
 
     </section>
 
-    <section class="py-32 relative story">
 
-        <p class="text-gray-700 text-9xl absolute top-0 right-12 ouat" style="font-family: 'Square Peg', cursive;">Once
-            upon
-            a
-            time
-        </p>
-        <div class="flex items-center justify-center   text-white">
-            <div class="">
-                <div class=" text-7xl  text-center titleStory">Share<br> a <span class="font-bold"> Story.</span>
-                </div>
-                <div
-                    class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 mx-auto storyLine">
-                </div>
-                <div class=" space-x-12 mt-20">
-                    <div class="max-w-xl mx-auto text-center about text-xl leading-normal storyContent">Yugen is an
-                        organization that
-                        was
-                        born
-                        from a
-                        lifetime of
-                        work,
-                        learning &
-                        passion
-                        for
-                        education and we translate this to creating life-long learning communities with the adult groups
-                        in
-                        schools. Sneak a peek into what we believe in to learn more about us! </div>
-
-                </div>
-                <div class="mt-32"> <input type="text"
-                        class="border-2 py-12 w-full  rounded-full bg-transparent text-4xl px-12"
-                        placeholder="Once Upon A Time...." name="mail" id="mail"
-                        style="font-family: 'Square Peg', cursive;"></div>
+    <section>
+        <div class="w-px h-screen bg-gradient-to-b from-purple-300  to-yellow-200 mx-auto line2"></div>
+    </section>
 
 
+    <section class="flex items-center justify-center h-screen" id="work">
+        <div class="p-2 bg-yellow-200 rounded-full absolute workCircle z-30"></div>
+        <div class="text-center text-yellow-500 z-50">
+            <p class="text-7xl workTitle">Our <span class="cursive text-9xl">Work</span></p>
+            <div class="h-1 bg-yellow-500 workLine"></div>
+            <p class="max-w-2xl leading-loose text-2xl mt-12 mb-24">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Unde
+                laborum
+                praesentium minus
+                eveniet eos,
+                atque incidunt inventore tenetur suscipit, excepturi obcaecati ea recusandae qui facilis. Ratione minima
+                quasi et nobis!</p>
 
-
-
-            </div>
+            <a href="work.html"
+                class="border-2 border-yellow-500 rounded-full py-12 px-32 text-2xl transform transition delay-45  hover:bg-yellow-500 hover:text-white">Know
+                More</a>
         </div>
     </section>
 
-    <section class="py-32 relative">
 
-        <div class="flex items-center justify-center   text-white">
-            <div class="">
-                <div class=" text-7xl text-center about">Buy us<br> a <span class="font-bold"> Book.</span></div>
-                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 mx-auto"></div>
-                <div class=" space-x-12 mt-20">
-                    <div class="max-w-xl mx-auto text-center about text-xl leading-normal">Lorem ipsum dolor sit amet
-                        consectetur, adipisicing elit. Sequi ad eius cumque saepe possimus amet quas similique nam
-                        quidem in quam, necessitatibus culpa vel. Ratione quaerat incidunt voluptas sint quos. </div>
+    <section>
+        <div class="w-px h-screen bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 mx-auto line3"></div>
+    </section>
 
-                </div>
-                <div class="mt-32"> <input type="text"
-                        class="border-2 py-12 w-full  rounded-full bg-transparent text-4xl px-12"
-                        placeholder="Enter book name" name="mail" id="mail" style="font-family: 'Square Peg', cursive;">
-                </div>
+    <section class="flex items-center justify-center h-screen" id="events">
+        <div class="p-2 bg-pink-300 rounded-full absolute eventsCircle z-30"></div>
+        <div class="text-center text-pink-500 z-50">
+            <p class="text-7xl eventsTitle"><span class="cursive text-9xl">Events</span> and <span
+                    class="cursive text-9xl">Blogs</span></p>
+            <div class="h-1 bg-pink-500 eventsLine"></div>
+            <p class="max-w-2xl leading-loose text-2xl mt-12 mb-24">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Unde
+                laborum
+                praesentium minus
+                eveniet eos,
+                atque incidunt inventore tenetur suscipit, excepturi obcaecati ea recusandae qui facilis. Ratione minima
+                quasi et nobis!</p>
+            <a href="events.html"
+                class="border-2 border-pink-500 rounded-full py-12 px-32 text-2xl transform transition delay-45  hover:bg-pink-500 hover:text-white">Know
+                More</a>
+
+        </div>
+
+    </section>
 
 
+    <section>
+        <div class="w-px h-screen bg-gradient-to-b from-green-300 to-green-500 mx-auto line4"></div>
+    </section>
 
 
+    <section class="flex items-center justify-center h-screen" id="involved">
+        <div class="p-2 bg-green-200 rounded-full absolute involvedCircle"></div>
+        <div class="text-center text-green-500 z-50">
+            <p class="text-7xl involvedTitle">Get <span class="cursive text-9xl">Involved</span></p>
+            <div class="h-1 bg-green-500 involvedLine"></div>
+            <p class="max-w-2xl leading-loose text-2xl mt-12 mb-24">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Unde
+                laborum
+                praesentium minus
+                eveniet eos,
+                atque incidunt inventore tenetur suscipit, excepturi obcaecati ea recusandae qui facilis. Ratione minima
+                quasi et nobis!</p>
 
-            </div>
+            <a href="work.html"
+                class="border-2 border-green-500 rounded-full py-12 px-32 text-2xl transform transition delay-45  hover:bg-green-500 hover:text-white">Know
+                More</a>
         </div>
     </section>
 
-    <section class="py-32 relative">
 
-
-        <div class="flex items-center justify-center   text-white">
-            <div class="">
-                <div class=" text-7xl text-center about">Join our<br> <span class="font-bold"> Team.</span></div>
-                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 mx-auto"></div>
-                <div class=" space-x-12 mt-20">
-                    <div class="max-w-xl mx-auto text-center about text-xl leading-normal">Yugen is an organization that
-                        was
-                        born
-                        from a
-                        lifetime of
-                        work,
-                        learning &
-                        passion
-                        for
-                        education and we translate this to creating life-long learning communities with the adult groups
-                        in
-                        schools. Sneak a peek into what we believe in to learn more about us! </div>
-
-                </div>
-                <div class="grid md:grid-cols-2 space-x-12 mt-12">
-                    <div
-                        class="transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-center rounded-3xl bg-gradient-to-br from-blue-700 via-blue-800 to-gray-900 text-4xl p-32">
-                        as an<br><span class="text-6xl font-bold">Intern.</span> </div>
-                    <div
-                        class="transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-110 text-center rounded-3xl bg-gradient-to-br from-gray-700 via-gray-900 to-black text-4xl p-32">
-                        as an<br> <span class="text-6xl font-bold">Employee.</span></div>
-                </div>
-
-
-
-
-
-            </div>
-        </div>
+    <section>
+        <div class="w-px h-screen bg-black mx-auto "></div>
     </section>
-    <section class="max-w-6xl mx-auto py-32">
-        <p class="uppercase font-bold">Sign up to our newsletter</p>
-        <form action="" id="myForm" class="">
-            <div class="flex items-center ">
-                <input type="text"
-                    class="font-bold focus:outline-none py-12 border-b-2 border-gray-700 bg-transparent placeholder-gray-700  text-6xl"
-                    placeholder="your@mail.com" name="name" id="name">
-                <button type="submit">
-                    <div
-                        class="bg-gray-700 rounded-full p-4 transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                        <svg clip-rule="evenodd" class="h-12 fill-current text-white" fill-rule="evenodd"
-                            stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z"
-                                fill-rule="nonzero" />
-                        </svg>
-                    </div>
-                </button>
 
-            </div>
 
-        </form>
-        <div id="message" class="hidden text-7xl font-bold text-gray-700 mt-32">Thanks for Subscribing!</div>
-    </section>
+
+
+
+
+
+
+
+
+
+
+
 
     <section class="py-12 bg-gray-900 px-32">
 
@@ -231,14 +183,14 @@
                 <p>&copy;2022 All rights reserved</p>
             </div>
             <div class="flex items-center space-x-12 justify-center"><svg xmlns="http://www.w3.org/2000/svg"
-                    class="fill-current text-gray-500 h-8" viewBox="0 0 24 24">
+                    class="fill-current text-gray-500 h-6" viewBox="0 0 24 24">
                     <path
                         d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg><svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-500 h-8"
+                </svg><svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-500 h-6"
                     viewBox="0 0 24 24">
                     <path
                         d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                </svg><svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-500 h-8"
+                </svg><svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-500 h-6"
                     viewBox="0 0 24 24">
                     <path
                         d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
@@ -256,51 +208,41 @@
 
     <script>
 
-        const myForm = document.getElementById('myForm')
+        // const myForm = document.getElementById('myForm')
 
-        myForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const formData = new FormData(this)
+        // myForm.addEventListener('submit', function (e) {
+        //     e.preventDefault();
+        //     const formData = new FormData(this)
 
-            fetch("https://formsubmit.co/ajax/darshanpk2001@gmail.com", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    showMessage();
-                    console.log(data.message)
-                })
-                .catch(error => console.log(error));
+        //     fetch("https://formsubmit.co/ajax/darshanpk2001@gmail.com", {
+        //         method: "POST",
+        //         body: formData
+        //     })
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             showMessage();
+        //             console.log(data.message)
+        //         })
+        //         .catch(error => console.log(error));
 
 
-        })
+        // })
 
-        function showMessage() {
-            document.getElementById('myForm').classList.add('hidden')
-            document.getElementById('message').classList.remove('hidden')
-        }
+        // function showMessage() {
+        //     document.getElementById('myForm').classList.add('hidden')
+        //     document.getElementById('message').classList.remove('hidden')
+        // }
 
 
         gsap.from('.logoCircle', { scale: 2 })
         gsap.from('.caption', { opacity: 0, stagger: 0.1, duration: 5 })
 
-        let aboutTl = gsap.timeline().pause()
-            .from('.aboutPic', { opacity: 0, x: 100, rotate: 30 })
-
-        let workTl = gsap.timeline().pause()
-            .from('.workPic', { opacity: 0, x: 100, rotate: 30 })
-
-        let comTl = gsap.timeline().pause()
-            .from('.comPic', { opacity: 0, x: 100, rotate: 30 })
-
-        let eventTl = gsap.timeline().pause()
-            .from('.eventPic', { opacity: 0, x: 100, rotate: 30 })
 
 
-        let menu = gsap.timeline({
+
+        let line1 = gsap.timeline({
             scrollTrigger: {
-                trigger: '#menu',
+                trigger: '.line1',
                 toggleActions: 'play none none pause',
                 scrub: true,
                 start: 'top bottom'
@@ -309,24 +251,21 @@
 
         )
 
-        menu.from('.menuCard', {
-            x: 200, stagger: 0.1,
+        line1.from('.line1', {
+            scale: 0,
             onStart: () => showMenu.play(),
             onReverseComplete: () => showMenu.reverse()
-            // onComplete: () => red()
+
         })
-        // function red() {
-        //     document.body.classList.remove('bg-black')
-        //     document.body.classList.add('bg-red-300')
-        // }
+
 
         let showMenu = gsap.timeline().pause()
         showMenu.from('.navbar', { opacity: 0 })
 
-
-        let story = gsap.timeline({
+        // -------------------------------------------------ABOUT----------------------------------------
+        let about = gsap.timeline({
             scrollTrigger: {
-                trigger: '.story',
+                trigger: '#about',
                 toggleActions: 'play none none pause',
                 scrub: true,
                 start: 'top bottom'
@@ -335,10 +274,107 @@
 
         )
 
-        story.from('.ouat', { x: 100, opacity: 0 })
-            .from('.titleStory', { scale: 1.5 }, '-=0.7')
-            .from('.storyLine', { scale: -1 }, '-=0.7')
-            .from('.storyContent', { opacity: 0, x: -100 }, '-=0.7')
+        about.to('.aboutCircle', { scale: 150 })
+            .from('.aboutLine', { scale: -1 }, '-=0.5')
+
+        let line2 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.line2',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        }
+
+        )
+
+        line2.from('.line2', {
+            scale: 0,
+
+
+        })
+
+        // ------------------------------------------------WORK--------------------------------------
+        let work = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#work',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        }
+
+        )
+
+        work.to('.workCircle', { scale: 150 })
+            .from('.workLine', { scale: -1 }, '-=0.5')
+
+
+        let line3 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.line3',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        }
+
+        )
+
+        line3.from('.line3', {
+            scale: 0,
+
+
+        })
+
+        // ----------------------------------------------EVENTS--------------------------------------
+
+        let events = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#events',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        }
+
+        )
+
+        events.to('.eventsCircle', { scale: 150 })
+            .from('.eventsLine', { scale: -1 }, '-=0.5')
+
+
+        let line4 = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.line4',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        }
+
+        )
+
+        line4.from('.line4', {
+            scale: 0,
+
+
+        })
+
+        let involved = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#involved',
+                toggleActions: 'play none none pause',
+                scrub: true,
+                start: 'top bottom'
+            }
+        }
+
+        )
+
+        involved.to('.involvedCircle', { scale: 150 })
+            .from('.involvedLine', { scale: -1 }, '-=0.5')
+
     </script>
 </body>
 
