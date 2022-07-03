@@ -47,7 +47,10 @@
     <section class="flex items-center justify-center  md:h-screen space-y-32">
         <div class="space-y-12">
             <img class="mx-auto h-72 bg-white rounded-full logoCircle" src="images/logo.png" alt="">
-            <p class="caption text-center text-3xl">Equitable, innovative & life-long learning communities</p>
+            <p class="caption text-center text-3xl lg:text-pink-800 xl:text-yellow-600">Equitable, innovative &
+                life-long learning
+                communities
+            </p>
         </div>
 
 
@@ -279,6 +282,12 @@
 
         about.to('.aboutCircle', { scale: 100 })
             .from('.aboutLine', { scale: -1 }, '-=0.5')
+            .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
+
+        function purple() {
+            document.body.classList.toggle('bg-black')
+            document.body.classList.toggle('bg-purple-300')
+        }
 
         let line2 = gsap.timeline({
             scrollTrigger: {
@@ -311,6 +320,12 @@
 
         work.to('.workCircle', { scale: 100 })
             .from('.workLine', { scale: -1 }, '-=0.5')
+            .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
+
+        function changeBG() {
+            document.body.classList.toggle('bg-purple-300')
+            document.body.classList.toggle('bg-yellow-200')
+        }
 
 
         let line3 = gsap.timeline({
@@ -345,6 +360,12 @@
 
         events.to('.eventsCircle', { scale: 100 })
             .from('.eventsLine', { scale: -1 }, '-=0.5')
+            .to('.eventsCircle', { onStart: () => pink(), onReverseComplete: () => pink() })
+
+        function pink() {
+            document.body.classList.toggle('bg-yellow-200')
+            document.body.classList.toggle('bg-pink-300')
+        }
 
 
         let line4 = gsap.timeline({
@@ -364,6 +385,8 @@
 
         })
 
+        // -------------------------------------------------INVOLVED--------------------------
+
         let involved = gsap.timeline({
             scrollTrigger: {
                 trigger: '#involved',
@@ -377,6 +400,12 @@
 
         involved.to('.involvedCircle', { scale: 100 })
             .from('.involvedLine', { scale: -1 }, '-=0.5')
+            .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
+
+        function green() {
+            document.body.classList.toggle('bg-pink-300')
+            document.body.classList.toggle('bg-green-200')
+        }
 
     </script>
 </body>
