@@ -28,14 +28,43 @@
             </div>
 
 
-            <div class="">
-                <div class=""><svg class="fill-current text-white h-12" clip-rule="evenodd" fill-rule="evenodd"
-                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
+            <div class="relative">
+                <button class="hamburger" onclick="menu.play()"><svg id="menu" class="fill-current text-white h-12"
+                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
                             fill-rule="nonzero" />
-                    </svg></div>
+                    </svg></button>
+                <button class="close" onclick="menu.reverse()">
+                    <svg clip-rule="evenodd" class="fill-current text-white h-12" fill-rule="evenodd"
+                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+                    </svg>
+                </button>
+                <div class="w-screen absolute top-12 left-0">
+                    <div class=" text-lg">
+                        <a href="about.html" class="">
+                            <div class="bg-purple-300 text-purple-700 rounded-full py-6 my-4  px-6 menuItem">About Us
+                            </div>
+                        </a>
+                        <a href="work.html">
+                            <div class="bg-yellow-200 text-yellow-500 rounded-full py-6 my-4  px-6 menuItem">Our Work
+                            </div>
+                        </a>
+                        <a href="events.html">
+                            <div class="bg-pink-300 rounded-full py-6 text-pink-500 my-4  px-6 menuItem">Events and Blog
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="bg-green-200 rounded-full py-6  px-6 my-4 text-green-500 menuItem">Get Involved
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -106,6 +135,15 @@
         gsap.from('.title', { opacity: 0, duration: 2 })
         gsap.from('.line', { scale: -1 })
         gsap.from('.card', { rotate: 15, opacity: 0, stagger: 0.1 })
+
+        // ------------------------------------------------MENU-------------------------------------
+
+        let menu = gsap.timeline().pause()
+        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
+        menu.from('.close', { opacity: 0 }, '-=1')
+        menu.to('.hamburger', { opacity: 0 }, '-=1')
+
+
     </script>
 </body>
 
