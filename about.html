@@ -43,13 +43,15 @@
     </div>
 
 
-    <section class="flex items-center max-w-7xl mx-auto h-screen text-white py-32">
+    <section class="flex items-center justify-center h-screen text-white py-32">
 
         <div class="w-full">
-            <div class=" text-7xl about">About <span class="cursive text-8xl">Us.</span> </div>
-            <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 "></div>
-            <div class=" space-x-12 mt-20">
-                <div class="max-w-xl about text-xl leading-normal transform">Yugen is an organization that was born
+            <div class=" text-5xl about text-center">About <span class="cursive text-7xl">Us.</span> </div>
+            <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-2 w-72 mx-auto line"></div>
+            <div class=" space-x-12 mt-8">
+                <div class="max-w-xl about text-xl leading-normal transform text-center mx-auto">Yugen is an
+                    organization that
+                    was born
                     from a
                     lifetime of
                     work,
@@ -97,10 +99,10 @@
         </div>
     </section>
 
-    <section class="flex items-center justify-center text-white py-32 text-7xl space-x-12">
+    <section class="flex items-center justify-center text-white py-32 text-5xl space-x-12">
         <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 "></div>
         <div class="">
-            <p>Our <span class="text-9xl cursive">Community</span> <br></p>
+            <p>Our <span class="text-7xl cursive">Community</span> <br></p>
         </div>
         <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 "></div>
     </section>
@@ -159,8 +161,8 @@
 
 
     <section class="volunteers  text-white text-3xl py-32 leading-normal">
-        <p class="text-7xl px-4 text-center title">Meet out <span class="text-9xl cursive">volunteers</span> </p>
-        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mb-28  w-72 mt-12 mx-auto"></div>
+        <p class="text-5xl px-4 text-center title">Meet out <span class="text-7xl cursive">volunteers</span> </p>
+        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mb-12  w-72 mt-6 mx-auto"></div>
         <div class=" flex flex-wrap items-center space-x-12">
             <div class="ml-12 row1">Maria T. Jones</div>
             <div class="bg-white row1  w-4 transform rotate-45 h-4"></div>
@@ -262,7 +264,8 @@
         }
 
 
-        gsap.from('.about', { opacity: 0, x: 30, stagger: 0.1, duration: 5 })
+        gsap.from('.about', { opacity: 0, stagger: 0.1, duration: 2 })
+        gsap.from('.line', { scale: -1 })
 
         let volunteers = gsap.timeline({
             scrollTrigger: {
