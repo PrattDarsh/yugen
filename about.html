@@ -74,7 +74,7 @@
 
 
     <section class="flex items-center justify-center h-screen text-white py-32">
-
+        <div class="absolute border-2 border-gray-600 rounded-full -bottom-32 -left-32 p-96"></div>
         <div class="w-full">
             <div class=" text-5xl about text-center">About <span class="cursive text-7xl">Us.</span> </div>
             <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-2 w-72 mx-auto line"></div>
@@ -98,30 +98,30 @@
 
 
     </section>
-    <section class="grid grid-cols-3">
-        <div class="col-span-2 p-12">
-            <iframe id="vidContainer" class="w-full h-full"
-                src="https://www.youtube.com/embed/bYxzOZj0NTY?autoplay=1&controls=0" title="YouTube video player"
-                frameborder="0"
+    <section class="grid grid-cols-1 md:grid-cols-3">
+
+        <div class="col-span-2 p-12 z-50">
+            <iframe id="vidContainer" class=" w-full h-full" src="https://www.youtube.com/embed/bYxzOZj0NTY?controls=0"
+                title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
 
         <div class="text-white text-xl space-y-4 ">
             <button onclick="playVid(1)" class="border-b w-full text-left">
-                <p class="pl-4 py-8 ">Our theory of change</p>
+                <p class="pl-4 py-8 item font-bold text-2xl" id="menu1">Our theory of change</p>
             </button>
-            <button onclick="playVid(2)" class="border-b w-full text-left">
-                <p class="pl-4 py-8 ">Our Values</p>
+            <button onclick="playVid(2) " class="border-b w-full text-left">
+                <p class="pl-4 py-8 item" id="menu2">Our Values</p>
             </button>
             <button onclick="playVid(3)" class="border-b w-full text-left">
-                <p class="pl-4 py-8 ">How it all started</p>
+                <p class="pl-4 py-8 item" id="menu3">How it all started</p>
             </button>
             <button onclick="playVid(4)" class="border-b w-full text-left">
-                <p class="pl-4 py-8 ">What happened in 2019</p>
+                <p class="pl-4 py-8 item" id="menu4">What happened in 2019</p>
             </button>
             <button onclick="playVid(5)" class="border-b w-full text-left">
-                <p class="pl-4 py-8 ">Why we do what we do</p>
+                <p class="pl-4 py-8 item" id="menu5">Why we do what we do</p>
             </button>
 
 
@@ -129,16 +129,17 @@
         </div>
     </section>
 
-    <section class="flex items-center justify-center text-white py-32 text-5xl space-x-12">
-        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 "></div>
+    <section class="flex items-center justify-center text-white py-32 text-5xl space-x-12 ">
+        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px  w-72 "></div>
         <div class="">
             <p>Our <span class="text-7xl cursive">Community</span> <br></p>
         </div>
-        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-8 w-72 "></div>
+        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px  w-72 "></div>
+
     </section>
 
-    <section class="relative h-screen flex items-center justify-center space-x-12" id="comm">
-
+    <section class="relative h-screen flex items-center justify-center space-x-12 relative" id="comm">
+        <div class="absolute border-2 border-gray-600 rounded-full -bottom-32 -right-32 p-96"></div>
         <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 rotate-6 transform mem1" alt="">
         <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 -rotate-12 transform mem2" alt="">
         <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 rotate-12 transform mem3" alt="">
@@ -274,19 +275,50 @@
     <script>
         function playVid(id) {
             if (id == 1) {
-                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/bYxzOZj0NTY?autoplay=1&controls=0"
+                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/bYxzOZj0NTY?controls=0"
+
+                document.getElementById('menu1').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
             }
             if (id == 2) {
-                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/FIyGqQzLZmM?autoplay=1&controls=0"
+                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/FIyGqQzLZmM?controls=0"
+
+                document.getElementById('menu2').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+
             }
             if (id == 3) {
-                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/qx6wf-SUZc8?autoplay=1&controls=0"
+                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/qx6wf-SUZc8?controls=0"
+
+                document.getElementById('menu3').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
             }
             if (id == 4) {
-                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/gLoHGjC45Hs?autoplay=1&controls=0"
+                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/gLoHGjC45Hs?controls=0"
+
+                document.getElementById('menu4').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
             }
             if (id == 5) {
-                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/id8p9zGqxVU?autoplay=1&controls=0"
+                document.getElementById('vidContainer').src = "https://www.youtube.com/embed/id8p9zGqxVU?controls=0"
+
+                document.getElementById('menu5').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
             }
             // if (id == 6) {
             //     document.getElementById('vidContainer').src = "https://www.youtube.com/embed/gLoHGjC45Hs"
