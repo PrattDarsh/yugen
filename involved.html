@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+    <title>Get Involved</title>
+</head>
+<style>
+    .cursive {
+        font-family: 'square peg';
+    }
+
+</style>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+    <div class="fixed w-full">
+        <div class="flex justify-between px-32 items-center space-x-12 p-6 text-white  z-50">
+            <div class="">
+                <a href="index.html">
+                    <img src="images/logo.png" class="h-24 bg-white rounded-full" alt="">
+
+                </a>
+
+            </div>
+
+
+            <div class="relative">
+                <button class="hamburger" onclick="menu.play()"><svg id="menu" class="fill-current text-white h-12"
+                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
+                            fill-rule="nonzero" />
+                    </svg></button>
+                <button class="close" onclick="menu.reverse()">
+                    <svg clip-rule="evenodd" class="fill-current text-white h-12" fill-rule="evenodd"
+                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+                    </svg>
+                </button>
+                <div class="w-screen absolute top-12 left-0">
+                    <div class=" text-lg">
+                        <a href="about.html" class="">
+                            <div class="bg-purple-300 text-purple-700 rounded-full py-6 my-4  px-6 menuItem">About Us
+                            </div>
+                        </a>
+                        <a href="work.html">
+                            <div class="bg-yellow-200 text-yellow-500 rounded-full py-6 my-4  px-6 menuItem">Our Work
+                            </div>
+                        </a>
+                        <a href="events.html">
+                            <div class="bg-pink-300 rounded-full py-6 text-pink-500 my-4  px-6 menuItem">Events and Blog
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="bg-green-200 rounded-full py-6  px-6 my-4 text-green-500 menuItem">Get Involved
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="z-50">
+        <div class="py-32 space-y-16 ">
+            <div class="flex items-end justify-end" class="" onclick="">
+                <div class="px-48">
+                    <p class="text-8xl text-right " onmouseenter="clicked(1)" onmouseleave="clicked(1)">Volunteer</p>
+                    <!-- <div class="h-1 w-12 bg-white"></div> -->
+                    <p class="text-right max-w-lg mt-4 hidden mt-12" id="volunteerDeets">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit.
+                        Deleniti
+                        totam
+                        aperiam
+                        pariatur distinctio
+                        eius voluptate ut tempore quas enim quibusdam. Rerum consectetur ab odio veritatis accusamus
+                        architecto, id quod facilis.</p>
+                </div>
+
+            </div>
+            <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-2 w-full mx-auto line">
+            </div>
+            <div class="flex items-start justify-start" class="" onclick="">
+                <div class="px-48">
+                    <p class="text-8xl" onmouseenter="clicked(2)" onmouseleave="clicked(2)">Buy us a <span
+                            class="cursive text-9xl">book</span>
+                    </p>
+                    <!-- <div class="h-1 w-12 bg-white"></div> -->
+                    <p class=" max-w-lg mt-4 hidden mb-12" id="bookDeets">Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Deleniti
+                        totam
+                        aperiam
+                        pariatur distinctio
+                        eius voluptate ut tempore quas enim quibusdam. Rerum consectetur ab odio veritatis accusamus
+                        architecto, id quod facilis.</p>
+                </div>
+
+            </div>
+            <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-2 w-full mx-auto line">
+            </div>
+            <div class="flex items-end justify-end" class="" onclick="">
+                <div class="px-48">
+                    <p class="text-8xl text-right " onmouseenter="clicked(3)" onmouseleave="clicked(3)">Donate</p>
+                    <!-- <div class="h-1 w-12 bg-white"></div> -->
+                    <p class="text-right max-w-lg  hidden mt-12" id="donateDeets">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing
+                        elit.
+                        Deleniti
+                        totam
+                        aperiam
+                        pariatur distinctio
+                        eius voluptate ut tempore quas enim quibusdam. Rerum consectetur ab odio veritatis accusamus
+                        architecto, id quod facilis.</p>
+                </div>
+
+            </div>
+            <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-2 w-full mx-auto line">
+            </div>
+            <div class="flex " class="" onclick="">
+                <div class="px-48">
+                    <p class="text-8xl" onmouseenter="clicked(4)" onmouseleave="clicked(4)">Join our <span
+                            class="cursive text-9xl"> team</span>
+                    </p>
+                    <!-- <div class="h-1 w-12 bg-white"></div> -->
+                    <p class=" max-w-lg mt-12 hidden " id="teamDeets">Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Deleniti
+                        totam
+                        aperiam
+                        pariatur distinctio
+                        eius voluptate ut tempore quas enim quibusdam. Rerum consectetur ab odio veritatis accusamus
+                        architecto, id quod facilis.</p>
+                </div>
+
+            </div>
+            <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mt-2 w-full mx-auto line">
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script>
+        function clicked(id) {
+            switch (id) {
+                case 1: document.getElementById('volunteerDeets').classList.toggle('hidden'); break;
+                case 2: document.getElementById('bookDeets').classList.toggle('hidden'); break;
+                case 3: document.getElementById('donateDeets').classList.toggle('hidden'); break;
+                case 4: document.getElementById('teamDeets').classList.toggle('hidden'); break;
+            }
+        }
+
+
+
+        // ------------------------------------------------MENU-------------------------------------
+
+        let menu = gsap.timeline().pause()
+        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
+        menu.from('.close', { opacity: 0 }, '-=1')
+        menu.to('.hamburger', { opacity: 0 }, '-=1')
+
+
+    </script>
+</body>
+
+</html>
