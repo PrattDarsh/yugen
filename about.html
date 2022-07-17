@@ -98,7 +98,7 @@
 
 
     </section>
-    <section class="grid grid-cols-1 md:grid-cols-3">
+    <section class="grid grid-cols-1 md:grid-cols-3 videos">
 
         <div class="col-span-2 p-12 z-50">
             <iframe id="vidContainer" class=" w-full h-full" src="https://www.youtube.com/embed/bYxzOZj0NTY?controls=0"
@@ -108,19 +108,19 @@
         </div>
 
         <div class="text-white text-xl space-y-4 ">
-            <button onclick="playVid(1)" class="border-b w-full text-left">
+            <button onclick="playVid(1)" class="border-b w-full text-left vmenu">
                 <p class="pl-4 py-8 item font-bold text-2xl" id="menu1">Our theory of change</p>
             </button>
-            <button onclick="playVid(2) " class="border-b w-full text-left">
+            <button onclick="playVid(2) " class="border-b w-full text-left vmenu">
                 <p class="pl-4 py-8 item" id="menu2">Our Values</p>
             </button>
-            <button onclick="playVid(3)" class="border-b w-full text-left">
+            <button onclick="playVid(3)" class="border-b w-full text-left vmenu">
                 <p class="pl-4 py-8 item" id="menu3">How it all started</p>
             </button>
-            <button onclick="playVid(4)" class="border-b w-full text-left">
+            <button onclick="playVid(4)" class="border-b w-full text-left vmenu">
                 <p class="pl-4 py-8 item" id="menu4">What happened in 2019</p>
             </button>
-            <button onclick="playVid(5)" class="border-b w-full text-left">
+            <button onclick="playVid(5)" class="border-b w-full text-left vmenu">
                 <p class="pl-4 py-8 item" id="menu5">Why we do what we do</p>
             </button>
 
@@ -348,16 +348,16 @@
 
         let vidsTl = gsap.timeline({
             scrollTrigger: {
-                trigger: '.sec2',
+                trigger: '.videos',
                 toggleActions: 'play none none pause',
                 scrub: true,
-                start: 'top center'
+                start: 'top bottom'
             }
         }
 
         )
-        vidsTl.from('.left', { x: 200, stagger: 0.1, })
-            .from('.right', { x: -200, stagger: 0.1 }, '-=0.5')
+        vidsTl.from('.vmenu', { x: 30, opacity: 0, stagger: 0.1, }, '-=1')
+
 
 
 
