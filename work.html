@@ -9,84 +9,312 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
     <title>Our Work</title>
 </head>
+<style>
+    .cursive {
+        font-family: 'square peg';
+    }
+
+</style>
+
+<body class="bg-black text-white overflow-x-hidden">
+    <div class="fixed w-full z-50 navbar">
+        <div class="flex justify-between  px-4 md:px-32 items-center space-x-12 text-white py-6 z-50">
+            <div class="">
+                <a href="index.html">
+                    <img src="images/logo.png" class="h-24 bg-white rounded-full" alt="">
+
+                </a>
+
+            </div>
 
 
-<body style="background-color: #2a9d8f; font-family: 'Nanum Pen Script', cursive;">
-    <a href="index.html"><img src="images/logo.svg" class="z-50 h-32 lg:h-72 absolute top-0" alt=""></a>
-    <img src="images/work.svg" class="absolute top-0 left-0 md:right-32 max-w-xs lg:max-w-xl " alt="">
-    <div class="grid max-w-7xl mx-auto grid-cols-1 lg:grid-cols-2 mt-56 px-4">
-        <div class="text-3xl">
-            <p>
-                We believe that quality education is essential to reforming lives and equipping children to grow into
-                thriving individuals with the potential to leave a great impact on their communities. But in our rush to
-                reform education, we simply cannot forget the layers that are very close to student learning – the adult
-                community in schools. Learn more about the work we do to realize our mission here.
-            </p>
-            <div class="mt-12 mb-4 space-x-8">
-                <button onclick="show1()" id="but1" class="border-white border-b-4 text-white">Our Work</button>
-                <button onclick="show2()" id="but2" class="border-white">Our Theory of Change</button>
-                <button onclick="show3()" id="but3" class="border-white">Gallery</button>
-            </div>
-            <div id="vid1" class="relative h-full w-full overflow-hidden pt-32"> <iframe
-                    class=" absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/id8p9zGqxVU"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe></div>
+            <div class="relative">
+                <button class="hamburger" onclick="menu.play()"><svg id="menu" class="fill-current text-white h-12"
+                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
+                            fill-rule="nonzero" />
+                    </svg></button>
+                <button class="close" onclick="menu.reverse()">
+                    <svg clip-rule="evenodd" class="fill-current text-white h-12" fill-rule="evenodd"
+                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+                    </svg>
+                </button>
+                <div class="w-screen absolute top-12 left-0">
+                    <div class=" text-lg">
+                        <a href="about.html" class="">
+                            <div class="bg-purple-300 text-purple-700 rounded-full py-6 my-4  px-6 menuItem">About Us
+                            </div>
+                        </a>
+                        <a href="work.html">
+                            <div class="bg-yellow-200 text-yellow-500 rounded-full py-6 my-4  px-6 menuItem">Our Work
+                            </div>
+                        </a>
+                        <a href="events.html">
+                            <div class="bg-pink-300 rounded-full py-6 text-pink-500 my-4  px-6 menuItem">Events and Blog
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="bg-green-200 rounded-full py-6  px-6 my-4 text-green-500 menuItem">Get Involved
+                            </div>
+                        </a>
+                    </div>
 
-            <div id="vid2" class="hidden relative h-full w-full overflow-hidden pt-32">
-                <iframe width="560" height="315" class="absolute top-0 left-0 w-full h-full "
-                    src="https://www.youtube.com/embed/bYxzOZj0NTY" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                </div>
             </div>
-            <div class="hidden relative h-full w-full overflow-hidden pt-32" id="vid3">
-                <iframe width="560" height="315" class="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/1wK6D2KQ07E" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="py-32 text-center title">
+        <p class="text-5xl eventsTitle">Our <span class="cursive text-7xl ">Work</span></p>
+        <div class="bg-gradient-to-r from-indigo-500 mx-auto via-purple-500 to-pink-500 h-px mt-8 w-72 line"></div>
+    </div>
+    <section class="grid grid-cols-1 md:grid-cols-3 md:px-32 space-x-4">
+
+        <div class="relative col-span-2 p-12 z-50  h-96 md:h-full" id="vidContainer">
+
+
+            <div
+                class="absolute inset-0 flex items-center item5  justify-center bg-green-200 text-green-500 rounded-3xl py-12">
+                <div class="space-y-4">
+                    <p class="text-center  text-5xl">The <span class="cursive text-6xl">Title</span></p>
+                    <div class="bg-green-500 h-px mt-2 w-72 mx-auto line">
+                    </div>
+                    <p class="max-w-xl about text-xl leading-normal transform text-center mx-auto">Yugen
+                        is an
+                        organization that
+                        was born
+                        from a
+                        lifetime of
+                        work,
+                        learning &
+                        passion
+                        for
+                        education and we translate this to creating life-long learning communities with the adult groups
+                        in
+                        schools. Sneak a peek into what we believe in to learn more about us! </p>
+                </div>
+
             </div>
+            <div
+                class="absolute inset-0 flex items-center item4  justify-center bg-pink-200 text-pink-500 rounded-3xl py-12">
+                <div class="space-y-4">
+                    <p class="text-center  text-5xl">The <span class="cursive text-6xl">Title</span></p>
+                    <div class="bg-pink-500 h-px mt-2 w-72 mx-auto line">
+                    </div>
+                    <p class="max-w-xl about text-xl leading-normal transform text-center mx-auto">Yugen
+                        is an
+                        organization that
+                        was born
+                        from a
+                        lifetime of
+                        work,
+                        learning &
+                        passion
+                        for
+                        education and we translate this to creating life-long learning communities with the adult groups
+                        in
+                        schools. Sneak a peek into what we believe in to learn more about us! </p>
+                </div>
+
+            </div>
+
+            <div
+                class="absolute inset-0 flex items-center item3  justify-center bg-purple-200 text-purple-500 rounded-3xl py-12">
+                <div class="space-y-4">
+                    <p class="text-center  text-5xl">The <span class="cursive text-6xl">Title</span></p>
+                    <div class="bg-purple-500 h-px mt-2 w-72 mx-auto line">
+                    </div>
+                    <p class="max-w-xl about text-xl leading-normal transform text-center mx-auto">Yugen
+                        is an
+                        organization that
+                        was born
+                        from a
+                        lifetime of
+                        work,
+                        learning &
+                        passion
+                        for
+                        education and we translate this to creating life-long learning communities with the adult groups
+                        in
+                        schools. Sneak a peek into what we believe in to learn more about us! </p>
+                </div>
+
+            </div>
+            <div
+                class="absolute inset-0 flex items-center item2  justify-center bg-blue-200 text-blue-500 rounded-3xl py-12">
+                <div class="space-y-4">
+                    <p class="text-center  text-5xl">The <span class="cursive text-6xl">Title</span></p>
+                    <div class="bg-blue-500 h-px mt-2 w-72 mx-auto line">
+                    </div>
+                    <p class="max-w-xl about text-xl leading-normal transform text-center mx-auto">Yugen
+                        is an
+                        organization that
+                        was born
+                        from a
+                        lifetime of
+                        work,
+                        learning &
+                        passion
+                        for
+                        education and we translate this to creating life-long learning communities with the adult groups
+                        in
+                        schools. Sneak a peek into what we believe in to learn more about us! </p>
+                </div>
+
+            </div>
+
+            <div
+                class="absolute inset-0 flex items-center item1  justify-center bg-purple-200 text-purple-500 rounded-3xl py-12">
+                <div class="space-y-4">
+                    <p class="text-center  text-5xl">The <span class="cursive text-6xl">Title</span></p>
+                    <div class="bg-purple-500 h-px mt-2 w-72 mx-auto line">
+                    </div>
+                    <p class="max-w-xl about text-xl leading-normal transform text-center mx-auto">Yugen
+                        is an
+                        organization that
+                        was born
+                        from a
+                        lifetime of
+                        work,
+                        learning &
+                        passion
+                        for
+                        education and we translate this to creating life-long learning communities with the adult groups
+                        in
+                        schools. Sneak a peek into what we believe in to learn more about us! </p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="text-white text-xl space-y-4 ">
+            <button onclick="playVid(1)" class="border-b w-full text-left">
+                <p class="pl-4 py-8 item font-bold text-2xl" id="menu1">SEL</p>
+            </button>
+            <button onclick="playVid(2) " class="border-b w-full text-left">
+                <p class="pl-4 py-8 item" id="menu2">B4T</p>
+            </button>
+            <button onclick="playVid(3)" class="border-b w-full text-left">
+                <p class="pl-4 py-8 item" id="menu3">SPAG</p>
+            </button>
+            <button onclick="playVid(4)" class="border-b w-full text-left">
+                <p class="pl-4 py-8 item" id="menu4">Retell a story</p>
+            </button>
+            <button onclick="playVid(5)" class="border-b w-full text-left">
+                <p class="pl-4 py-8 item" id="menu5">Other Project</p>
+            </button>
+
 
 
         </div>
-        <div class="order-first h-72"></div>
-    </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script>
-        function show1() {
-            document.getElementById('but1').classList.add('text-white')
-            document.getElementById('but1').classList.add('border-b-4')
-            document.getElementById('but2').classList.remove('text-white')
-            document.getElementById('but3').classList.remove('text-white')
-            document.getElementById('but2').classList.remove('border-b-4')
-            document.getElementById('but3').classList.remove('border-b-4')
-            document.getElementById('vid1').classList.remove('hidden')
-            document.getElementById('vid2').classList.add('hidden')
-            document.getElementById('vid3').classList.add('hidden')
+        function playVid(id) {
+            if (id == 1) {
 
+                item1.play()
+                item2.reverse()
+                item3.reverse()
+                item4.reverse()
+                item5.reverse()
+                document.getElementById('menu1').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+            }
+            if (id == 2) {
+
+                item2.play()
+                item1.reverse()
+                item3.reverse()
+                item4.reverse()
+                item5.reverse()
+                document.getElementById('menu2').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+
+            }
+            if (id == 3) {
+
+                item3.play()
+                item2.reverse()
+                item1.reverse()
+                item4.reverse()
+                item5.reverse()
+                document.getElementById('menu3').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+            }
+            if (id == 4) {
+
+                item4.play()
+                item2.reverse()
+                item3.reverse()
+                item1.reverse()
+                item5.reverse()
+                document.getElementById('menu4').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+            }
+            if (id == 5) {
+
+                item5.play()
+                item2.reverse()
+                item3.reverse()
+                item4.reverse()
+                item1.reverse()
+                document.getElementById('menu5').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+            }
+            // if (id == 6) {
+            //     document.getElementById('vidContainer').src = "https://www.youtube.com/embed/gLoHGjC45Hs"
+            // }
         }
-        function show2() {
-            document.getElementById('but2').classList.add('text-white')
-            document.getElementById('but2').classList.add('border-b-4')
-            document.getElementById('but1').classList.remove('text-white')
-            document.getElementById('but3').classList.remove('text-white')
-            document.getElementById('but1').classList.remove('border-b-4')
-            document.getElementById('but3').classList.remove('border-b-4')
-            document.getElementById('vid2').classList.remove('hidden')
-            document.getElementById('vid1').classList.add('hidden')
-            document.getElementById('vid3').classList.add('hidden')
-        }
-        function show3() {
-            document.getElementById('but3').classList.add('text-white')
-            document.getElementById('but3').classList.add('border-b-4')
-            document.getElementById('but1').classList.remove('text-white')
-            document.getElementById('but2').classList.remove('text-white')
-            document.getElementById('but1').classList.remove('border-b-4')
-            document.getElementById('but2').classList.remove('border-b-4')
-            document.getElementById('vid3').classList.remove('hidden')
-            document.getElementById('vid1').classList.add('hidden')
-            document.getElementById('vid2').classList.add('hidden')
-        }
+
+        // -----------------------------ITEM TIMELINES------------------------------------
+        let item1 = gsap.timeline()
+        item1.from('.item1', { x: -70, opacity: 0, })
+
+        let item2 = gsap.timeline().pause()
+        item2.from('.item2', { x: -70, opacity: 0, })
+
+        let item3 = gsap.timeline().pause()
+        item3.from('.item3', { x: -70, opacity: 0, })
+
+        let item4 = gsap.timeline().pause()
+        item4.from('.item4', { x: -70, opacity: 0, })
+
+        let item5 = gsap.timeline().pause()
+        item5.from('.item5', { x: -70, opacity: 0, })
+
+
+        // ------------------------------------------------MENU-------------------------------------
+
+        let menu = gsap.timeline().pause()
+        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
+        menu.from('.close', { opacity: 0 }, '-=1')
+        menu.to('.hamburger', { opacity: 0 }, '-=1')
     </script>
 </body>
 
