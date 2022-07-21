@@ -9,12 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>Yugen</title>
 </head>
 
 <style>
     .cursive {
         font-family: 'square peg';
+    }
+
+    body {
+        font-family: 'Work Sans', sans-serif;
     }
 
 </style>
@@ -170,31 +175,65 @@
 
     <section class="flex items-center justify-center h-screen" id="involved">
         <div class="p-2 bg-green-200 rounded-full absolute involvedCircle z-30"></div>
-        <div class="text-center text-green-500 z-50">
-            <p class="text-5xl involvedTitle">Get <span class="cursive text-7xl">Involved</span></p>
-            <div class="h-px bg-green-500 involvedLine"></div>
-            <p class="max-w-2xl leading-loose text-lg mt-6 mb-16">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit.
-                Unde
-                laborum
-                praesentium minus
-                eveniet eos,
-                atque incidunt inventore tenetur suscipit, excepturi obcaecati ea recusandae qui facilis. Ratione minima
-                quasi et nobis!</p>
+        <div class="flex items-center space-x-8">
+            <div class="z-30 space-y-12 text-xl">
+                <div class="text-white bg-green-500 py-28 px-24 text-center  rounded-full involvedButtonLeft"
+                    onclick="switchContent(1)">
+                    Volunteer</div>
+                <div class="text-white bg-green-500 py-28 px-24 text-center rounded-full  involvedButtonLeft"
+                    onclick="switchContent(2)">Buy
+                    us a book</div>
+            </div>
+            <div class="text-center text-green-500 z-50 ">
+                <p class="text-5xl involvedTitle" id="headerSlate">Get <span class="cursive text-7xl">Involved</span>
+                </p>
+                <div class="h-px bg-green-500 involvedLine"></div>
+                <p class="max-w-2xl leading-loose text-lg mt-6 mb-16" id="paraSlate">Lorem ipsum dolor sit amet
+                    consectetur adipisicing
+                    elit.
+                    Unde
+                    laborum
+                    praesentium minus
+                    eveniet eos,
+                    atque incidunt inventore tenetur suscipit, excepturi obcaecati ea recusandae qui facilis. Ratione
+                    minima
+                    quasi et nobis!</p>
 
-            <a href="involved.html"
-                class="border-2 border-green-500 rounded-full py-8 px-32 text-lg transform transition delay-45  hover:bg-green-500 hover:text-white">Know
-                More</a>
+                <button onclick="goAway.play()"
+                    class="border-2 border-green-500 submitButton rounded-full py-8 px-32 text-lg transform transition delay-45  hover:bg-green-500 hover:text-white">Know
+                    More</button>
+
+                <!-- <div class=" ">
+                    <form id="myForm">
+                        <textarea rows="1" cols="40"
+                            class="bg-transparent text-center inputButt placeholder-green-500 focus:outline-none border-2 border-green-500 rounded-full py-8 px-4 text-lg">Say Hi!</textarea>
+                        <button type="submit"
+                            class="bg-green-500 mt-4 text-white subButt text-lg rounded-full py-8 px-48 block mx-auto">Submit</button>
+                    </form>
+                </div> -->
+
+
+
+
+            </div>
+            <div class="z-30 space-y-12 text-xl">
+                <div class="text-white bg-green-500 py-28 px-24 text-center  rounded-full  involvedButtonRight"
+                    onclick="switchContent(3)">
+                    Donate</div>
+                <div class="text-white bg-green-500 py-28 px-24 text-center rounded-full  involvedButtonRight"
+                    onclick="switchContent(4)">
+                    Join us</div>
+            </div>
         </div>
+
+
     </section>
 
 
-    <section>
-        <div class="w-px h-screen  mx-auto "></div>
+    <section class="h-screen">
+
     </section>
-    <section>
-        <div class="w-px h-screen  mx-auto "></div>
-    </section>
+
 
 
 
@@ -242,30 +281,7 @@
 
     <script>
 
-        // const myForm = document.getElementById('myForm')
 
-        // myForm.addEventListener('submit', function (e) {
-        //     e.preventDefault();
-        //     const formData = new FormData(this)
-
-        //     fetch("https://formsubmit.co/ajax/darshanpk2001@gmail.com", {
-        //         method: "POST",
-        //         body: formData
-        //     })
-        //         .then(response => response.json())
-        //         .then(data => {
-        //             showMessage();
-        //             console.log(data.message)
-        //         })
-        //         .catch(error => console.log(error));
-
-
-        // })
-
-        // function showMessage() {
-        //     document.getElementById('myForm').classList.add('hidden')
-        //     document.getElementById('message').classList.remove('hidden')
-        // }
 
 
         gsap.from('.logoCircle', { scale: 2 })
@@ -435,6 +451,8 @@
         involved.to('.involvedCircle', { scale: 100 })
             .from('.involvedLine', { scale: -1 }, '-=0.5')
             .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
+            .from('.involvedButtonLeft', { opacity: 0, x: -200, stagger: 0.1 }, '-=1.0')
+            .from('.involvedButtonRight', { opacity: 0, x: 200, stagger: 0.1 }, '-=1.0')
 
         function green() {
             document.body.classList.toggle('bg-pink-300')
@@ -444,12 +462,74 @@
         }
 
 
+        function switchContent(id) {
+
+            switch (id) {
+                case 1: document.getElementById('headerSlate').innerHTML = 'Volunteer';
+                    document.getElementById('paraSlate').innerHTML = 'Volunteer Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut';
+                    break;
+
+                case 2: document.getElementById('headerSlate').innerHTML = 'Buy us a <span class="cursive text-7xl">book</span>';
+                    document.getElementById('paraSlate').innerHTML = 'Book Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut';
+                    break;
+
+
+                case 3: document.getElementById('headerSlate').innerHTML = 'Donate';
+                    document.getElementById('paraSlate').innerHTML = 'Donate Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut';
+                    break;
+
+                case 4: document.getElementById('headerSlate').innerHTML = 'Join <span class="text-7xl cursive">Us</span>';
+                    document.getElementById('paraSlate').innerHTML = 'Join us Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut';
+                    break;
+            }
+        }
+
+        // let goAway = gsap.timeline().pause();
+        // goAway.to('.involvedButtonLeft', { x: -200, opacity: 0, stagger: 0.1 })
+        // goAway.to('.involvedButtonRight', { x: 200, opacity: 0, stagger: 0.1 }, '-=0.5')
+        // goAway.to('.involvedLine', { opacity: 0, scale: 0 }, '-=0.5')
+        // goAway.to('#headerSlate', { y: -30, opacity: 0 }, '-=0.5')
+        // goAway.to('#paraSlate', { y: 30, opacity: 0 }, '-=0.5')
+        // goAway.to('.submitButton', { y: 30, opacity: 0 }, '-=0.5')
+        // goAway.from('.inputButt', { y: 30, opacity: 0 })
+        // goAway.from('.subButt', { y: 30, opacity: 0 }, '-=0.5')
+
         // ------------------------------------------------MENU-------------------------------------
 
         let menu = gsap.timeline().pause()
         menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
         menu.from('.close', { opacity: 0 }, '-=1')
         menu.to('.hamburger', { opacity: 0 }, '-=1')
+
+
+        // ----------------------------form------------------------------------
+
+
+
+        const myForm = document.getElementById('myForm')
+
+        myForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this)
+
+            fetch("https://formsubmit.co/ajax/darshanpk2001@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    showMessage();
+                    console.log(data.message)
+                })
+                .catch(error => console.log(error));
+
+
+        })
+
+        function showMessage() {
+            document.getElementById('myForm').classList.add('hidden')
+            document.getElementById('message').classList.remove('hidden')
+        }
     </script>
 </body>
 
