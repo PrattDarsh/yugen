@@ -199,9 +199,9 @@
                     minima
                     quasi et nobis!</p>
 
-                <button onclick="goAway.play()"
-                    class="border-2 border-green-500 submitButton rounded-full py-8 px-32 text-lg transform transition delay-45  hover:bg-green-500 hover:text-white">Know
-                    More</button>
+                <a href="mailto:meenakshi@yugen.org.in"
+                    class="border-2 border-green-500 submitButton rounded-full py-8 px-32 text-lg transform transition delay-45  hover:bg-green-500 hover:text-white">Write
+                    to us!</a>
 
                 <!-- <div class=" ">
                     <form id="myForm">
@@ -506,30 +506,30 @@
 
 
 
-        const myForm = document.getElementById('myForm')
+        // const myForm = document.getElementById('myForm')
 
-        myForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const formData = new FormData(this)
+        // myForm.addEventListener('submit', function (e) {
+        //     e.preventDefault();
+        //     const formData = new FormData(this)
 
-            fetch("https://formsubmit.co/ajax/darshanpk2001@gmail.com", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    showMessage();
-                    console.log(data.message)
-                })
-                .catch(error => console.log(error));
+        //     fetch("https://formsubmit.co/ajax/darshanpk2001@gmail.com", {
+        //         method: "POST",
+        //         body: formData
+        //     })
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             showMessage();
+        //             console.log(data.message)
+        //         })
+        //         .catch(error => console.log(error));
 
 
-        })
+        // })
 
-        function showMessage() {
-            document.getElementById('myForm').classList.add('hidden')
-            document.getElementById('message').classList.remove('hidden')
-        }
+        // function showMessage() {
+        //     document.getElementById('myForm').classList.add('hidden')
+        //     document.getElementById('message').classList.remove('hidden')
+        // }
     </script>
 </body>
 
