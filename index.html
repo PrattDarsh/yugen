@@ -22,6 +22,14 @@
         font-family: 'Work Sans', sans-serif;
     }
 
+    .curved {
+        border-radius: 56px 0 0 56px;
+    }
+
+    .curvedFull {
+        border-radius: 56px;
+    }
+
 </style>
 
 <body class="overflow-x-hidden text-white bg-black transition duration-700">
@@ -176,14 +184,7 @@
     <section class="flex items-center justify-center h-screen" id="involved">
         <div class="p-2 bg-green-200 rounded-full absolute involvedCircle z-30"></div>
         <div class="flex items-center space-x-8">
-            <div class="z-30 space-y-12 text-xl">
-                <div class="text-white bg-green-500 py-28 px-24 text-center  rounded-full involvedButtonLeft"
-                    onclick="switchContent(1)">
-                    Volunteer</div>
-                <div class="text-white bg-green-500 py-28 px-24 text-center rounded-full  involvedButtonLeft"
-                    onclick="switchContent(2)">Buy
-                    us a book</div>
-            </div>
+
             <div class="text-center text-green-500 z-50 ">
                 <p class="text-5xl involvedTitle" id="headerSlate">Get <span class="cursive text-7xl">Involved</span>
                 </p>
@@ -216,22 +217,164 @@
 
 
             </div>
-            <div class="z-30 space-y-12 text-xl">
-                <div class="text-white bg-green-500 py-28 px-24 text-center  rounded-full  involvedButtonRight"
-                    onclick="switchContent(3)">
-                    Donate</div>
-                <div class="text-white bg-green-500 py-28 px-24 text-center rounded-full  involvedButtonRight"
-                    onclick="switchContent(4)">
-                    Join us</div>
-            </div>
+
         </div>
 
 
     </section>
 
 
-    <section class="h-screen">
+    <section class="h-screen my-32">
+        <div class="grid grid-cols-1 md:grid-cols-3 pl-32 space-x-4">
 
+            <div class="relative col-span-2 p-12 z-50 h-screen" id="vidContainer">
+
+
+
+                <div
+                    class="absolute inset-0 p-4 flex items-center item4  justify-center bg-white text-pink-500 curvedFull py-12">
+                    <div class="">
+                        <p class="text-center  text-5xl"><span class="cursive text-7xl">Join</span> Us</p>
+                        <div class="bg-pink-500 h-px mt-2 w-72 mx-auto line">
+                        </div>
+                        <p class="max-w-xl my-4 about text-xl leading-normal transform text-center mx-auto">Lorem ipsum
+                            dolor
+                            sit amet consectetur adipisicing elit. Sequi nesciunt quod pariatur, vitae a accusantium
+                            quia magnam tempora voluptatibus laboriosam.</p>
+                        <form action="" class="space-y-4 my-12">
+                            <input type="text"
+                                class="w-full py-6 px-4 rounded-full border-2 border-pink-500 focus:outline-none"
+                                placeholder="Name">
+                            <input type="email"
+                                class="w-full py-6 px-4 rounded-full border-2 border-pink-500 focus:outline-none"
+                                placeholder="Mail">
+                            <button class="w-full text-white py-6 px-4 rounded-full bg-pink-500">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div
+                    class="absolute inset-0  p-4 flex items-center item3  justify-center bg-white text-purple-500 curvedFull py-12">
+                    <div class="">
+                        <p class="text-center  text-5xl"> <span class="cursive text-6xl">Donate</span></p>
+                        <div class="bg-purple-500 h-px mt-2 w-72 mx-auto line">
+                        </div>
+                        <p class="max-w-xl my-4 about text-xl leading-normal transform text-center mx-auto">Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Distinctio, nihil .</p>
+                        <form action="" class="space-y-4 my-12">
+                            <input type="text"
+                                class="w-full py-6 px-4 rounded-full border-2 border-purple-500 focus:outline-none"
+                                placeholder="Name">
+                            <input type="email"
+                                class="w-full py-6 px-4 rounded-full border-2 border-purple-500 focus:outline-none"
+                                placeholder="Mail">
+                            <button class="w-full text-white py-6 px-4 rounded-full bg-purple-500">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+                <div
+                    class="absolute inset-0  p-4 flex items-center item2  justify-center bg-white text-blue-500 curvedFull py-12">
+                    <div class="">
+                        <p class="text-center  text-5xl">Buy us a <span class="cursive text-6xl">Book</span></p>
+                        <div class="bg-blue-500 h-px mt-2 w-72 mx-auto line">
+                        </div>
+                        <p class="max-w-xl my-4 about text-xl leading-normal transform text-center mx-auto">Yugen
+                            is an
+                            organization that
+                            was born
+                            from a
+                            lifetime of
+                            work,
+                            learning &
+                            passion
+                            for
+                            education and we translate this to creating life-long learning communities with the adult
+                            groups
+                            in
+                            schools. Sneak a peek into what we believe in to learn more about us! </p>
+                        <form action="" class="space-y-4 my-12">
+                            <input type="text"
+                                class="w-full py-6 px-4 rounded-full border-2 border-blue-500 focus:outline-none"
+                                placeholder="Name">
+                            <input type="email"
+                                class="w-full py-6 px-4 rounded-full border-2 border-blue-500 focus:outline-none"
+                                placeholder="Mail">
+                            <button class="w-full text-white py-6 px-4 rounded-full bg-blue-500">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div
+                    class="absolute inset-0 p-4 flex items-center item1  justify-center bg-white text-green-500 curvedFull py-12">
+                    <div class="">
+                        <p class="text-center text-5xl"><span class="cursive text-6xl">Volunteer</span></p>
+                        <div class="bg-green-500 h-px mt-2 w-72 mx-auto line">
+                        </div>
+                        <p class="max-w-xl my-4  about text-xl leading-normal transform text-center mx-auto">Yugen
+                            is an
+                            organization that
+                            was born
+                            from a
+                            lifetime of
+                            work,
+                            learning &
+                            passion
+                            for
+                            education and we translate this to creating life-long learning communities with the adult
+                            groups
+                            in
+                            schools. Sneak a peek into what we believe in to learn more about us! </p>
+                        <form action="" class="space-y-4 my-12">
+                            <input type="text"
+                                class="w-full py-6 px-4 rounded-full border-2 border-green-500 focus:outline-none"
+                                placeholder="Name">
+                            <input type="email"
+                                class="w-full py-6 px-4 rounded-full border-2 border-green-500 focus:outline-none"
+                                placeholder="Mail">
+                            <button class="w-full text-white py-6 px-4 rounded-full bg-green-500">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="text-green-500 text-xl space-y-4 z-30">
+                <button onclick="playVid(1)" class="bg-green-500 text-white curved w-full text-left workmenu">
+                    <p class="pl-4 py-8 item font-bold text-2xl" id="menu1">Volunteer</p>
+                </button>
+                <button onclick="playVid(2) "
+                    class="bg-green-500 curved rounded-l-3xl text-white w-full text-left workmenu">
+                    <p class="pl-4 py-8 item" id="menu2">Buy us a book</p>
+                </button>
+                <button onclick="playVid(3)"
+                    class="bg-green-500 curved rounded-l-3xl text-white w-full text-left workmenu">
+                    <p class="pl-4 py-8 item" id="menu3">Donate</p>
+                </button>
+                <button onclick="playVid(4)"
+                    class="bg-green-500 curved rounded-l-3xl text-white w-full text-left workmenu">
+                    <p class="pl-4 py-8 item" id="menu4">Join us</p>
+                </button>
+
+
+
+
+            </div>
+
+
+
+        </div>
     </section>
 
 
@@ -483,6 +626,83 @@
                     break;
             }
         }
+
+
+        function playVid(id) {
+            if (id == 1) {
+
+                item1.play()
+                item2.reverse()
+                item3.reverse()
+                item4.reverse()
+                item5.reverse()
+                document.getElementById('menu1').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+            }
+            if (id == 2) {
+
+                item2.play()
+                item1.reverse()
+                item3.reverse()
+                item4.reverse()
+                item5.reverse()
+                document.getElementById('menu2').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+
+            }
+            if (id == 3) {
+
+                item3.play()
+                item2.reverse()
+                item1.reverse()
+                item4.reverse()
+                item5.reverse()
+                document.getElementById('menu3').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+            }
+            if (id == 4) {
+
+                item4.play()
+                item2.reverse()
+                item3.reverse()
+                item1.reverse()
+                item5.reverse()
+                document.getElementById('menu4').classList.add('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+            }
+
+            // if (id == 6) {
+            //     document.getElementById('vidContainer').src = "https://www.youtube.com/embed/gLoHGjC45Hs"
+            // }
+        }
+
+        // -----------------------------ITEM TIMELINES------------------------------------
+        let item1 = gsap.timeline()
+        item1.from('.item1', { rotate: -5, x: -200, opacity: 0, display: 'none', })
+
+        let item2 = gsap.timeline().pause()
+        item2.from('.item2', { rotate: -5, x: -200, opacity: 0, display: 'none' })
+
+        let item3 = gsap.timeline().pause()
+        item3.from('.item3', { rotate: -5, x: -200, opacity: 0, display: 'none' })
+
+        let item4 = gsap.timeline().pause()
+        item4.from('.item4', { rotate: -5, x: -200, opacity: 0, display: 'none' })
+
+        let item5 = gsap.timeline().pause()
+        item5.from('.item5', { rotate: -15, x: -200, opacity: 0, display: 'none' })
 
         // let goAway = gsap.timeline().pause();
         // goAway.to('.involvedButtonLeft', { x: -200, opacity: 0, stagger: 0.1 })
