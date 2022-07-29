@@ -169,7 +169,7 @@
     </section>
 
 
-    <section class="flex items-center justify-center h-screen" id="involved">
+    <section class="flex items-center justify-center" id="involved">
         <div class="p-2 bg-green-200 rounded-full absolute involvedCircle z-30"></div>
         <div class="flex items-center space-x-8">
 
@@ -177,30 +177,56 @@
                 <p class="text-5xl involvedTitle" id="headerSlate">Get <span class="cursive text-7xl">Involved</span>
                 </p>
                 <div class="h-px bg-green-500 involvedLine"></div>
-                <p class="max-w-2xl leading-loose text-lg mt-6 mb-16" id="paraSlate">Lorem ipsum dolor sit amet
-                    consectetur adipisicing
-                    elit.
-                    Unde
-                    laborum
-                    praesentium minus
-                    eveniet eos,
-                    atque incidunt inventore tenetur suscipit, excepturi obcaecati ea recusandae qui facilis. Ratione
-                    minima
-                    quasi et nobis!</p>
 
-                <a href="mailto:meenakshi@yugen.org.in"
-                    class="border-2 border-green-500 submitButton rounded-full py-8 px-32 text-lg transform transition delay-45  hover:bg-green-500 hover:text-white">Write
-                    to us!</a>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-32 py-12 text-xl">
+                    <button onclick="playVid(1)">
+                        <div class="">
 
-                <!-- <div class=" ">
-                    <form id="myForm">
-                        <textarea rows="1" cols="40"
-                            class="bg-transparent text-center inputButt placeholder-green-500 focus:outline-none border-2 border-green-500 rounded-full py-8 px-4 text-lg">Say Hi!</textarea>
-                        <button type="submit"
-                            class="bg-green-500 mt-4 text-white subButt text-lg rounded-full py-8 px-48 block mx-auto">Submit</button>
-                    </form>
-                </div> -->
+                            <p>
+                                Volunteer
+                            </p>
 
+
+                            <div class="w-2 h-2 rounded-full mx-auto bg-green-500"></div>
+                        </div>
+                    </button>
+
+                    <button onclick="playVid(2)">
+                        <div class="">
+
+                            <p>
+                                Buy us a book
+                            </p>
+
+
+                            <div class="w-2 h-2 rounded-full mx-auto bg-green-500"></div>
+                        </div>
+                    </button>
+
+                    <button onclick="playVid(3)">
+                        <div class="">
+
+                            <p>
+                                Donate
+                            </p>
+
+
+                            <div class="w-2 h-2 rounded-full mx-auto bg-green-500"></div>
+                        </div>
+                    </button>
+
+                    <button onclick="playVid(4)">
+                        <div class="">
+
+                            <p>
+                                Join us
+                            </p>
+
+
+                            <div class="w-2 h-2 rounded-full mx-auto bg-green-500"></div>
+                        </div>
+                    </button>
+                </div>
 
 
 
@@ -212,10 +238,10 @@
     </section>
 
 
-    <section class="h-screen my-32">
-        <div class="grid grid-cols-1 md:grid-cols-3 pl-32 space-x-4 items-center">
+    <section class="h-screen my-12">
+        <div class="md:px-32 ">
 
-            <div class="relative col-span-2 p-12 z-50 h-screen" id="vidContainer">
+            <div class="relative  md:p-12 z-50 h-screen" id="vidContainer">
 
 
 
@@ -330,29 +356,6 @@
 
 
             </div>
-            <div class="text-green-500 text-xl space-y-4 z-30">
-                <button onclick="playVid(1)"
-                    class="focus:bg-green-500 border-green-500 focus:text-white text-green-500 border-l transition easeInOut duration-100 border-b border-t curved w-full text-left workmenu">
-                    <p class="pl-4 py-8 item font-bold text-2xl" id="menu1">Volunteer</p>
-                </button>
-                <button onclick="playVid(2) "
-                    class="focus:bg-green-500 border-green-500 focus:text-white text-green-500 border-l transition easeInOut duration-100 border-b border-t curved w-full text-left workmenu">
-                    <p class="pl-4 py-8 item" id="menu2">Buy us a book</p>
-                </button>
-                <button onclick="playVid(3)"
-                    class="focus:bg-green-500 border-green-500 focus:text-white text-green-500 border-l transition easeInOut duration-100 border-b border-t curved w-full text-left workmenu">
-                    <p class="pl-4 py-8 item" id="menu3">Donate</p>
-                </button>
-                <button onclick="playVid(4)"
-                    class="focus:bg-green-500 border-green-500 focus:text-white text-green-500 border-l transition easeInOut duration-100 border-b border-t curved w-full text-left workmenu">
-                    <p class="pl-4 py-8 item" id="menu4">Join us</p>
-                </button>
-
-
-
-
-            </div>
-
 
 
         </div>
@@ -617,11 +620,11 @@
                 item3.reverse()
                 item4.reverse()
                 item5.reverse()
-                document.getElementById('menu1').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu1').classList.add('font-bold', 'text-2xl')
+                // document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
             }
             if (id == 2) {
 
@@ -630,11 +633,11 @@
                 item3.reverse()
                 item4.reverse()
                 item5.reverse()
-                document.getElementById('menu2').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu2').classList.add('font-bold', 'text-2xl')
+                // document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
 
             }
             if (id == 3) {
@@ -644,11 +647,11 @@
                 item1.reverse()
                 item4.reverse()
                 item5.reverse()
-                document.getElementById('menu3').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu3').classList.add('font-bold', 'text-2xl')
+                // document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
             }
             if (id == 4) {
 
@@ -657,11 +660,11 @@
                 item3.reverse()
                 item1.reverse()
                 item5.reverse()
-                document.getElementById('menu4').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu4').classList.add('font-bold', 'text-2xl')
+                // document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                // document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
             }
 
             // if (id == 6) {
