@@ -26,7 +26,7 @@
 <body class="bg-black overflow-x-hidden">
 
 
-    <div class="fixed w-full z-50 navbar">
+    <div class="fixed w-full z-50 navbar" onmouseover="showMenu.reverse()">
         <div class="flex justify-between px-32 items-center space-x-12 text-white py-6 z-50">
             <div class="">
                 <a href="index.html">
@@ -403,6 +403,17 @@
         menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
         menu.from('.close', { opacity: 0 }, '-=1')
         menu.to('.hamburger', { opacity: 0 }, '-=1')
+
+        let showMenu = gsap.timeline().pause()
+        showMenu.to('.navbar', { opacity: 0, })
+
+        window.onscroll = function () {
+            showMenu.reverse()
+        }
+
+        setInterval(function () {
+            showMenu.play()
+        }, 5000)
     </script>
 </body>
 

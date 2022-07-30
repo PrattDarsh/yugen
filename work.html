@@ -26,7 +26,8 @@
 </style>
 
 <body class="bg-black text-white overflow-x-hidden">
-    <div class="fixed w-full z-50 navbar">
+
+    <div class="fixed w-full z-50 navbar" onmouseover="showMenu.reverse()">
         <div class="flex justify-between  px-4 md:px-32 items-center space-x-12 text-white py-6 z-50">
             <div class="">
                 <a href="index.html">
@@ -56,19 +57,23 @@
                 <div class="w-screen absolute top-12 left-0">
                     <div class=" text-lg">
                         <a href="about.html" class="">
-                            <div class="bg-purple-300 text-purple-700 rounded-full py-6 my-4  px-6 menuItem">About Us
+                            <div class="bg-purple-300 text-purple-700 rounded-full py-6 my-4  px-6 menuItem">About
+                                Us
                             </div>
                         </a>
                         <a href="work.html">
-                            <div class="bg-yellow-200 text-yellow-500 rounded-full py-6 my-4  px-6 menuItem">Our Work
+                            <div class="bg-yellow-200 text-yellow-500 rounded-full py-6 my-4  px-6 menuItem">Our
+                                Work
                             </div>
                         </a>
                         <a href="events.html">
-                            <div class="bg-pink-300 rounded-full py-6 text-pink-500 my-4  px-6 menuItem">Events and Blog
+                            <div class="bg-pink-300 rounded-full py-6 text-pink-500 my-4  px-6 menuItem">Events and
+                                Blog
                             </div>
                         </a>
                         <a href="">
-                            <div class="bg-green-200 rounded-full py-6  px-6 my-4 text-green-500 menuItem">Get Involved
+                            <div class="bg-green-200 rounded-full py-6  px-6 my-4 text-green-500 menuItem">Get
+                                Involved
                             </div>
                         </a>
                     </div>
@@ -102,7 +107,7 @@
 
 
         </div>
-        <div class="relative col-span-2 p-12 z-50  h-96 md:h-full h-screen" id="vidContainer">
+        <div class="relative col-span-2 p-12 z-30  h-96 md:h-full h-screen" id="vidContainer">
 
 
             <div
@@ -121,7 +126,8 @@
                         learning &
                         passion
                         for
-                        education and we translate this to creating life-long learning communities with the adult groups
+                        education and we translate this to creating life-long learning communities with the adult
+                        groups
                         in
                         schools. Sneak a peek into what we believe in to learn more about us! </p>
                 </div>
@@ -137,7 +143,8 @@
                         <p>
                             “A library is a rainbow in the clouds” – Maya Angelou
                         </p>
-                        <p>A library is a place where all information and knowledge belong to everyone, helping us to
+                        <p>A library is a place where all information and knowledge belong to everyone, helping us
+                            to
                             understand that we are not alone in the way we feel and think. Yet, access to books can
                             itself be a fantasy. </p>
                         <p>
@@ -166,7 +173,8 @@
                         learning &
                         passion
                         for
-                        education and we translate this to creating life-long learning communities with the adult groups
+                        education and we translate this to creating life-long learning communities with the adult
+                        groups
                         in
                         schools. Sneak a peek into what we believe in to learn more about us! </p>
                 </div>
@@ -180,15 +188,19 @@
                     </div>
                     <div class="px-8 about text-xl leading-normal transform text-center mx-auto space-y-4">
                         <p> We all understand
-                            that a teacher’s primary job is to help children learn important life skills and knowledge,
+                            that a teacher’s primary job is to help children learn important life skills and
+                            knowledge,
                             so
                             they are sufficiently equipped to take on the world as adults. But how can we expect
                             teachers to
                             teach from an infinitely growing knowledge base if they themselves can’t access it?</p>
 
-                        <p>A key to the world of knowledge for teachers is staying updated on the latest research and
-                            findings in the relevant fields. From subject matter to understanding brain development in
-                            children, the world is changing but the resources available to our teachers haven't moved an
+                        <p>A key to the world of knowledge for teachers is staying updated on the latest research
+                            and
+                            findings in the relevant fields. From subject matter to understanding brain development
+                            in
+                            children, the world is changing but the resources available to our teachers haven't
+                            moved an
                             inch.</p>
 
                     </div>
@@ -205,14 +217,19 @@
                     </div>
                     <div class="px-8 about text-lg leading-normal transform text-center mx-auto space-y-4">
                         <p>Social and emotional
-                            skills are the foundation of a healthy individual, and psychology researchers couldn’t agree
-                            more. Our feelings accompany us everywhere we go, and no matter how hard we try, we cannot
+                            skills are the foundation of a healthy individual, and psychology researchers couldn’t
+                            agree
+                            more. Our feelings accompany us everywhere we go, and no matter how hard we try, we
+                            cannot
                             leave
-                            them at the door. We see them as extra fittings, but they are actually integral to our human
+                            them at the door. We see them as extra fittings, but they are actually integral to our
+                            human
                             existence.</p>
                         <p>
-                            Teachers and parents are constantly modelling behaviour and thinking. Their emotions affect
-                            their judgements, communication, and in turn, their relationships with children during the
+                            Teachers and parents are constantly modelling behaviour and thinking. Their emotions
+                            affect
+                            their judgements, communication, and in turn, their relationships with children during
+                            the
                             formative stage. There’s a lot at stake.
                         </p>
 
@@ -327,6 +344,17 @@
         menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
         menu.from('.close', { opacity: 0 }, '-=1')
         menu.to('.hamburger', { opacity: 0 }, '-=1')
+
+        let showMenu = gsap.timeline().pause()
+        showMenu.to('.navbar', { opacity: 0, })
+
+        window.onscroll = function () {
+            showMenu.reverse()
+        }
+
+        setInterval(function () {
+            showMenu.play()
+        }, 5000)
     </script>
 </body>
 
