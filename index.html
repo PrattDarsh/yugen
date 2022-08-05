@@ -181,52 +181,54 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-32 py-12 text-xl">
 
                     <button onclick="playVid(1)">
-                        <div class="">
+                        <div class="relative">
 
                             <p class="">
                                 Volunteer
                             </p>
 
 
-                            <div class="w-2 h-2  rounded-full mx-auto bg-green-500 volCircle"></div>
+
+                            <img class="absolute -top-12 volCircle" src="images/circle.svg" alt="">
+
                         </div>
                     </button>
 
 
 
                     <button onclick="playVid(2)">
-                        <div class="">
+                        <div class="relative">
 
                             <p>
                                 Buy us a book
                             </p>
 
 
-                            <div class="w-2 h-2 rounded-full mx-auto bg-green-500 bookCircle"></div>
+                            <img class="absolute -top-12 bookCircle" src="images/circle.svg" alt="">
                         </div>
                     </button>
 
                     <button onclick="playVid(3)">
-                        <div class="">
+                        <div class="relative">
 
                             <p>
                                 Donate
                             </p>
 
 
-                            <div class="w-2 h-2 rounded-full mx-auto bg-green-500 donateCircle"></div>
+                            <img class="absolute -top-12 donateCircle" src="images/circle.svg" alt="">
                         </div>
                     </button>
 
                     <button onclick="playVid(4)">
-                        <div class="">
+                        <div class="relative">
 
                             <p>
                                 Join us
                             </p>
 
 
-                            <div class="w-2 h-2 rounded-full mx-auto bg-green-500 joinCircle"></div>
+                            <img class="absolute -top-12 joinCircle" src="images/circle.svg" alt="">
                         </div>
                     </button>
                 </div>
@@ -618,16 +620,16 @@
 
 
         let vol = gsap.timeline()
-        vol.from('.volCircle', { opacity: 0, y: 30 })
+        vol.from('.volCircle', { opacity: 0, scale: 1.2 })
 
         let book = gsap.timeline().pause();
-        book.from('.bookCircle', { opacity: 0, y: 30 })
+        book.from('.bookCircle', { opacity: 0, scale: 1.2 })
 
         let donate = gsap.timeline().pause()
-        donate.from('.donateCircle', { opacity: 0, y: 30 })
+        donate.from('.donateCircle', { opacity: 0, scale: 1.2 })
 
         let join = gsap.timeline().pause();
-        join.from('.joinCircle', { opacity: 0, y: 30 })
+        join.from('.joinCircle', { opacity: 0, scale: 1.2 })
 
 
 
