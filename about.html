@@ -27,7 +27,7 @@
 
 
     <div class="fixed w-full z-50 navbar" onmouseover="showMenu.reverse()">
-        <div class="flex justify-between px-32 items-center space-x-12 text-white py-6 z-50">
+        <div class="flex justify-between px-4 md:px-32 items-center space-x-12 text-white py-6 z-50">
             <div class="">
                 <a href="index.html">
                     <img src="images/logo_white.png" class="h-24 " alt="">
@@ -104,7 +104,7 @@
 
 
     </section>
-    <section class="grid grid-cols-1 gap-4 md:grid-cols-3 videos px-32">
+    <section class="grid grid-cols-1 gap-4 md:grid-cols-3 videos  px-4 md:px-32">
 
         <div class="col-span-2  ">
             <iframe id="vidContainer" class="z-30 w-full h-full rounded-3xl"
@@ -144,12 +144,16 @@
 
     </section>
 
-    <section class="relative h-screen flex items-center justify-center space-x-12 relative" id="comm">
+    <section class="relative h-screen flex items-center justify-center space-x-12" id="comm">
 
-        <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 rotate-6 transform mem1" alt="">
-        <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 -rotate-12 transform mem2" alt="">
-        <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 rotate-12 transform mem3" alt="">
-        <img src="images/meena.jpeg" class="max-w-xl absolute top-42 left-32 -rotate-6 transform mem4" alt="">
+        <img src="images/meena.jpeg"
+            class="max-w-sm md:max-w-xl absolute top-2 md:top-42 left-2 md:left-32 rotate-6 transform mem1" alt="">
+        <img src="images/meena.jpeg"
+            class="max-w-sm md:max-w-xl absolute top-2 md:top-42 left-2 md:left-32 -rotate-12 transform mem2" alt="">
+        <img src="images/meena.jpeg"
+            class="max-w-sm md:max-w-xl absolute top-2 md:top-42 left-2 md:left-32 rotate-12 transform mem3" alt="">
+        <img src="images/meena.jpeg"
+            class="max-w-sm md:max-w-xl absolute top-2 md:top-42 left-2 md:left-32 -rotate-6 transform mem4" alt="">
 
         <div class="text-white absolute bottom-32 right-32 max-w-xl">
             <p class="text-6xl mb-6  one cursive ">Name</p>
@@ -253,15 +257,15 @@
         </div>
 
     </section>
-    <section class="py-12 bg-gray-900 px-32">
+    <section class="py-12 bg-gray-900 px-4 md:px-32">
 
-        <div class="flex justify-between">
+        <div class="md:flex justify-between">
             <div class="flex items-center justify-center text-gray-500 space-x-12"><img
                     class=" bg-white h-32 rounded-full" src="images/logo.png" alt="">
                 <p>&copy;2022 All rights reserved</p>
             </div>
-            <div class="flex items-center space-x-12 justify-center"><svg xmlns="http://www.w3.org/2000/svg"
-                    class="fill-current text-gray-500 h-8" viewBox="0 0 24 24">
+            <div class="flex items-center space-x-12 mt-12 md:mt-2 justify-center"><svg
+                    xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-500 h-8" viewBox="0 0 24 24">
                     <path
                         d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg><svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-500 h-8"
