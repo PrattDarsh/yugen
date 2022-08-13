@@ -1,0 +1,26 @@
+.cursive {
+    font-family: 'square peg';
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.curved {
+    border-radius: 56px 0 0 56px;
+}
+
+.curvedFull {
+    border-radius: 56px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 20px;
+
+}
