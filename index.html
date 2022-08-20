@@ -350,7 +350,25 @@
         </div>
     </section>
 
+    <section class="my-32 max-w-7xl mx-auto" id="newsletter">
+        <div class="md:flex items-center justify-between md:space-x-32">
+            <div class="text-green-500 w-1/2">
+                <p class="text-5xl">Subscribe to <br> our <span class="cursive text-7xl">newsletter</span></p>
+                <div class="h-1 w-32 mb-12 bg-green-500 involvedLine"></div>
+                <form action="" class="space-y-4">
+                    <input type="email"
+                        class="w-full text-center py-6 px-4 rounded-full border-2 border-green-500 focus:outline-none"
+                        placeholder="Mail">
+                    <button class="w-full text-white py-6 px-4 rounded-full bg-green-500">
+                        Submit
+                    </button>
+                </form>
 
+
+            </div>
+            <div class=""><img src="images/mailbox.svg" class="h-32 md:h-96 letterBox" alt=""></div>
+        </div>
+    </section>
 
 
 
@@ -740,6 +758,22 @@
             showMenu.reverse()
         }, 5000)
 
+
+
+        // ----------------------------------------------NEWSLETTER------------------------------
+
+        let newsletter = gsap.timeline({
+            scrollTrigger: {
+                trigger: '#newsletter',
+                toggleActions: 'play none none pause',
+                // scrub: true,
+                start: 'top center'
+            }
+        }
+
+        )
+
+        newsletter.from('.letterBox', { rotate: 15 })
 
         // ----------------------------form------------------------------------
 
