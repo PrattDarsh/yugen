@@ -14,6 +14,10 @@ body {
     border-radius: 56px;
 }
 
+.spaced-out{
+    letter-spacing: 10px;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 
