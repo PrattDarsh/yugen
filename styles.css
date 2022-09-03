@@ -1,9 +1,13 @@
 .cursive {
-    font-family: 'square peg';
+    font-family: 'Lora', serif;
 }
 
 body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Poppins';
+}
+
+.secHeading{
+    font-family: 'League Spartan', sans-serif;
 }
 
 .curved {

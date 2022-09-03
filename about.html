@@ -9,8 +9,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Lora:ital@1&family=Poppins&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>About</title>
 </head>
@@ -27,6 +28,11 @@
 
                 </a>
 
+            </div>
+            <div class="flex space-x-6 items-center justify-center">
+                <div class="">Vision</div>
+                <div class="">Mission</div>
+                <div class="">Community</div>
             </div>
 
 
@@ -76,10 +82,10 @@
     <section class="flex items-center justify-center h-screen text-white py-32">
 
         <div class="w-full">
-            <div class=" text-xl uppercase tracking-widest about text-center spaced-out">About us </div>
-
-            <div class="max-w-6xl mx-auto space-x-12 mt-8">
-                <div class=" text-gray-400 about text-2xl md:text-5xl transform text-center mx-auto">
+            <div class=" text-5xl about text-center  secHeading">About <span class="cursive">us</span> </div>
+            <div class="bg-purple-700 mx-auto h-px mt-2 w-72 line"></div>
+            <div class="max-w-2xl mx-auto space-x-12 mt-8">
+                <div class=" text-gray-400 about text-xl transform text-center mx-auto">
                     <p class="leading-loose">Yugen
                         is
                         an
@@ -91,10 +97,9 @@
                         learning &
                         passion
                         for
-                        education and we translate this to creating <span
-                            class=" text-5xl md:text-7xl text-white cursive">life-long
+                        education and we translate this to creating <span class=" text-xl text-purple-700">life-long
                             learning
-                            communities</span> with the <span class="text-5xl md:text-7xl cursive text-white">adult
+                            communities</span> with the <span class="text-xl text-purple-700">adult
                             groups</span> in
                         schools.</p>
                 </div>
@@ -106,9 +111,78 @@
 
 
     </section>
-    <section class="grid grid-cols-1 gap-4 md:grid-cols-3 videos  px-4 md:px-32">
 
-        <div class="col-span-2  ">
+    <section class="py-32 bg-gray-900">
+        <div class="max-w-6xl mx-auto ">
+            <div class="flex text-white  justify-center space-x-32">
+                <div class="text-5xl text-right secHeading flex items-end justify-end">
+                    <p class="">Our<br> <span class="text-purple-700 cursive">Vision</span></p>
+                </div>
+                <div class="">
+                    <p class="max-w-xl text-xl leading-loose">
+                        Our vision is a world where the education system is fair and inclusive where teachers are
+                        lifelong learners, ensuring high-quality education to all students irrespective of their social
+                        and
+                        economic background leading to a fairer and socially equitable society.
+                    </p>
+                </div>
+            </div>
+            <div class="flex text-white  justify-center space-x-32 my-32">
+                <div class="">
+                    <p class="max-w-xl text-xl text-right leading-loose">
+                        Our social mission is to create equitable, innovative and lifelong learning communities for
+                        teachers
+                        and school leaders and, through them, improve the quality of learning in schools.
+                        Currently, we are working with rural public school teachers and school leaders of Tamil Nadu.
+
+                    </p>
+                </div>
+                <div class="text-5xl  secHeading flex items-end justify-end">
+                    <p class="">Our<br> social <br><span class="text-purple-700 cursive">mission</span></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 text-white">
+        <div class="max-w-6xl mx-auto ">
+            <p class="text-center text-5xl secHeading">Our key <span class="cursive text-purple-700">objectives</span>
+            </p>
+            <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto"></div>
+            <div class=" mt-12 leading-loose space-y-6 text-xl">
+                <p><span class="bg-purple-700  p-1 mr-2"></span>To make schools a safe place and
+                    enriching
+                    by
+                    honing the social and emotional skills of teachers and
+                    students.
+                </p>
+                <p><span class="bg-purple-700 p-1 mr-2"></span>Help teachers bridge gaps in math learning
+                    through data-driven classroom interventions.
+                </p>
+                <p><span class="bg-purple-700  p-1 mr-2"></span>Help school leaders become community leaders by
+                    developing relational leadership skills.
+                </p>
+                <p><span class="bg-purple-700  p-1 mr-2"></span>To bring cutting-edge developments in education
+                    across the globe to the school adult community.
+                </p>
+                <p><span class="bg-purple-700  p-1 mr-2"></span>To build empathy through design thinking
+                    training to local bureaucrats and school leaders.
+                </p>
+                <p><span class="bg-purple-700  p-1 mr-2"></span>To build the key objectives for scale by
+                    leveraging affordable technologies and local languages.
+                </p>
+                <p><span class="bg-purple-700 w-px h-1 p-1 mr-2"></span>To co-create a culture of learning and
+                    development among the school adult community.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="grid grid-cols-1 gap-4 md:grid-cols-4 videos  px-4 md:px-32">
+
+        <div class="col-span-3  ">
             <iframe id="vidContainer" class="z-30 w-full h-full rounded-3xl"
                 src="https://www.youtube.com/embed/bYxzOZj0NTY?controls=0" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -117,7 +191,7 @@
 
         <div class="text-white text-xl space-y-4 ">
             <button onclick="playVid(1)" class="border-b w-full text-left vmenu">
-                <p class="pl-4 py-8 item font-bold text-2xl" id="menu1">Our theory of change</p>
+                <p class="pl-4 py-8 item font-bold text-2xl text-purple-700" id="menu1">Our theory of change</p>
             </button>
             <button onclick="playVid(2) " class="border-b w-full text-left vmenu">
                 <p class="pl-4 py-8 item" id="menu2">Our Values</p>
@@ -143,12 +217,15 @@
     </section>
 
     <section class="px-4 md:px-32" id="comm">
-        <p class="text-5xl text-white px-4 text-center title">Our <span class="text-7xl cursive">community</span> </p>
-        <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mb-12  w-72 mt-6 mx-auto"></div>
-        <p class="text-center text-gray-400 max-w-md mx-auto leading-loose">Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit.
-            Culpa
-            recusandae.</p>
+        <p class="text-5xl text-white px-4 text-center title secHeading">Our <span class=" cursive">community</span>
+        </p>
+        <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto">
+        </div>
+        <p class="text-center text-gray-400 max-w-4xl mx-auto leading-loose text-xl">It takes more than one person to
+            build an
+            impactful organization. We are lucky to have a team of great individuals who share our passion for
+            transforming the ways of education. Meet our amazing community.
+        </p>
 
         <div
             class="grid grid-cols-1 md:grid-cols-2 grid-rows-3 gap-12 max-w-7xl mx-auto mt-32 items-center text-xl leading-loose">
@@ -156,7 +233,7 @@
                 <img src="images/meena.jpeg" class="left" alt="">
             </div>
             <div class="text-white order-2">
-                <p class="right cursive text-6xl right">Name</p>
+                <p class="right cursive text-5xl right">Name</p>
                 <p class="right text-gray-400 right">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni tempora assumenda
                     nisi
@@ -165,7 +242,7 @@
                     Doloremque ipsa consectetur quidem voluptatum.</p>
             </div>
             <div class="text-white text-right order-4 md:order-3 ">
-                <p class="cursive text-6xl right2">Name</p>
+                <p class="cursive text-5xl right2">Name</p>
                 <p class="text-gray-400 right2">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni tempora assumenda
                     nisi
@@ -180,7 +257,7 @@
                 <img src="images/meena.jpeg" class="left3" alt="">
             </div>
             <div class="text-white md:order-6">
-                <p class="cursive text-6xl right3">Name</p>
+                <p class="cursive text-5xl right3">Name</p>
                 <p class="text-gray-400 right3">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni tempora assumenda
                     nisi
@@ -197,12 +274,11 @@
 
 
     <section class="volunteers  text-white text-xl py-32 leading-normal">
-        <p class="text-5xl px-4 text-center title">Our wonderful <span class="text-7xl cursive">volunteers</span> </p>
+        <p class="text-5xl px-4 text-center title">Our wonderful <span class="cursive">volunteers</span> </p>
         <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-px mb-12  w-72 mt-6 mx-auto"></div>
-        <p class="text-center text-gray-400 max-w-md mx-auto leading-loose">Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit.
-            Culpa
-            recusandae.</p>
+        <p class="text-center text-gray-400 max-w-xl mx-auto leading-loose">We wouldn't be what we are today without the
+            incredible work of our volunteers. Their generosity and hard work play a pivotal role in our success, and
+            remain a source of inspiration for us. Meet our wonderful volunteers.</p>
         <div class="flex max-w-6xl mx-auto mt-12 items-center justify-center space-x-6 leading-loose">
             <div class="names">Ashley Anderson<br>
                 Brandon Harvey<br>
@@ -273,48 +349,48 @@
             if (id == 1) {
                 document.getElementById('vidContainer').src = "https://www.youtube.com/embed/bYxzOZj0NTY?controls=0"
 
-                document.getElementById('menu1').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu1').classList.add('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
             }
             if (id == 2) {
                 document.getElementById('vidContainer').src = "https://www.youtube.com/embed/FIyGqQzLZmM?controls=0"
 
-                document.getElementById('menu2').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu2').classList.add('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
 
             }
             if (id == 3) {
                 document.getElementById('vidContainer').src = "https://www.youtube.com/embed/qx6wf-SUZc8?controls=0"
 
-                document.getElementById('menu3').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu3').classList.add('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
             }
             if (id == 4) {
                 document.getElementById('vidContainer').src = "https://www.youtube.com/embed/gLoHGjC45Hs?controls=0"
 
-                document.getElementById('menu4').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu4').classList.add('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu5').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
             }
             if (id == 5) {
                 document.getElementById('vidContainer').src = "https://www.youtube.com/embed/id8p9zGqxVU?controls=0"
 
-                document.getElementById('menu5').classList.add('font-bold', 'text-2xl')
-                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl')
-                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl')
+                document.getElementById('menu5').classList.add('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu2').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu3').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu4').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
+                document.getElementById('menu1').classList.remove('font-bold', 'text-2xl', 'text-purple-700')
             }
             // if (id == 6) {
             //     document.getElementById('vidContainer').src = "https://www.youtube.com/embed/gLoHGjC45Hs"
