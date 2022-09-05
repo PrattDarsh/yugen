@@ -29,11 +29,7 @@
                 </a>
 
             </div>
-            <div class="flex space-x-6 items-center justify-center">
-                <a href="#vision" class="">Vision</a>
-                <a href="#obj" class="">Objectives</a>
-                <a href="#comm">Community</a>
-            </div>
+
 
 
             <div class="relative">
@@ -106,6 +102,14 @@
                 </div>
 
             </div>
+            <div class="flex items-center space-x-12 justify-center mt-32 text-gray-400">
+                <a href="#vision" class="hover:text-purple-700 subMenu">Mission</a>
+                <a href="#obj" class="hover:text-purple-700 subMenu">Objectives</a>
+                <a href="#comm" class="hover:text-purple-700 subMenu">SDG's</a>
+                <a href="#vision" class="hover:text-purple-700 subMenu">Stakeholders</a>
+                <a href="#obj" class="hover:text-purple-700 subMenu">Community</a>
+                <a href="#comm" class="hover:text-purple-700 subMenu">Volunteers</a>
+            </div>
         </div>
 
 
@@ -113,7 +117,7 @@
 
     </section>
 
-    <section class="py-32 bg-gray-900" id="vision">
+    <section class="py-32 " id="vision">
         <div class="max-w-6xl mx-auto ">
             <div class="flex text-white  justify-center space-x-32">
                 <div class="text-5xl text-right secHeading flex items-end justify-end lhs">
@@ -140,7 +144,7 @@
                     </p>
                 </div>
                 <div class="rhs text-5xl  secHeading flex items-end justify-end">
-                    <p class="">Our<br> social <br><span class="text-purple-700 cursive">mission</span></p>
+                    <p class="">Our<br> social <span class="text-purple-700 cursive">mission</span></p>
                 </div>
 
             </div>
@@ -184,12 +188,13 @@
         </div>
     </section>
 
-    <section class="py-32 bg-gray-900 text-white" id="sus">
-        <p class="text-center text-5xl secHeading">Sustainable <span class="cursive text-purple-700">Develop</span>
-            Goals</p>
+    <section class="py-32  text-white" id="sus">
+        <p class="text-center text-5xl secHeading ">Our <span class="cursive text-purple-700">SDG's</span> and
+            <span class="cursive text-purple-700">targets</span>
+        </p>
         <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto susLine"></div>
-        <p class="text-center text-gray-500 text-xl mb-8 sus">What are sustainable development goals?</p>
-        <p class="max-w-4xl text-center mx-auto leading-loose text-xl sus">The Sustainable Development Goals are a
+        <p class="text-center  text-lg mb-2 sus secHeading">What are sustainable development goals?</p>
+        <p class="max-w-4xl text-gray-400 text-center mx-auto leading-loose sus">The Sustainable Development Goals are a
             universal
             call to
             action
@@ -200,20 +205,13 @@
             in 2015, as part of the 2030 Agenda for Sustainable Development which set out a 15-year plan to achieve the
             Goals.
         </p>
-    </section>
-
-    <section class="py-32 max-w-6xl mx-auto text-white" id="table">
-        <p class="text-center text-5xl secHeading ">Yugen's <span class="cursive text-purple-700">SDG's</span> and
-            <span class="cursive text-purple-700">targets</span>
-        </p>
-        <div class="bg-purple-700 h-px mt-4 mb-28  w-72  mx-auto tableLine"></div>
-        <div class="grid grid-cols-6 text-xl gap-y-6">
+        <div class="grid grid-cols-6 text-xl gap-y-6 max-w-6xl mx-auto mt-32">
             <div class="text-purple-700 text-center">SDGC Goal</div>
             <div class="col-span-3 text-center text-purple-700">Target</div>
             <div class="col-span-2 text-center text-purple-700">Impacted stakeholder</div>
 
-            <div class="py-6 text-center bg-gray-900 table">4.1</div>
-            <div class="col-span-3 bg-gray-900 py-6  table">Quality elementary education - Through teacher training
+            <div class="py-6 text-center bg-gray-900  table">4.1</div>
+            <div class="col-span-3  py-6  bg-gray-900 table">Quality elementary education - Through teacher training
                 and
                 development</div>
             <div class="col-span-2 text-center bg-gray-900  table  py-6">Students</div>
@@ -242,12 +240,13 @@
                 sex – HR processes</div>
             <div class="col-span-2 text-center bg-gray-900  table  px-4 py-6">Employees</div>
         </div>
-
     </section>
 
 
-    <section class="py-32 bg-gray-900 text-white ">
-        <p class="text-center text-5xl secHeading"><span class="cursive text-purple-700">Stakeholder</span> Map
+
+
+    <section class="py-32  text-white ">
+        <p class="text-center text-5xl secHeading"><span class="cursive text-purple-700">Stakeholder</span> map
         </p>
         <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto"></div>
         <img src="images/graph.png" class="mx-auto" alt="">
@@ -286,7 +285,7 @@
 
 
 
-    <section class="py-32 px-4 md:px-32 bg-gray-900" id="comm">
+    <section class="py-32 px-4 md:px-32" id="comm">
         <p class="text-5xl text-white px-4 text-center title secHeading">Our <span
                 class=" cursive text-purple-700">community</span>
         </p>
@@ -472,6 +471,7 @@
         // ---------------------------------LANDING--------------------------
         gsap.from('.about', { opacity: 0, stagger: 0.1, duration: 2 })
         gsap.from('.line', { scale: -1 })
+        gsap.from('.subMenu', { x: 30, stagger: 0.1, opacity: 0 })
 
         // ------------------------------------------------------VISION AND MISSION----------------------
         let vision = gsap.timeline({
@@ -510,17 +510,7 @@
         sus.from('.sus', { opacity: 0, stagger: 0.1 }, '-=0.5')
 
 
-        // -----------------------------SDG-------------------------
-        let table = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#table',
-                start: 'top bottom',
-                scrub: true
-            }
-        })
 
-        table.from('.tableLine', { scale: 0 })
-            .from('.table', { x: 30, opacity: 0, stagger: 0.1 }, '-=0.9')
 
         // --------------------------------------VOLUNTEERS--------------------------------------
         let volunteers = gsap.timeline({
