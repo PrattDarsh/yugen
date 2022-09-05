@@ -79,10 +79,10 @@
         <p class="text-5xl eventsTitle">Our <span class="cursive ">Work</span></p>
         <div class="bg-yellow-500 mx-auto h-px mt-8 w-32 line"></div>
         <div class="flex items-center space-x-24 justify-center mt-12 text-gray-400">
-            <a class="hover:text-yellow-500" href="#sel">SEL</a>
-            <a class="hover:text-yellow-500" href="#b4t">B4T</a>
-            <a class="hover:text-yellow-500" href="#spag">SPAG</a>
-            <a class="hover:text-yellow-500" href="#story">Retell a story</a>
+            <a class="hover:text-yellow-500 subMenu" href="#sel">SEL</a>
+            <a class="hover:text-yellow-500 subMenu" href="#b4t">B4T</a>
+            <a class="hover:text-yellow-500 subMenu" href="#spag">SPAG</a>
+            <a class="hover:text-yellow-500 subMenu" href="#story">Retell a story</a>
         </div>
     </div>
     <div class="max-w-6xl mx-auto ">
@@ -259,6 +259,8 @@
 
         // ------------------------------------------------MENU-------------------------------------
 
+
+
         let menu = gsap.timeline().pause()
         menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
         menu.from('.close', { opacity: 0 }, '-=1')
@@ -276,6 +278,7 @@
 
         gsap.from('.selLeft', { x: -50 })
         gsap.from('.selRight', { x: 50, opacity: 0, stagger: 0.1 })
+        gsap.from('.subMenu', { opacity: 0, x: 30, stagger: 0.1 })
 
         let b4t = gsap.timeline({
             scrollTrigger: {
