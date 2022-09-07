@@ -89,7 +89,10 @@
         <section id="sel">
             <div class="flex text-white  justify-center space-x-32">
                 <div class="text-5xl text-right secHeading flex justify-end selLeft">
-                    <p class="text-yellow-500 mt-2">SEL</p>
+                    <p class="mt-2"><span class="text-yellow-500 cursive">Social</span> and<br> <span
+                            class="text-yellow-500 cursive">Emotional</span> <br>Learning<br><span
+                            class="text-3xl text-gray-500">(SEL)</span>
+                    </p>
                 </div>
                 <div class="">
                     <div class="max-w-xl text-lg leading-loose space-y-6 ">
@@ -113,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" my-32 flex items-center justify-center space-x-4">
+            <div class=" my-20 flex items-center justify-center space-x-4" id="b4t">
                 <div class="rounded-full p-1 bg-yellow-500"></div>
                 <div class="rounded-full p-1 bg-yellow-500"></div>
                 <div class="rounded-full p-1 bg-yellow-500"></div>
@@ -121,8 +124,8 @@
         </section>
 
 
-        <section id="b4t">
-            <div class="flex text-white  justify-center space-x-32 my-32">
+        <section>
+            <div class="flex text-white  justify-center space-x-32 my-20">
                 <div class="lhs">
                     <div class="max-w-xl text-lg text-right leading-loose space-y-6">
                         <p class="b4tLeft">
@@ -156,14 +159,14 @@
                 </div>
 
             </div>
-            <div class=" my-32 flex items-center justify-center space-x-4">
+            <div class=" my-20 flex items-center justify-center space-x-4" id="spag">
                 <div class="rounded-full p-1 bg-yellow-500"></div>
                 <div class="rounded-full p-1 bg-yellow-500"></div>
                 <div class="rounded-full p-1 bg-yellow-500"></div>
             </div>
         </section>
 
-        <section id="spag">
+        <section>
             <div class="flex text-white  justify-center space-x-32">
                 <div class="text-5xl text-right secHeading spagLeft">
                     <p class="mt-2">Project<br> <span class="text-yellow-500 cursive">SPAG</span></p>
@@ -190,15 +193,15 @@
                     </div>
                 </div>
             </div>
-            <div class=" my-32 flex items-center justify-center space-x-4">
+            <div class=" my-20 flex items-center justify-center space-x-4" id="story">
                 <div class="rounded-full p-1 bg-yellow-500"></div>
                 <div class="rounded-full p-1 bg-yellow-500"></div>
                 <div class="rounded-full p-1 bg-yellow-500 "></div>
             </div>
         </section>
 
-        <section id="story">
-            <div class="flex text-white  justify-center space-x-32 my-32">
+        <section>
+            <div class="flex text-white  justify-center space-x-32 my-12">
                 <div class="">
                     <div class="max-w-xl text-lg text-right leading-loose space-y-6">
                         <p class="storyLeft">
@@ -284,34 +287,34 @@
             scrollTrigger: {
                 trigger: '#b4t',
                 scrub: true,
-                start: 'top bottom'
+                start: 'top center'
             }
         })
 
         b4t.from('.b4tLeft', { x: -50, opacity: 0, stagger: 0.1 })
-            .from('.b4tRight', { x: 50, }, '-=0.5')
+            .from('.b4tRight', { x: 50, opacity: 0 }, '-=0.5')
 
 
         let spag = gsap.timeline({
             scrollTrigger: {
                 trigger: '#spag',
                 scrub: true,
-                start: 'top bottom'
+                start: 'top center'
             }
         })
 
-        spag.from('.spagLeft', { x: -50, })
+        spag.from('.spagLeft', { x: -50, opacity: 0 })
             .from('.spagRight', { x: 50, opacity: 0, stagger: 0.1 }, '-=0.5')
 
         let story = gsap.timeline({
             scrollTrigger: {
                 trigger: '#story',
                 scrub: true,
-                start: 'top bottom'
+                start: 'top center'
             }
         })
 
-        story.from('.storyLeft', { x: -50, })
+        story.from('.storyLeft', { x: -50, opacity: 0 })
             .from('.storyRight', { x: 50, opacity: 0, stagger: 0.1 }, '-=0.5')
     </script>
 </body>
