@@ -102,13 +102,14 @@
                 </div>
 
             </div>
-            <div class="flex items-center space-x-12 justify-center mt-32 text-gray-400">
+            <div class="flex items-center space-x-12 justify-center mt-28 text-gray-400">
                 <a href="#vision" class="hover:text-purple-700 subMenu">Mission</a>
                 <a href="#obj" class="hover:text-purple-700 subMenu">Objectives</a>
-                <a href="#sus" class="hover:text-purple-700 subMenu">SDG's</a>
+                <a href="#sus" class="hover:text-purple-700 subMenu">SDGs</a>
                 <a href="#map" class="hover:text-purple-700 subMenu">Stakeholders</a>
+                <a href="#vidBox" class="hover:text-purple-700 subMenu">Our Story</a>
                 <a href="#comm" class="hover:text-purple-700 subMenu">Community</a>
-                <a href="#vol" class="hover:text-purple-700 subMenu">Volunteers</a>
+
             </div>
         </div>
 
@@ -193,7 +194,7 @@
             <span class="cursive text-purple-700">targets</span>
         </p>
         <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto susLine"></div>
-        <p class="text-center  text-lg mb-2 sus secHeading">What are sustainable development goals?</p>
+        <p class="text-center  text-xl mb-2 sus secHeading">What are sustainable development goals?</p>
         <p class="max-w-4xl text-gray-400 text-center mx-auto leading-loose sus">The Sustainable Development Goals are a
             universal
             call to
@@ -257,7 +258,7 @@
         <img src="images/graph.png" class="mx-auto" alt="">
     </section>
 
-    <section class="grid grid-cols-1 gap-4 md:grid-cols-4 videos  px-4 md:px-32 py-32">
+    <section class="grid grid-cols-1 gap-4 md:grid-cols-4 videos  px-4 md:px-32 py-32" id="vidBox">
 
         <div class="col-span-3  ">
             <iframe id="vidContainer" class="z-30 w-full h-full rounded-3xl"
@@ -512,7 +513,7 @@
             }
         })
         sus.from('.susLine', { scale: 0 })
-        sus.from('.sus', { opacity: 0, stagger: 0.1 }, '-=0.5')
+        // sus.from('.sus', { opacity: 0, stagger: 0.1 }, '-=0.5')
 
 
 
