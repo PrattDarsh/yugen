@@ -77,17 +77,21 @@
 
     <section class="flex items-center justify-center h-screen text-white py-32">
 
-        <div class="w-full">
+        <div class="">
             <div class=" text-xl uppercase tracking-widest about text-center spaced-out">Yugen</div>
-
             <div class="max-w-5xl mx-auto space-x-12 mt-8">
-                <div class=" text-gray-400 about text-5xl leading-loose transform text-center mx-auto">Creating
+                <div class="caption text-gray-400 about text-5xl leading-loose transform text-center mx-auto">Creating
                     <span class="text-white cursive"> equitable</span>,
                     <span class=" text-white cursive">innovative</span> & <span class=" text-white cursive">life-long
                         learning</span> communities for
                     <span class=" text-white cursive">teachers.</span>
                 </div>
-
+                <div class="flex items-center justify-center mt-12">
+                    <img src="images/hero1.png" class="h-24 icons" alt="">
+                    <img src="images/hero2.png" class="h-24 icons" alt="">
+                    <img src="images/hero3.png" class="h-24 icons" alt="">
+                    <img src="images/hero4.png" class="h-24 icons " alt="">
+                </div>
             </div>
         </div>
 
@@ -169,6 +173,7 @@
         <div class="flex items-center space-x-8">
 
             <div class="text-center text-green-500 z-50 ">
+                <img src="images/Flower Girl-01.png" class="h-36 mx-auto" alt="">
                 <p class="text-5xl involvedTitle secHeading" id="headerSlate">Get <span class="cursive">Involved</span>
                 </p>
                 <div class="h-px bg-green-500 involvedLine"></div>
@@ -454,6 +459,7 @@
 
         gsap.from('.logoCircle', { scale: 2 })
         gsap.from('.caption', { opacity: 0, stagger: 0.1, duration: 5 })
+        gsap.from('.icons', { opacity: 0, y: 30, stagger: 0.5, duration: 5 })
 
 
 
