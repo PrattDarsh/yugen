@@ -88,11 +88,12 @@
     <div class="max-w-6xl mx-auto ">
         <section id="sel">
             <div class="md:flex text-white  justify-center md:space-x-32">
-                <div class="text-5xl text-center md:text-right secHeading md:flex md:justify-end selLeft">
-                    <p class="mt-2"><span class="text-yellow-500 cursive">Social</span> and<br> <span
+                <div class="text-5xl text-center md:text-right secHeading md:flex-wrap md:justify-end selLeft">
+                    <p class="mt-2 selLeft"><span class="text-yellow-500 cursive ">Social</span> and<br> <span
                             class="text-yellow-500 cursive">Emotional</span> <br>Learning<br><span
                             class="text-3xl text-gray-500">(SEL)</span>
                     </p>
+                    <img src="images/Windy_Dress.png" class="h-56 selLeft" alt="">
                 </div>
                 <div class="">
                     <div class="max-w-xl text-lg leading-loose md:space-y-6 ">
@@ -225,8 +226,9 @@
 
                     </div>
                 </div>
-                <div class="text-5xl  secHeading storyRight">
-                    <p class="mt-2">Retell<br> a <br><span class="text-yellow-500 cursive">story</span></p>
+                <div class="text-5xl  secHeading ">
+                    <p class="mt-2 storyRight">Retell<br> a <br><span class="text-yellow-500 cursive">story</span></p>
+                    <img src="images/Excited_Jump.png" class="storyRight h-56 mt-12" alt="">
                 </div>
 
             </div>
@@ -279,7 +281,7 @@
         }, 5000)
 
 
-        gsap.from('.selLeft', { x: -50 })
+        gsap.from('.selLeft', { x: -50, stagger: 0.1, opacity: 0 })
         gsap.from('.selRight', { x: 50, opacity: 0, stagger: 0.1 })
         gsap.from('.subMenu', { opacity: 0, x: 30, stagger: 0.1 })
 
