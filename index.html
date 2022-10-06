@@ -102,9 +102,9 @@
 
     </section>
 
-    <section>
+    <!-- <section>
         <div class="w-px h-screen bg-gradient-to-b from-purple-300 to-purple-700 mx-auto line1"></div>
-    </section>
+    </section> -->
 
     <section class="flex items-center justify-center h-screen" id="about">
         <div class="p-2 bg-purple-300 rounded-full absolute aboutCircle z-30"></div>
@@ -123,9 +123,9 @@
     </section>
 
 
-    <section>
+    <!-- <section>
         <div class="w-px h-screen bg-gradient-to-b from-purple-300  to-purple-500 mx-auto line2"></div>
-    </section>
+    </section> -->
 
 
     <section class="flex items-center justify-center h-screen" id="work">
@@ -144,9 +144,9 @@
     </section>
 
 
-    <section>
+    <!-- <section>
         <div class="w-px h-screen bg-gradient-to-b from-yellow-300  to-yellow-500 mx-auto line3"></div>
-    </section>
+    </section> -->
 
     <section class="flex items-center justify-center h-screen" id="events">
         <div class="p-2 bg-pink-300 rounded-full absolute eventsCircle z-30"></div>
@@ -165,9 +165,9 @@
     </section>
 
 
-    <section>
+    <!-- <section>
         <div class="w-px h-screen bg-gradient-to-b from-pink-300 to-pink-500 mx-auto line4"></div>
-    </section>
+    </section> -->
 
 
     <section class="flex items-center justify-center" id="involved">
@@ -504,11 +504,11 @@
         )
         if (!isMobile) {
             about.to('.aboutCircle', { scale: 100 })
-                .from('.aboutLine', { scale: -1 }, '-=0.5')
+                // .from('.aboutLine', { scale: -1 }, '-=0.5')
                 .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
         } else {
             about.to('.aboutCircle', { scale: 50 })
-                .from('.aboutLine', { scale: -1 }, '-=0.5')
+                // .from('.aboutLine', { scale: -1 }, '-=0.5')
                 .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
         }
 
@@ -550,11 +550,11 @@
         )
         if (!isMobile) {
             work.to('.workCircle', { scale: 100 })
-                .from('.workLine', { scale: -1 }, '-=0.5')
+                // .from('.workLine', { scale: -1 }, '-=0.5')
                 .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
         } else {
             work.to('.workCircle', { scale: 50 })
-                .from('.workLine', { scale: -1 }, '-=0.5')
+                // .from('.workLine', { scale: -1 }, '-=0.5')
                 .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
         }
 
@@ -598,11 +598,11 @@
         )
         if (!isMobile) {
             events.to('.eventsCircle', { scale: 100 })
-                .from('.eventsLine', { scale: -1 }, '-=0.5')
+                // .from('.eventsLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => pink(), onReverseComplete: () => pink() })
         } else {
             events.to('.eventsCircle', { scale: 50 })
-                .from('.eventsLine', { scale: -1 }, '-=0.5')
+                // .from('.eventsLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => pink(), onReverseComplete: () => pink() })
         }
 
@@ -646,11 +646,11 @@
         )
         if (!isMobile) {
             involved.to('.involvedCircle', { scale: 100 })
-                .from('.involvedLine', { scale: -1 }, '-=0.5')
+                // .from('.involvedLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
         } else {
             involved.to('.involvedCircle', { scale: 50 })
-                .from('.involvedLine', { scale: -1 }, '-=0.5')
+                // .from('.involvedLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
         }
 
