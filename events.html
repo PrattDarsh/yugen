@@ -296,7 +296,7 @@
         // ------------------------------------------------MENU-------------------------------------
 
         let menu = gsap.timeline().pause()
-        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
+        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, display: 'none' })
         menu.from('.close', { opacity: 0 }, '-=1')
         menu.to('.hamburger', { opacity: 0 }, '-=1')
 
