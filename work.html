@@ -17,7 +17,7 @@
 </head>
 
 
-<body class="bg-black text-white overflow-x-hidden px-6 md:px-0">
+<body class="bg-black text-white overflow-x-hidden ">
 
     <div class="fixed w-full z-50 navbar" onmouseover="showMenu.reverse()">
         <div class="flex justify-between  px-4 md:px-8 items-center space-x-12 text-white py-6 z-50">
@@ -78,7 +78,7 @@
     <div class="py-32 text-center title">
         <p class="text-5xl eventsTitle">Our <span class="cursive ">Work</span></p>
         <div class="bg-yellow-500 mx-auto h-px mt-8 w-32 line"></div>
-        <div class="flex items-center space-x-24 justify-center mt-12 text-gray-400">
+        <div class="grid grid-cols-2 gap-y-4 md:flex items-center md:space-x-24 justify-center mt-12 text-gray-400">
             <a class="hover:text-yellow-500 subMenu" href="#sel">SEL</a>
             <a class="hover:text-yellow-500 subMenu" href="#b4t">B4T</a>
             <a class="hover:text-yellow-500 subMenu" href="#spag">SPAG</a>
@@ -86,7 +86,7 @@
         </div>
     </div>
     <div class="max-w-6xl mx-auto ">
-        <section id="sel">
+        <section id="sel" class="px-4 md:px-0">
             <div class="md:flex text-white  justify-center md:space-x-32">
                 <div class="text-5xl text-center md:text-right secHeading md:flex-wrap md:justify-end selLeft">
                     <p class="mt-2 selLeft"><span class="text-yellow-500 cursive ">Social</span> and<br> <span
@@ -125,9 +125,9 @@
         </section>
 
 
-        <section>
-            <div class="md:flex text-white  md:justify-center md:space-x-32 my-20">
-                <div class="lhs ">
+        <section class="px-4 md:px-0">
+            <div class="flex flex-wrap text-white  justify-center md:space-x-32 my-20">
+                <div class="lhs order-last md:order-first">
                     <div class="max-w-xl text-lg md:text-right leading-loose space-y-6">
                         <p class="b4tLeft">
                             We all understand that a teacher’s primary job is to help children learn important life
@@ -167,7 +167,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="px-4 md:px-0">
             <div class="md:flex text-white  justify-center md:space-x-32">
                 <div class="text-5xl text-center md:text-right secHeading spagLeft">
                     <p class="mt-2">Project<br> <span class="text-yellow-500 cursive">SPAG</span></p>
@@ -201,9 +201,9 @@
             </div>
         </section>
 
-        <section class="pb-20">
-            <div class="md:flex text-white  justify-center md:space-x-32 my-12">
-                <div class="">
+        <section class="pb-20 px-4 md:px-0">
+            <div class="flex flex-wrap text-white  justify-center md:space-x-32 my-12">
+                <div class="order-last md:order-first">
                     <div class="max-w-xl text-lg md:text-right leading-loose space-y-6">
                         <p class="storyLeft">
                             “A library is a rainbow in the clouds” – Maya Angelou
@@ -226,7 +226,7 @@
 
                     </div>
                 </div>
-                <div class="text-5xl  secHeading ">
+                <div class="text-5xl  secHeading order-first">
                     <p class="mt-2 storyRight">Retell<br> a <br><span class="text-yellow-500 cursive">story</span></p>
                     <img src="images/Excited_Jump.png" class="storyRight h-56 mt-12" alt="">
                 </div>
@@ -261,14 +261,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script>
-
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
         // ------------------------------------------------MENU-------------------------------------
 
 
 
         let menu = gsap.timeline().pause()
-        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
+        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, display: 'none' })
         menu.from('.close', { opacity: 0 }, '-=1')
         menu.to('.hamburger', { opacity: 0 }, '-=1')
 
@@ -282,43 +282,47 @@
         }, 5000)
 
 
-        gsap.from('.selLeft', { x: -50, stagger: 0.1, opacity: 0 })
-        gsap.from('.selRight', { x: 50, opacity: 0, stagger: 0.1 })
-        gsap.from('.subMenu', { opacity: 0, x: 30, stagger: 0.1 })
-
-        let b4t = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#b4t',
-                scrub: true,
-                start: 'top center'
-            }
-        })
-
-        b4t.from('.b4tLeft', { x: -50, opacity: 0, stagger: 0.1 })
-            .from('.b4tRight', { x: 50, opacity: 0 }, '-=0.5')
 
 
-        let spag = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#spag',
-                scrub: true,
-                start: 'top center'
-            }
-        })
+        if (!isMobile) {
+            gsap.from('.selLeft', { x: -50, stagger: 0.1, opacity: 0 })
+            gsap.from('.selRight', { x: 50, opacity: 0, stagger: 0.1 })
+            gsap.from('.subMenu', { opacity: 0, x: 30, stagger: 0.1 })
 
-        spag.from('.spagLeft', { x: -50, opacity: 0 })
-            .from('.spagRight', { x: 50, opacity: 0, stagger: 0.1 }, '-=0.5')
+            let b4t = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#b4t',
+                    scrub: true,
+                    start: 'top center'
+                }
+            })
 
-        let story = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#story',
-                scrub: true,
-                start: 'top center'
-            }
-        })
+            b4t.from('.b4tLeft', { x: -50, opacity: 0, stagger: 0.1 })
+                .from('.b4tRight', { x: 50, opacity: 0 }, '-=0.5')
 
-        story.from('.storyLeft', { x: -50, opacity: 0 })
-            .from('.storyRight', { x: 50, opacity: 0, stagger: 0.1 }, '-=0.5')
+
+            let spag = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#spag',
+                    scrub: true,
+                    start: 'top center'
+                }
+            })
+
+            spag.from('.spagLeft', { x: -50, opacity: 0 })
+                .from('.spagRight', { x: 50, opacity: 0, stagger: 0.1 }, '-=0.5')
+
+            let story = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#story',
+                    scrub: true,
+                    start: 'top center'
+                }
+            })
+
+            story.from('.storyLeft', { x: -50, opacity: 0 })
+                .from('.storyRight', { x: 50, opacity: 0, stagger: 0.1 }, '-=0.5')
+        }
     </script>
 </body>
 
