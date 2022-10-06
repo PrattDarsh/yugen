@@ -102,7 +102,8 @@
                 </div>
 
             </div>
-            <div class="flex items-center space-x-12 justify-center mt-28 text-gray-400">
+            <div
+                class="grid grid-cols-2 gap-y-6 text-center  md:flex items-center md:space-x-12 justify-center mt-28 text-gray-400">
                 <a href="#vision" class="hover:text-purple-700 subMenu">Mission</a>
                 <a href="#obj" class="hover:text-purple-700 subMenu">Objectives</a>
                 <a href="#sus" class="hover:text-purple-700 subMenu">SDGs</a>
@@ -120,7 +121,7 @@
 
     <section class="py-32 " id="vision">
         <div class="max-w-6xl mx-auto ">
-            <div class="md:flex text-white  justify-center space-x-32">
+            <div class="md:flex text-white  justify-center md:space-x-32 px-4 md:px-0">
                 <div class="text-5xl text-right secHeading flex items-end justify-end lhs">
                     <p class="">Our<br> <span class="text-purple-700 cursive">Vision</span></p>
                 </div>
@@ -135,7 +136,7 @@
             </div>
             <div class="bg-purple-700 mx-auto h-px my-32 w-56 visMisSep "></div>
 
-            <div class="md:flex text-white  justify-center space-x-32 my-32">
+            <div class="md:flex text-white  justify-center md:space-x-32 my-32 px-4 md:px-0">
                 <div class="lhs">
                     <p class="max-w-xl text-xl text-right leading-loose">
                         Our social mission is to create equitable, innovative and lifelong learning communities for
@@ -145,16 +146,16 @@
 
                     </p>
                 </div>
-                <div class="rhs text-5xl  secHeading flex items-end justify-end relative">
+                <div class="rhs text-5xl  secHeading flex items-end md:justify-end relative">
                     <p class="">Our<br> social <span class="text-purple-700 cursive">mission</span></p>
-                    <img src="images/Meditative_Heart.png" class="h-44 absolute -top-56" alt="">
+                    <img src="images/Meditative_Heart.png" class="h-44 absolute top-32 md:-top-56" alt="">
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section class="py-32 text-white" id="obj">
+    <section class="px-4 md:px-0 py-32 text-white" id="obj">
         <div class="max-w-6xl mx-auto ">
             <p class="text-center text-5xl secHeading">Our key <span class="cursive text-purple-700">objectives</span>
             </p>
@@ -191,7 +192,7 @@
         </div>
     </section>
 
-    <section class="py-32  text-white" id="sus">
+    <section class="px-4 md:px-0 py-32  text-white" id="sus">
         <p class="text-center text-5xl secHeading ">Our <span class="cursive text-purple-700">SDGs</span> and
             <span class="cursive text-purple-700">targets</span>
         </p>
@@ -328,7 +329,7 @@
                 <img src="images/babuVittal.png" class="left2 rounded-3xl" alt="">
             </div>
             <div class="order-5">
-                <img src="images/sahana.jpg" class="left3 max-w-lg mx-auto rounded-3xl" alt="">
+                <img src="images/sahana.jpg" class="left3 max-w-xs md:max-w-lg mx-auto rounded-3xl" alt="">
             </div>
             <div class="text-white order-6">
                 <div class=" right3">
@@ -391,10 +392,10 @@
                 </div>
             </div>
             <div class="order-7 md:order-8">
-                <img src="images/prateek.jpeg" class="left4 rounded-3xl max-w-md mx-auto" alt="">
+                <img src="images/prateek.jpeg" class="left4 rounded-3xl max-w-xs md:max-w-md mx-auto" alt="">
             </div>
             <div class="order-9">
-                <img src="images/pooja.jpg" class="left5 rounded-3xl max-w-lg mx-auto" alt="">
+                <img src="images/pooja.jpg" class="left5 rounded-3xl max-w-xs md:max-w-lg mx-auto" alt="">
             </div>
             <div class="text-white order-10">
                 <div class=" right5">
@@ -428,15 +429,16 @@
 
 
 
-    <section class="volunteers  text-white text-xl py-32 leading-normal" id="vol">
+    <section class="px-4 md:px-0 volunteers  text-white text-xl py-32 leading-normal" id="vol">
         <p class="text-5xl px-4 text-center title">Our wonderful <span class="cursive text-purple-700">volunteers</span>
         </p>
         <div class="bg-purple-700 h-px mb-12  w-72 mt-6 mx-auto"></div>
         <p class="text-center text-gray-400 max-w-xl mx-auto leading-loose">We wouldn't be what we are today without the
             incredible work of our volunteers. Their generosity and hard work play a pivotal role in our success, and
             remain a source of inspiration for us. Meet our wonderful volunteers.</p>
-        <div class="flex max-w-6xl mx-auto mt-12 justify-center space-x-6 leading-loose">
-            <div class="names text-center">Aditi nagpal<br>
+        <div
+            class="flex  max-w-6xl mx-auto mt-12 justify-center space-x-6 leading-relaxed md:leading-loose text-sm md:text-xl">
+            <div class="names text-center ">Aditi nagpal<br>
                 Ajay Nambiar<br>
                 Arami<br>
                 Archana Pati<br>
@@ -507,6 +509,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script>
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         function playVid(id) {
             if (id == 1) {
                 document.getElementById('vidContainer').src = "https://www.youtube.com/embed/bYxzOZj0NTY?controls=0"
@@ -559,108 +562,111 @@
             // }
         }
 
-        // ---------------------------------LANDING--------------------------
-        gsap.from('.about', { opacity: 0, stagger: 0.1, duration: 2 })
-        gsap.from('.line', { scale: -1 })
-        gsap.from('.subMenu', { x: 30, stagger: 0.1, opacity: 0 })
 
-        // ------------------------------------------------------VISION AND MISSION----------------------
-        let vision = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#vision',
-                start: 'top bottom',
-                scrub: true
+        if (!isMobile) {
+
+            // ---------------------------------LANDING--------------------------
+            gsap.from('.about', { opacity: 0, stagger: 0.1, duration: 2 })
+            gsap.from('.line', { scale: -1 })
+            gsap.from('.subMenu', { x: 30, stagger: 0.1, opacity: 0 })
+
+            // ------------------------------------------------------VISION AND MISSION----------------------
+            let vision = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#vision',
+                    start: 'top bottom',
+                    scrub: true
+                }
+            })
+
+            vision.from('.lhs', { x: -100, stagger: 0.1 })
+                .from('.visMisSep', { scale: 0 }, '-=0.5')
+                .from('.rhs', { x: 100, stagger: 0.1 }, '-=0.5')
+
+            // -----------------------------OBJECTIVES-------------------------
+            let obj = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#obj',
+                    start: 'top bottom',
+                    scrub: true
+                }
+            })
+            obj.from('.objLine', { scale: 0 })
+            obj.from('.point', { opacity: 0, x: 50, stagger: 0.1 }, '-=0.5')
+
+
+            // -----------------------------SUS GOALS-------------------------
+            let sus = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#sus',
+                    start: 'top bottom',
+                    scrub: true
+                }
+            })
+            sus.from('.susLine', { scale: 0 })
+            // sus.from('.sus', { opacity: 0, stagger: 0.1 }, '-=0.5')
+
+
+
+
+            // --------------------------------------VOLUNTEERS--------------------------------------
+            let volunteers = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.volunteers',
+                    toggleActions: 'play none none pause',
+                    start: 'top center',
+                }
             }
-        })
 
-        vision.from('.lhs', { x: -100, stagger: 0.1 })
-            .from('.visMisSep', { scale: 0 }, '-=0.5')
-            .from('.rhs', { x: 100, stagger: 0.1 }, '-=0.5')
+            )
 
-        // -----------------------------OBJECTIVES-------------------------
-        let obj = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#obj',
-                start: 'top bottom',
-                scrub: true
+            volunteers.from('.names', { opacity: 0, x: 100, stagger: 0.1 })
+
+
+
+
+            let vidsTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '.videos',
+                    toggleActions: 'play none none pause',
+                    scrub: true,
+                    start: 'top bottom'
+                }
             }
-        })
-        obj.from('.objLine', { scale: 0 })
-        obj.from('.point', { opacity: 0, x: 50, stagger: 0.1 }, '-=0.5')
 
+            )
+            vidsTl.from('.vmenu', { x: 30, opacity: 0, stagger: 0.1, }, '-=1')
 
-        // -----------------------------SUS GOALS-------------------------
-        let sus = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#sus',
-                start: 'top bottom',
-                scrub: true
+            // ---------------------------------CORE COMMITEEE--------------------------
+            let commTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#comm',
+                    scrub: true,
+                    start: 'top center'
+                }
             }
-        })
-        sus.from('.susLine', { scale: 0 })
-        // sus.from('.sus', { opacity: 0, stagger: 0.1 }, '-=0.5')
+
+            )
+
+            commTl.from('.left', { x: -100, rotate: -12 })
+            commTl.from('.right', { x: 100, stagger: 0.1, }, '-=0.5')
+            commTl.from('.left2', { x: 100, rotate: 12 }, '-=0.5')
+            commTl.from('.right2', { x: -100, stagger: 0.1, }, '-=0.5')
+            commTl.from('.left3', { x: -100, rotate: -12 }, '-=0.5')
+            commTl.from('.right3', { x: 100, stagger: 0.1, }, '-=0.5')
+            commTl.from('.left4', { x: 100, rotate: 12 }, '-=0.5')
+            commTl.from('.right4', { x: -100, stagger: 0.1, }, '-=0.5')
+            commTl.from('.left5', { x: -100, rotate: -12 }, '-=0.5')
+            commTl.from('.right5', { x: 100, stagger: 0.1, }, '-=0.5')
 
 
-
-
-        // --------------------------------------VOLUNTEERS--------------------------------------
-        let volunteers = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.volunteers',
-                toggleActions: 'play none none pause',
-                start: 'top center',
-            }
         }
-
-        )
-
-        volunteers.from('.names', { opacity: 0, x: 100, stagger: 0.1 })
-
-
-
-
-        let vidsTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.videos',
-                toggleActions: 'play none none pause',
-                scrub: true,
-                start: 'top bottom'
-            }
-        }
-
-        )
-        vidsTl.from('.vmenu', { x: 30, opacity: 0, stagger: 0.1, }, '-=1')
-
-        // ---------------------------------CORE COMMITEEE--------------------------
-        let commTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '#comm',
-                scrub: true,
-                start: 'top center'
-            }
-        }
-
-        )
-
-        commTl.from('.left', { x: -100, rotate: -12 })
-        commTl.from('.right', { x: 100, stagger: 0.1, }, '-=0.5')
-        commTl.from('.left2', { x: 100, rotate: 12 }, '-=0.5')
-        commTl.from('.right2', { x: -100, stagger: 0.1, }, '-=0.5')
-        commTl.from('.left3', { x: -100, rotate: -12 }, '-=0.5')
-        commTl.from('.right3', { x: 100, stagger: 0.1, }, '-=0.5')
-        commTl.from('.left4', { x: 100, rotate: 12 }, '-=0.5')
-        commTl.from('.right4', { x: -100, stagger: 0.1, }, '-=0.5')
-        commTl.from('.left5', { x: -100, rotate: -12 }, '-=0.5')
-        commTl.from('.right5', { x: 100, stagger: 0.1, }, '-=0.5')
-
-
-
 
         // ------------------------------------------------MENU-------------------------------------
 
         let menu = gsap.timeline().pause()
         menu.fromTo('.menuCircle', { opacity: 0 }, { opacity: 1, scale: 120 })
-        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, opacity: 0 })
+        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, display: 'none' })
         menu.from('.close', { opacity: 0 }, '-=1')
         menu.to('.hamburger', { opacity: 0 }, '-=1')
 
