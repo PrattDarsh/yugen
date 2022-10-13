@@ -95,6 +95,7 @@
                     <img src="images/hero4.png" class="h-24 icons " alt="">
                 </div> -->
             </div>
+            <div class=""><img src="images/teacher.png" class="mx-auto" alt=""></div>
         </div>
 
 
@@ -112,7 +113,8 @@
             <p class="text-4xl md:text-5xl aboutTitle secHeading">About<span class="cursive text-4xl md:text-5xl">
                     Us</span></p>
             <div class="h-px bg-purple-700 aboutLine"></div>
-            <p class="max-w-2xl leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">Yugen is an education-centered
+            <p class="max-w-2xl leading-loose md:leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">Yugen is an
+                education-centered
                 organization
                 born
                 from
@@ -137,7 +139,8 @@
         <div class="text-center text-yellow-500 z-50">
             <p class="text-4xl md:text-5xl workTitle secHeading">Our <span class="cursive">Work</span></p>
             <div class="h-px bg-yellow-500 workLine"></div>
-            <p class="max-w-2xl leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">There are many layers to improving the
+            <p class="max-w-2xl leading-loose md:leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">There are many layers
+                to improving the
                 quality of our
                 schooling system. We believe that the whole is greater than the sum of its parts, and we work towards
                 building a collection of small but meaningful solutions.</p>
@@ -158,7 +161,8 @@
         <div class="text-center text-pink-500 z-50">
             <p class="text-4xl md:text-5xl eventsTitle secHeading">Events & <span class="cursive">Blogs</span></p>
             <div class="h-px bg-pink-500 eventsLine"></div>
-            <p class="max-w-2xl leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">We are very happy to know your thoughts
+            <p class="max-w-2xl leading-loose md:leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">We are very happy to
+                know your thoughts
                 on our views
                 and our activities.
             </p>
@@ -518,7 +522,7 @@
                 // .from('.aboutLine', { scale: -1 }, '-=0.5')
                 .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
         } else {
-            about.to('.aboutCircle', { scale: 50 })
+            about.to('.aboutCircle', { scale: 25 })
                 // .from('.aboutLine', { scale: -1 }, '-=0.5')
                 .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
         }
@@ -564,7 +568,7 @@
                 // .from('.workLine', { scale: -1 }, '-=0.5')
                 .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
         } else {
-            work.to('.workCircle', { scale: 50 })
+            work.to('.workCircle', { scale: 30 })
                 // .from('.workLine', { scale: -1 }, '-=0.5')
                 .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
         }
@@ -612,7 +616,7 @@
                 // .from('.eventsLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => pink(), onReverseComplete: () => pink() })
         } else {
-            events.to('.eventsCircle', { scale: 50 })
+            events.to('.eventsCircle', { scale: 30 })
                 // .from('.eventsLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => pink(), onReverseComplete: () => pink() })
         }
@@ -660,7 +664,7 @@
                 // .from('.involvedLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
         } else {
-            involved.to('.involvedCircle', { scale: 50 })
+            involved.to('.involvedCircle', { scale: 30 })
                 // .from('.involvedLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
         }
