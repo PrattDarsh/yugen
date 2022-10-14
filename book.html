@@ -76,7 +76,7 @@
     <section class="">
 
         <div class="grid md:grid-cols-4 ">
-            <div class=" text-green-700  md:col-span-1 text-right bg-green-300 px-6 py-32 h-full">
+            <div class=" text-green-700  md:col-span-1 text-right bg-green-300 px-6 py-32 h-full sideBar">
                 <div class="text-7xl font-bold">Buy us<br> a book
                 </div>
                 <div class="text-xl mt-32 space-y-6">
@@ -96,67 +96,67 @@
             </div>
 
             <div class="md:col-span-3 grid md:grid-cols-3 grid-cols-2 gap-y-4 md:px-12  py-32">
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href=" " class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
                     </div>
                 </a>
-                <a href="">
+                <a href="" class="book">
                     <div class="border-r border-gray-700 border-1 pb-32 hover:bg-gray-900 p-4 transition delay-45">
                         <p class="text-2xl"> I Am You:<br> A Book about Ubuntu</p>
                         <p class="text-green-500 mt-6">4-7 years</p>
@@ -193,6 +193,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script>
+
+
+        gsap.from('.sideBar', { x: -20, opacity: 0 })
+        gsap.from('.book', { x: 20, opacity: 0, stagger: 0.1 })
         // ------------------------------------------------MENU-------------------------------------
 
         let menu = gsap.timeline().pause()
@@ -210,5 +214,11 @@
 
         setInterval(function () {
             showMenu.play()
-        }, 5000)</script>
+        }, 5000)
+
+
+    </script>
+
+
+
 </body>
