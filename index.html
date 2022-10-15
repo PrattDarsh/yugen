@@ -104,7 +104,7 @@
 
 
         <section class="md:flex items-center justify-center space-x-12 h-screen text-white py-32">
-            <div class=""><img src="images/landing.png" class="mx-auto" alt=""></div>
+            <div class=""><img src="images/landing.png" class="mx-auto heroImg" alt=""></div>
             <div class="hidden md:block w-px bg-gray-700 h-72"></div>
             <div class="">
                 <!-- <div class=" text-4xl about text-center ">Yugen</div> -->
@@ -520,9 +520,8 @@
 
 
 
-        gsap.from('.logoCircle', { scale: 2 })
-        gsap.from('.caption', { opacity: 0, stagger: 0.1, duration: 5 })
-        gsap.from('.icons', { opacity: 0, y: 30, stagger: 0.5, duration: 5 })
+
+
 
 
 
@@ -653,10 +652,18 @@
 
         )
         if (!isMobile) {
+            gsap.from('.heroImg', { opacity: 0, x: 30, })
+            gsap.from('.caption', { opacity: 0, x: -30, })
+
+
             events.to('.eventsCircle', { scale: 100 })
                 // .from('.eventsLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => pink(), onReverseComplete: () => pink() })
         } else {
+            gsap.from('.heroImg', { opacity: 0, y: 30, })
+            gsap.from('.caption', { opacity: 0, y: -30, })
+
+
             events.to('.eventsCircle', { scale: 25 })
                 // .from('.eventsLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => pink(), onReverseComplete: () => pink() })
