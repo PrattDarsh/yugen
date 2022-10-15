@@ -17,503 +17,550 @@
 </head>
 
 
-<body class="bg-black overflow-x-hidden">
+<body class="bg-black overflow-x-hidden transition duration-700">
+
 
 
     <div class="fixed w-full z-50 navbar" onmouseover="showMenu.reverse()">
         <div class="flex justify-between px-4 md:px-8 items-center space-x-12 text-white py-6 z-50">
             <div class="">
                 <a href="index.html">
-                    <img src="images/logo_white.png" class="h-24 " alt="">
-
+                    <img src="images/logo_white.png" class="h-24 " id="yugen_white" alt="">
+                    <img src="images/logo.png" class="h-24 hidden" id="yugen_black" alt="">
                 </a>
 
             </div>
 
 
 
-            <div class="relative">
+            <div class="">
 
-                <button class="close" onclick="menu.reverse()">
-                    <svg clip-rule="evenodd" class="fill-current text-white h-12" fill-rule="evenodd"
-                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
-                    </svg>
-                </button>
-                <button class="hamburger" onclick="menu.play()"><svg id="menu" class="fill-current text-white h-12"
+
+                <button class="hamburger" onclick="newMenu()"><svg id="menu" class="fill-current text-white h-12"
                         clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
                             fill-rule="nonzero" />
                     </svg></button>
-                <div class="w-screen absolute top-12  -left-12">
-                    <div class=" text-lg">
-                        <a href="about.html" class="">
-                            <div class="bg-purple-300 text-purple-700 rounded-full py-6 my-4  px-6 menuItem">About Us
-                            </div>
-                        </a>
-                        <a href="work.html">
-                            <div class="bg-yellow-200 text-yellow-500 rounded-full py-6 my-4  px-6 menuItem">Our Work
-                            </div>
-                        </a>
-                        <a href="events.html">
-                            <div class="bg-pink-300 rounded-full py-6 text-pink-500 my-4  px-6 menuItem">Events and Blog
-                            </div>
-                        </a>
-                        <a href="index.html#involved">
-                            <div class="bg-green-200 rounded-full py-6  px-6 my-4 text-green-500 menuItem">Get Involved
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
+                <button class="hamburger " onclick="newMenu()"><svg id="close" class="h-12 hidden" clip-rule="evenodd"
+                        fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+                    </svg></button>
             </div>
         </div>
     </div>
-
-
-    <section class="flex items-center justify-center h-screen text-white py-32">
-
-        <div class="w-full">
-            <div class=" text-4xl md:text-5xl about text-center  secHeading">About <span
-                    class="cursive text-purple-700">us</span>
-            </div>
-            <div class="bg-purple-700 mx-auto h-px mt-2 w-32 line"></div>
-            <div class="max-w-2xl mx-auto space-x-12 mt-8">
-                <div class=" text-gray-400 about md:text-xl transform text-center mx-auto">
-                    <p class="leading-loose">Yugen
-                        is
-                        an
-                        organization that
-                        was born
-                        from a
-                        lifetime of
-                        work,
-                        learning &
-                        passion
-                        for
-                        education and we translate this to creating <span class=" md:text-xl text-purple-700">life-long
-                            learning
-                            communities</span> with the <span class="md:text-xl text-purple-700">adult
-                            groups</span> in
-                        schools.</p>
-                </div>
+    <section class=" hidden font-bold newMenu   px-4 md:px-12" id="newmenu">
+        <div class="h-screen flex flex-wrap items-end  pt-32 pb-6  justify-between">
+            <div class="text-5xl md:text-8xl ">
+                <a href="about.html">
+                    <p class="py-4 hover:text-white transition duration-300">About Us</p>
+                </a>
+                <a href="work.html">
+                    <p class="py-4 hover:text-white transition duration-300">Our Work</p>
+                </a>
+                <a href="events.html">
+                    <p class="py-4 hover:text-white transition duration-300">Events and Blog</p>
+                </a>
+                <a href="index.html#involved">
+                    <p class="py-4 hover:text-white transition duration-300">Get Involved</p>
+                </a>
 
             </div>
-            <div
-                class="grid grid-cols-2 gap-y-6 text-center  md:flex items-center md:space-x-12 justify-center mt-28 text-gray-400">
-                <a href="#vision" class="hover:text-purple-700 subMenu">Mission</a>
-                <a href="#obj" class="hover:text-purple-700 subMenu">Objectives</a>
-                <a href="#sus" class="hover:text-purple-700 subMenu">SDGs</a>
-                <a href="#map" class="hover:text-purple-700 subMenu">Stakeholders</a>
-                <a href="#vidBox" class="hover:text-purple-700 subMenu">Our Stories</a>
-                <a href="#comm" class="hover:text-purple-700 subMenu">Community</a>
-
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-    <section class="py-32 " id="vision">
-        <div class="max-w-6xl mx-auto ">
-            <div class="md:flex text-white  justify-center md:space-x-32 px-4 md:px-0">
-                <div class="text-4xl md:text-5xl text-right secHeading flex items-end justify-end lhs">
-                    <p class="">Our<br> <span class="text-purple-700 cursive">Vision</span></p>
-                </div>
-                <div class="rhs">
-                    <p class="max-w-xl leading-loose md:leading-loose md:text-xl ">
-                        Our vision is a world where the education system is fair and inclusive where teachers are
-                        lifelong learners, ensuring high-quality education to all students irrespective of their social
-                        and
-                        economic background leading to a fairer and socially equitable society.
-                    </p>
-                </div>
-            </div>
-            <div class="bg-purple-700 mx-auto h-px my-32 w-56 visMisSep "></div>
-
-            <div class="md:flex text-white  justify-center md:space-x-32 my-32 px-4 md:px-0">
-                <div class="lhs">
-                    <p class="max-w-xl md:text-xl text-right leading-loose md:leading-loose">
-                        Our social mission is to create equitable, innovative and lifelong learning communities for
-                        teachers
-                        and school leaders and, through them, improve the quality of learning in schools.
-                        Currently, we are working with rural public school teachers and school leaders of Tamil Nadu.
-
-                    </p>
-                </div>
-                <div class="rhs text-4xl md:text-5xl  secHeading flex items-end md:justify-end relative">
-                    <p class="">Our<br> social <span class="text-purple-700 cursive">mission</span></p>
-                    <img src="images/Meditative_Heart.png" class="h-44 absolute top-32 md:-top-56" alt="">
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="px-4 md:px-0 py-32 text-white" id="obj">
-        <div class="max-w-6xl mx-auto ">
-            <p class="text-center text-4xl md:text-5xl secHeading">Our key <span
-                    class="cursive text-purple-700">objectives</span>
-            </p>
-            <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto objLine"></div>
-            <div class=" mt-12 leading-loose md:leading-loose space-y-6 md:text-xl">
-                <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>To make schools a safe place and
-                    enriching
-                    by
-                    honing the social and emotional skills of teachers and
-                    students.
-                </p>
-                <p class="point"><span class="bg-purple-700 p-1 mr-2"></span>Help teachers bridge gaps in math learning
-                    through data-driven classroom interventions.
-                </p>
-                <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>Help school leaders become community
-                    leaders by
-                    developing relational leadership skills.
-                </p>
-                <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>To bring cutting-edge developments in
-                    education
-                    across the globe to the school adult community.
-                </p>
-                <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>To build empathy through design thinking
-                    training to local bureaucrats and school leaders.
-                </p>
-                <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>To build the key objectives for scale by
-                    leveraging affordable technologies and local languages.
-                </p>
-                <p class="point"><span class="bg-purple-700 w-px h-1 p-1 mr-2"></span>To co-create a culture of learning
-                    and
-                    development among the school adult community.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="px-4 md:px-0 py-32  text-white" id="sus">
-        <p class="text-center text-4xl md:text-5xl secHeading ">Our <span class="cursive text-purple-700">SDGs</span>
-            and
-            <span class="cursive text-purple-700">targets</span>
-        </p>
-        <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto susLine"></div>
-        <p class="text-center  md:text-xl mb-2 sus secHeading">What are sustainable development goals?</p>
-        <p class="max-w-4xl text-gray-400 text-center mx-auto leading-loose md:leading-loose sus">The Sustainable
-            Development Goals are a
-            universal
-            call to
-            action
-            to end
-            poverty, protect
-            the planet and
-            improve the lives and prospects of everyone, everywhere. The 17 Goals were adopted by all UN Member States
-            in 2015, as part of the 2030 Agenda for Sustainable Development which set out a 15-year plan to achieve the
-            Goals.
-        </p>
-        <img src="images/table.svg" class="mx-auto" alt="">
-
-    </section>
-
-
-
-
-    <section class="py-32  text-white " id="map">
-        <p class="text-center text-4xl md:text-5xl secHeading"><span class="cursive text-purple-700">Stakeholder</span>
-            map
-        </p>
-        <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto"></div>
-        <img src="images/graph.png" class="mx-auto" alt="">
-    </section>
-
-    <section class="grid grid-cols-1 gap-4 md:grid-cols-4 videos  px-4 md:px-32 py-32" id="vidBox">
-
-        <div class="col-span-3  ">
-            <iframe id="vidContainer" class="z-30 w-full h-full rounded-3xl"
-                src="https://www.youtube.com/embed/bYxzOZj0NTY?controls=0" title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-
-        <div class="text-white md:text-xl space-y-4 " id="vidBox">
-            <button onclick="playVid(1)" class="border-b w-full text-left vmenu">
-                <p class="pl-4 py-8 item font-bold text-2xl text-purple-700" id="menu1">Our theory of change</p>
-            </button>
-            <button onclick="playVid(2) " class="border-b w-full text-left vmenu">
-                <p class="pl-4 py-8 item" id="menu2">Our Values</p>
-            </button>
-            <button onclick="playVid(3)" class="border-b w-full text-left vmenu">
-                <p class="pl-4 py-8 item" id="menu3">How it all started</p>
-            </button>
-            <button onclick="playVid(4)" class="border-b w-full text-left vmenu">
-                <p class="pl-4 py-8 item" id="menu4">What happened in 2019</p>
-            </button>
-            <button onclick="playVid(5)" class="border-b w-full text-left vmenu">
-                <p class="pl-4 py-8 item" id="menu5">Why we do what we do</p>
-            </button>
-
-
-
-        </div>
-    </section>
-
-
-
-    <section class="py-32 px-4 md:px-32" id="comm">
-        <p class="text-4xl md:text-5xl text-white px-4 text-center title secHeading">Our <span
-                class=" cursive text-purple-700">community</span>
-        </p>
-        <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto">
-        </div>
-        <p class="text-center text-gray-400 max-w-4xl mx-auto leading-loose md:leading-loose md:text-xl">It takes more
-            than one person to
-            build an
-            impactful organization. We are lucky to have a team of great individuals who share our passion for
-            transforming the ways of education. Meet our amazing community.
-        </p>
-
-        <div
-            class="grid grid-cols-1 md:grid-cols-2 grid-rows-5 gap-12 max-w-7xl mx-auto mt-32 items-center md:text-xl leading-loose md:leading-loose">
             <div class="">
-                <img src="images/Meenakshi Babu.jpeg" class="left rounded-3xl mx-auto" alt="">
-            </div>
-            <div class="text-white ">
-                <div class=" right">
-                    <p class="cursive text-4xl md:text-5xl">Meenakshi Babu</p>
-                    <p class="text-purple-700 ">Founder</p>
-                </div>
-
-                <div class="right text-gray-400 mt-6 right">
-                    <p> I believe in our capacity for change and that it is rooted in our will. To me, the
-                        quality of our lives is directly proportional to the quality of our learning.</p>
-                    <div class="flex items-center  space-x-6 mt-8">
-                        <a href="https://www.linkedin.com/in/meenakshi-babu-84087912a/" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                            </svg></a>
-                        <a href="https://www.meenakshibabu.com/" target="_blank"><svg
-                                class="fill-current text-gray-400 h-6" xmlns="http://www.w3.org/2000/svg"
-                                fill-rule="evenodd" clip-rule="evenodd">
-                                <path
-                                    d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708" />
-                            </svg></a>
+                <div class="space-x-6 flex">
+                    <div
+                        class="border-2 border-black rounded-full p-6 md:p-10 hover:bg-white hover:border-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
                     </div>
-                </div>
-
-            </div>
-            <div class="text-white text-right order-4  md:order-3 ">
-                <div class=" right2">
-                    <p class="cursive text-4xl md:text-5xl">Babu Vittal</p>
-                    <p class="text-purple-700 ">Co-Founder</p>
-                </div>
-                <div class="text-gray-400 mt-6 right2">
-                    <p>
-                        I take a
-                        systemic view and spend time understanding problems deeply. For me, a good
-                        problem understanding is the first part of any journey.</p>
-                    <div class="flex items-center justify-end  space-x-6 mt-8">
-                        <a href="https://www.linkedin.com/in/babuvittal/" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                            </svg></a>
-                        <a href="https://babuvittal.com/" target="_blank"><svg
-                                class="fill-current text-gray-400 w-6 h-6" xmlns="http://www.w3.org/2000/svg"
-                                fill-rule="evenodd" clip-rule="evenodd">
-                                <path
-                                    d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708" />
-                            </svg></a>
+                    <div
+                        class="border-2 border-black rounded-full p-6 md:p-10 hover:bg-white hover:border-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12" viewBox="0 0 24 24">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                        </svg>
                     </div>
-                </div>
-            </div>
-            <div class="order-3 md:order-4">
-                <img src="images/babuVittal.png" class="left2 rounded-3xl" alt="">
-            </div>
-            <div class="order-5">
-                <img src="images/sahana.jpg" class="left3 max-w-xs md:max-w-lg mx-auto rounded-3xl" alt="">
-            </div>
-            <div class="text-white order-6">
-                <div class=" right3">
-                    <p class="cursive text-4xl md:text-5xl">Sahana Babu</p>
-                    <p class="text-purple-700 ">Content Support</p>
-                </div>
-                <div class="text-gray-400  mt-6  right3">
-                    <p>
-                        A self-certified geek on all things literature and music, tea enthusiast and closeted artist.
-                        Currently plunging deep into learning about intersectionality and identity, including but not
-                        limited to my own experiences. I am also very intrigued and inspired by raccoons!</p>
-                    <div class="flex items-center  space-x-6 mt-8">
-                        <a href="http://instagram.com/sahanababuv" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                            </svg></a>
-                        <a href="https://www.sahanababu.com/" target="_blank"><svg
-                                class="fill-current text-gray-400 h-6" xmlns="http://www.w3.org/2000/svg"
-                                fill-rule="evenodd" clip-rule="evenodd">
-                                <path
-                                    d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708" />
-                            </svg></a>
+                    <div
+                        class="border-2 border-black rounded-full p-6 md:p-10 hover:bg-white hover:border-white transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12" viewBox="0 0 24 24">
+                            <path
+                                d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+                        </svg>
                     </div>
+
                 </div>
-            </div>
-            <div class="text-white text-right order-8  md:order-7 ">
-                <div class=" right4">
-                    <p class="cursive text-4xl md:text-5xl">Prateek Darshan</p>
-                    <p class="text-purple-700 ">Tech Support</p>
-                </div>
-                <div class="text-gray-400 right4 mt-6">
-                    <p>
-                        Your friendly neighbourhood anti-pigeon enthusiast, I build websites in my freetime. The rest of
-                        my
-                        incredibly busy schedule is occupied by gaming. I like challenging myself, trying new things,
-                        meeting new people and I
-                        have an attention span of a puppy.</p>
-                    <div class="flex items-center justify-end  space-x-6 mt-8">
-                        <a href="https://www.linkedin.com/in/prateek-darshan/" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                            </svg></a>
-                        <a href="https://www.instagram.com/prateek__darshan/" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                            </svg></a>
-                        <a href="https://prateekdarshan.netlify.app/" target="_blank"><svg
-                                class="fill-current text-gray-400 w-6 h-6" xmlns="http://www.w3.org/2000/svg"
-                                fill-rule="evenodd" clip-rule="evenodd">
-                                <path
-                                    d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708" />
-                            </svg></a>
-                    </div>
-                </div>
-            </div>
-            <div class="order-7 md:order-8">
-                <img src="images/prateek.jpeg" class="left4 rounded-3xl max-w-xs md:max-w-md mx-auto" alt="">
-            </div>
-            <div class="order-9">
-                <img src="images/pooja.jpg" class="left5 rounded-3xl max-w-xs md:max-w-lg mx-auto" alt="">
-            </div>
-            <div class="text-white order-10">
-                <div class=" right5">
-                    <p class="cursive text-4xl md:text-5xl">Pooja P N</p>
-                    <p class="text-purple-700 ">Social Media Support</p>
-                </div>
-                <div class="text-gray-400 right5 mt-6">
-                    <p>
-                        Engineer by profession, Bibliophile by passion. I'm one of those people who is always looking
-                        for
-                        adventure and would rather live in the moment. You can find me either talking to dogs or
-                        scrolling
-                        through memes.</p>
-                    <div class="flex items-center  space-x-6 mt-8">
-                        <a href="https://www.linkedin.com/in/pooja-p-n-b113311b1/" target="_blank"><svg
-                                xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                            </svg></a>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-
-    </section>
-
-
-
-    <section class="px-4 md:px-0 volunteers  text-white md:text-xl py-32 leading-normal" id="vol">
-        <p class="text-4xl md:text-5xl px-4 text-center title">Our wonderful <span
-                class="cursive text-purple-700">volunteers</span>
-        </p>
-        <div class="bg-purple-700 h-px mb-12  w-72 mt-6 mx-auto"></div>
-        <p class="text-center text-gray-400 max-w-xl mx-auto leading-loose md:leading-loose">We wouldn't be what we are
-            today without the
-            incredible work of our volunteers. Their generosity and hard work play a pivotal role in our success, and
-            remain a source of inspiration for us. Meet our wonderful volunteers.</p>
-        <div
-            class="flex  max-w-6xl mx-auto mt-12 justify-center space-x-6 leading-relaxed md:leading-loose text-sm md:md:text-xl">
-            <div class="names text-center ">Aditi nagpal<br>
-                Ajay Nambiar<br>
-                Arami<br>
-                Archana Pati<br>
-                Arihant<br>
-                Arpita Pandey<br>
-                Aruna Subramanian<br>
-                Ashana Shukla<br>
-                Atanda<br>
-                Avani<br>
-                Devangana<br>
-                Gargi<br>
-                Jagannathan M<br>
-            </div>
-            <div class="names text-center">Jeya<br>
-                Julian V<br>
-                Karuna Sinh<br>
-                Mangalam<br>
-                Meghna Krishna<br>
-                Namrata Pandit<br>
-                Nidhi Jaiswal<br>
-                Rhea Sajit<br>
-                Roopadarsini Selvaraj<br>
-                Samarth Srivastava<br>
-                Sanjna Kamat<br>
-                Sathyabama<br>
-                Shahina P<br>
-            </div>
-            <div class="names text-center">Shailja<br>
-                Shaino<br>
-                Shivangi Acharya<br>
-                Shivangi Pandey<br>
-                Shruthi Darshini<br>
-                Sneha Pandey<br>
-                Snehal Mahajan<br>
-                Sruthi Venkat<br>
-                Taanish Kumaar<br>
-                Tejaswini Yellayyagari<br>
-                Vidisha<br>
-                Vrinda Kakkar<br>
             </div>
         </div>
 
     </section>
-    <section class="mt-12 py-8 bg-gray-900 px-4 md:px-8">
 
-        <div class="md:flex justify-between">
-            <div class="flex items-center justify-center text-gray-500 space-x-12"><img
-                    class=" bg-white h-20 rounded-full" src="images/logo.png" alt="">
-                <p>&copy;2022 All rights reserved</p>
+    <section id="all">
+        <section class="flex items-center justify-center h-screen text-white py-32">
+
+            <div class="w-full">
+                <div class=" text-4xl md:text-5xl about text-center  secHeading">About <span
+                        class="cursive text-purple-700">us</span>
+                </div>
+                <div class="bg-purple-700 mx-auto h-px mt-2 w-32 line"></div>
+                <div class="max-w-2xl mx-auto space-x-12 mt-8">
+                    <div class=" text-gray-400 about md:text-xl transform text-center mx-auto">
+                        <p class="leading-loose">Yugen
+                            is
+                            an
+                            organization that
+                            was born
+                            from a
+                            lifetime of
+                            work,
+                            learning &
+                            passion
+                            for
+                            education and we translate this to creating <span
+                                class=" md:text-xl text-purple-700">life-long
+                                learning
+                                communities</span> with the <span class="md:text-xl text-purple-700">adult
+                                groups</span> in
+                            schools.</p>
+                    </div>
+
+                </div>
+                <div
+                    class="grid grid-cols-2 gap-y-6 text-center  md:flex items-center md:space-x-12 justify-center mt-28 text-gray-400">
+                    <a href="#vision" class="hover:text-purple-700 subMenu">Mission</a>
+                    <a href="#obj" class="hover:text-purple-700 subMenu">Objectives</a>
+                    <a href="#sus" class="hover:text-purple-700 subMenu">SDGs</a>
+                    <a href="#map" class="hover:text-purple-700 subMenu">Stakeholders</a>
+                    <a href="#vidBox" class="hover:text-purple-700 subMenu">Our Stories</a>
+                    <a href="#comm" class="hover:text-purple-700 subMenu">Community</a>
+
+                </div>
             </div>
-            <div class="flex items-center space-x-12 mt-12 md:mt-2 justify-center"><a
-                    href="https://www.instagram.com/yugen.education/" target="_blank"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="fill-current text-white h-6" viewBox="0 0 24 24">
-                        <path
-                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                    </svg></a><a href="https://m.facebook.com/YugenEdu/" target="_blank"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="fill-current text-white h-6" viewBox="0 0 24 24">
-                        <path
-                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                    </svg></a><a href="mailto:admin@yugen.org.in" target="_blank"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="fill-current text-white h-6" viewBox="0 0 24 24">
-                        <path
-                            d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
-                    </svg></a></div>
-        </div>
-    </section>
 
+
+
+
+        </section>
+
+        <section class="py-32 " id="vision">
+            <div class="max-w-6xl mx-auto ">
+                <div class="md:flex text-white  justify-center md:space-x-32 px-4 md:px-0">
+                    <div class="text-4xl md:text-5xl text-right secHeading flex items-end justify-end lhs">
+                        <p class="">Our<br> <span class="text-purple-700 cursive">Vision</span></p>
+                    </div>
+                    <div class="rhs">
+                        <p class="max-w-xl leading-loose md:leading-loose md:text-xl ">
+                            Our vision is a world where the education system is fair and inclusive where teachers are
+                            lifelong learners, ensuring high-quality education to all students irrespective of their
+                            social
+                            and
+                            economic background leading to a fairer and socially equitable society.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-purple-700 mx-auto h-px my-32 w-56 visMisSep "></div>
+
+                <div class="md:flex text-white  justify-center md:space-x-32 my-32 px-4 md:px-0">
+                    <div class="lhs">
+                        <p class="max-w-xl md:text-xl text-right leading-loose md:leading-loose">
+                            Our social mission is to create equitable, innovative and lifelong learning communities for
+                            teachers
+                            and school leaders and, through them, improve the quality of learning in schools.
+                            Currently, we are working with rural public school teachers and school leaders of Tamil
+                            Nadu.
+
+                        </p>
+                    </div>
+                    <div class="rhs text-4xl md:text-5xl  secHeading flex items-end md:justify-end relative">
+                        <p class="">Our<br> social <span class="text-purple-700 cursive">mission</span></p>
+                        <img src="images/Meditative_Heart.png" class="h-44 absolute top-32 md:-top-56" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 md:px-0 py-32 text-white" id="obj">
+            <div class="max-w-6xl mx-auto ">
+                <p class="text-center text-4xl md:text-5xl secHeading">Our key <span
+                        class="cursive text-purple-700">objectives</span>
+                </p>
+                <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto objLine"></div>
+                <div class=" mt-12 leading-loose md:leading-loose space-y-6 md:text-xl">
+                    <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>To make schools a safe place and
+                        enriching
+                        by
+                        honing the social and emotional skills of teachers and
+                        students.
+                    </p>
+                    <p class="point"><span class="bg-purple-700 p-1 mr-2"></span>Help teachers bridge gaps in math
+                        learning
+                        through data-driven classroom interventions.
+                    </p>
+                    <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>Help school leaders become community
+                        leaders by
+                        developing relational leadership skills.
+                    </p>
+                    <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>To bring cutting-edge developments in
+                        education
+                        across the globe to the school adult community.
+                    </p>
+                    <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>To build empathy through design
+                        thinking
+                        training to local bureaucrats and school leaders.
+                    </p>
+                    <p class="point"><span class="bg-purple-700  p-1 mr-2"></span>To build the key objectives for scale
+                        by
+                        leveraging affordable technologies and local languages.
+                    </p>
+                    <p class="point"><span class="bg-purple-700 w-px h-1 p-1 mr-2"></span>To co-create a culture of
+                        learning
+                        and
+                        development among the school adult community.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-4 md:px-0 py-32  text-white" id="sus">
+            <p class="text-center text-4xl md:text-5xl secHeading ">Our <span
+                    class="cursive text-purple-700">SDGs</span>
+                and
+                <span class="cursive text-purple-700">targets</span>
+            </p>
+            <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto susLine"></div>
+            <p class="text-center  md:text-xl mb-2 sus secHeading">What are sustainable development goals?</p>
+            <p class="max-w-4xl text-gray-400 text-center mx-auto leading-loose md:leading-loose sus">The Sustainable
+                Development Goals are a
+                universal
+                call to
+                action
+                to end
+                poverty, protect
+                the planet and
+                improve the lives and prospects of everyone, everywhere. The 17 Goals were adopted by all UN Member
+                States
+                in 2015, as part of the 2030 Agenda for Sustainable Development which set out a 15-year plan to achieve
+                the
+                Goals.
+            </p>
+            <img src="images/table.svg" class="mx-auto" alt="">
+
+        </section>
+
+
+
+
+        <section class="py-32  text-white " id="map">
+            <p class="text-center text-4xl md:text-5xl secHeading"><span
+                    class="cursive text-purple-700">Stakeholder</span>
+                map
+            </p>
+            <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto"></div>
+            <img src="images/graph.png" class="mx-auto" alt="">
+        </section>
+
+        <section class="grid grid-cols-1 gap-4 md:grid-cols-4 videos  px-4 md:px-32 py-32" id="vidBox">
+
+            <div class="col-span-3  ">
+                <iframe id="vidContainer" class="z-30 w-full h-full rounded-3xl"
+                    src="https://www.youtube.com/embed/bYxzOZj0NTY?controls=0" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="text-white md:text-xl space-y-4 " id="vidBox">
+                <button onclick="playVid(1)" class="border-b w-full text-left vmenu">
+                    <p class="pl-4 py-8 item font-bold text-2xl text-purple-700" id="menu1">Our theory of change</p>
+                </button>
+                <button onclick="playVid(2) " class="border-b w-full text-left vmenu">
+                    <p class="pl-4 py-8 item" id="menu2">Our Values</p>
+                </button>
+                <button onclick="playVid(3)" class="border-b w-full text-left vmenu">
+                    <p class="pl-4 py-8 item" id="menu3">How it all started</p>
+                </button>
+                <button onclick="playVid(4)" class="border-b w-full text-left vmenu">
+                    <p class="pl-4 py-8 item" id="menu4">What happened in 2019</p>
+                </button>
+                <button onclick="playVid(5)" class="border-b w-full text-left vmenu">
+                    <p class="pl-4 py-8 item" id="menu5">Why we do what we do</p>
+                </button>
+
+
+
+            </div>
+        </section>
+
+
+
+        <section class="py-32 px-4 md:px-32" id="comm">
+            <p class="text-4xl md:text-5xl text-white px-4 text-center title secHeading">Our <span
+                    class=" cursive text-purple-700">community</span>
+            </p>
+            <div class="bg-purple-700 h-px mt-4 mb-8  w-72  mx-auto">
+            </div>
+            <p class="text-center text-gray-400 max-w-4xl mx-auto leading-loose md:leading-loose md:text-xl">It takes
+                more
+                than one person to
+                build an
+                impactful organization. We are lucky to have a team of great individuals who share our passion for
+                transforming the ways of education. Meet our amazing community.
+            </p>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 grid-rows-5 gap-12 max-w-7xl mx-auto mt-32 items-center md:text-xl leading-loose md:leading-loose">
+                <div class="">
+                    <img src="images/Meenakshi Babu.jpeg" class="left rounded-3xl mx-auto" alt="">
+                </div>
+                <div class="text-white ">
+                    <div class=" right">
+                        <p class="cursive text-4xl md:text-5xl">Meenakshi Babu</p>
+                        <p class="text-purple-700 ">Founder</p>
+                    </div>
+
+                    <div class="right text-gray-400 mt-6 right">
+                        <p> I believe in our capacity for change and that it is rooted in our will. To me, the
+                            quality of our lives is directly proportional to the quality of our learning.</p>
+                        <div class="flex items-center  space-x-6 mt-8">
+                            <a href="https://www.linkedin.com/in/meenakshi-babu-84087912a/" target="_blank"><svg
+                                    xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                </svg></a>
+                            <a href="https://www.meenakshibabu.com/" target="_blank"><svg
+                                    class="fill-current text-gray-400 h-6" xmlns="http://www.w3.org/2000/svg"
+                                    fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708" />
+                                </svg></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-white text-right order-4  md:order-3 ">
+                    <div class=" right2">
+                        <p class="cursive text-4xl md:text-5xl">Babu Vittal</p>
+                        <p class="text-purple-700 ">Co-Founder</p>
+                    </div>
+                    <div class="text-gray-400 mt-6 right2">
+                        <p>
+                            I take a
+                            systemic view and spend time understanding problems deeply. For me, a good
+                            problem understanding is the first part of any journey.</p>
+                        <div class="flex items-center justify-end  space-x-6 mt-8">
+                            <a href="https://www.linkedin.com/in/babuvittal/" target="_blank"><svg
+                                    xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                </svg></a>
+                            <a href="https://babuvittal.com/" target="_blank"><svg
+                                    class="fill-current text-gray-400 w-6 h-6" xmlns="http://www.w3.org/2000/svg"
+                                    fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-3 md:order-4">
+                    <img src="images/babuVittal.png" class="left2 rounded-3xl" alt="">
+                </div>
+                <div class="order-5">
+                    <img src="images/sahana.jpg" class="left3 max-w-xs md:max-w-lg mx-auto rounded-3xl" alt="">
+                </div>
+                <div class="text-white order-6">
+                    <div class=" right3">
+                        <p class="cursive text-4xl md:text-5xl">Sahana Babu</p>
+                        <p class="text-purple-700 ">Content Support</p>
+                    </div>
+                    <div class="text-gray-400  mt-6  right3">
+                        <p>
+                            A self-certified geek on all things literature and music, tea enthusiast and closeted
+                            artist.
+                            Currently plunging deep into learning about intersectionality and identity, including but
+                            not
+                            limited to my own experiences. I am also very intrigued and inspired by raccoons!</p>
+                        <div class="flex items-center  space-x-6 mt-8">
+                            <a href="http://instagram.com/sahanababuv" target="_blank"><svg
+                                    xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg></a>
+                            <a href="https://www.sahanababu.com/" target="_blank"><svg
+                                    class="fill-current text-gray-400 h-6" xmlns="http://www.w3.org/2000/svg"
+                                    fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-white text-right order-8  md:order-7 ">
+                    <div class=" right4">
+                        <p class="cursive text-4xl md:text-5xl">Prateek Darshan</p>
+                        <p class="text-purple-700 ">Tech Support</p>
+                    </div>
+                    <div class="text-gray-400 right4 mt-6">
+                        <p>
+                            Your friendly neighbourhood anti-pigeon enthusiast, I build websites in my freetime. The
+                            rest of
+                            my
+                            incredibly busy schedule is occupied by gaming. I like challenging myself, trying new
+                            things,
+                            meeting new people and I
+                            have an attention span of a puppy.</p>
+                        <div class="flex items-center justify-end  space-x-6 mt-8">
+                            <a href="https://www.linkedin.com/in/prateek-darshan/" target="_blank"><svg
+                                    xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                </svg></a>
+                            <a href="https://www.instagram.com/prateek__darshan/" target="_blank"><svg
+                                    xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg></a>
+                            <a href="https://prateekdarshan.netlify.app/" target="_blank"><svg
+                                    class="fill-current text-gray-400 w-6 h-6" xmlns="http://www.w3.org/2000/svg"
+                                    fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-7 md:order-8">
+                    <img src="images/prateek.jpeg" class="left4 rounded-3xl max-w-xs md:max-w-md mx-auto" alt="">
+                </div>
+                <div class="order-9">
+                    <img src="images/pooja.jpg" class="left5 rounded-3xl max-w-xs md:max-w-lg mx-auto" alt="">
+                </div>
+                <div class="text-white order-10">
+                    <div class=" right5">
+                        <p class="cursive text-4xl md:text-5xl">Pooja P N</p>
+                        <p class="text-purple-700 ">Social Media Support</p>
+                    </div>
+                    <div class="text-gray-400 right5 mt-6">
+                        <p>
+                            Engineer by profession, Bibliophile by passion. I'm one of those people who is always
+                            looking
+                            for
+                            adventure and would rather live in the moment. You can find me either talking to dogs or
+                            scrolling
+                            through memes.</p>
+                        <div class="flex items-center  space-x-6 mt-8">
+                            <a href="https://www.linkedin.com/in/pooja-p-n-b113311b1/" target="_blank"><svg
+                                    xmlns="http://www.w3.org/2000/svg" class="fill-current text-gray-400 h-6"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                </svg></a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+
+        <section class="px-4 md:px-0 volunteers  text-white md:text-xl py-32 leading-normal" id="vol">
+            <p class="text-4xl md:text-5xl px-4 text-center title">Our wonderful <span
+                    class="cursive text-purple-700">volunteers</span>
+            </p>
+            <div class="bg-purple-700 h-px mb-12  w-72 mt-6 mx-auto"></div>
+            <p class="text-center text-gray-400 max-w-xl mx-auto leading-loose md:leading-loose">We wouldn't be what we
+                are
+                today without the
+                incredible work of our volunteers. Their generosity and hard work play a pivotal role in our success,
+                and
+                remain a source of inspiration for us. Meet our wonderful volunteers.</p>
+            <div
+                class="flex  max-w-6xl mx-auto mt-12 justify-center space-x-6 leading-relaxed md:leading-loose text-sm md:md:text-xl">
+                <div class="names text-center ">Aditi nagpal<br>
+                    Ajay Nambiar<br>
+                    Arami<br>
+                    Archana Pati<br>
+                    Arihant<br>
+                    Arpita Pandey<br>
+                    Aruna Subramanian<br>
+                    Ashana Shukla<br>
+                    Atanda<br>
+                    Avani<br>
+                    Devangana<br>
+                    Gargi<br>
+                    Jagannathan M<br>
+                </div>
+                <div class="names text-center">Jeya<br>
+                    Julian V<br>
+                    Karuna Sinh<br>
+                    Mangalam<br>
+                    Meghna Krishna<br>
+                    Namrata Pandit<br>
+                    Nidhi Jaiswal<br>
+                    Rhea Sajit<br>
+                    Roopadarsini Selvaraj<br>
+                    Samarth Srivastava<br>
+                    Sanjna Kamat<br>
+                    Sathyabama<br>
+                    Shahina P<br>
+                </div>
+                <div class="names text-center">Shailja<br>
+                    Shaino<br>
+                    Shivangi Acharya<br>
+                    Shivangi Pandey<br>
+                    Shruthi Darshini<br>
+                    Sneha Pandey<br>
+                    Snehal Mahajan<br>
+                    Sruthi Venkat<br>
+                    Taanish Kumaar<br>
+                    Tejaswini Yellayyagari<br>
+                    Vidisha<br>
+                    Vrinda Kakkar<br>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="mt-12 py-8 bg-gray-900 px-4 md:px-8">
+
+            <div class="md:flex justify-between">
+                <div class="flex items-center justify-center text-gray-500 space-x-12"><img
+                        class=" bg-white h-20 rounded-full" src="images/logo.png" alt="">
+                    <p>&copy;2022 All rights reserved</p>
+                </div>
+                <div class="flex items-center space-x-12 mt-12 md:mt-2 justify-center"><a
+                        href="https://www.instagram.com/yugen.education/" target="_blank"><svg
+                            xmlns="http://www.w3.org/2000/svg" class="fill-current text-white h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg></a><a href="https://m.facebook.com/YugenEdu/" target="_blank"><svg
+                            xmlns="http://www.w3.org/2000/svg" class="fill-current text-white h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                        </svg></a><a href="mailto:admin@yugen.org.in" target="_blank"><svg
+                            xmlns="http://www.w3.org/2000/svg" class="fill-current text-white h-6" viewBox="0 0 24 24">
+                            <path
+                                d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+                        </svg></a></div>
+            </div>
+        </section>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script>
@@ -672,22 +719,31 @@
 
         // ------------------------------------------------MENU-------------------------------------
 
-        let menu = gsap.timeline().pause()
-        menu.fromTo('.menuCircle', { opacity: 0 }, { opacity: 1, scale: 120 })
-        menu.from('.menuItem', { x: 30, stagger: 0.1, ease: Power4.easeInOut, display: 'none' })
-        menu.from('.close', { opacity: 0 }, '-=1')
-        menu.to('.hamburger', { opacity: 0 }, '-=1')
+
 
         let showMenu = gsap.timeline().pause()
         showMenu.to('.navbar', { opacity: 0, })
 
-        // window.onscroll = function () {
-        //     showMenu.reverse()
-        // }
+        window.onscroll = function () {
+            showMenu.reverse()
+        }
 
         setInterval(function () {
             showMenu.play()
         }, 5000)
+
+
+        function newMenu() {
+            document.getElementById('all').classList.toggle('hidden')
+            document.getElementById('newmenu').classList.toggle('hidden')
+            document.body.classList.toggle('bg-black')
+            document.body.classList.toggle('bg-purple-500')
+            document.getElementById('yugen_white').classList.toggle('hidden')
+            document.getElementById('yugen_black').classList.toggle('hidden')
+            document.getElementById('menu').classList.toggle('hidden')
+            document.getElementById('close').classList.toggle('hidden')
+            // document.getElementById('menu').classList.replace('text-white', 'text-black')
+        }
     </script>
 </body>
 
