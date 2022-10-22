@@ -521,10 +521,26 @@
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+        var sec = 0
 
 
 
 
+        function changeLogo() {
+            switch (sec) {
+                case 1: document.getElementById("yugen_white").src = "images/yg_purple.png";
+                    break;
+                case 2: document.getElementById("yugen_white").src = "images/yg_yellow.png";
+                    break;
+                case 3: document.getElementById("yugen_white").src = "images/yg_pink.png";
+                    break;
+                case 4: document.getElementById("yugen_white").src = "images/yg_green.png";
+                    break;
+
+                default: document.getElementById("yugen_white").src = "images/logo.png";
+            }
+
+        }
 
 
 
@@ -572,10 +588,13 @@
 
 
         function purple() {
+            sec = 1
+            changeLogo()
             document.body.classList.toggle('bg-black')
             document.body.classList.toggle('bg-purple-300')
             document.getElementById('menu').classList.toggle('text-white')
             document.getElementById('menu').classList.toggle('text-purple-600')
+
         }
 
         let line2 = gsap.timeline({
@@ -622,6 +641,8 @@
             document.body.classList.toggle('bg-yellow-200')
             document.getElementById('menu').classList.toggle('text-purple-600')
             document.getElementById('menu').classList.toggle('text-yellow-500')
+            sec = 2
+            changeLogo()
         }
 
 
@@ -674,6 +695,8 @@
 
 
         function pink() {
+            sec = 3
+            changeLogo()
             document.body.classList.toggle('bg-yellow-200')
             document.body.classList.toggle('bg-pink-300')
             document.getElementById('menu').classList.toggle('text-yellow-500')
@@ -723,6 +746,8 @@
 
 
         function green() {
+            sec = 4
+            changeLogo()
             document.body.classList.toggle('bg-pink-300')
             document.body.classList.toggle('bg-green-200')
             document.getElementById('menu').classList.toggle('text-pink-500')
