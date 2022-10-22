@@ -454,16 +454,19 @@
 
         </section>
 
-        <div class="md:flex justify-between items-center md:px-32 py-8 z-40">
+        <div class="px-4 md:flex justify-between items-center md:px-32 py-8 z-40">
             <div class="text-green-500 text-2xl text-center md:text-left">Subscribe to our <br><span
                     class="font-bold text-4xl md:text-5xl">Newsletter!</span>
             </div>
-            <form class="flex items-center justify-center space-x-4 mt-12 md:mt-0" action="" id="newsletter">
-                <input type="email" name="Email"
-                    class="w-72 focus:outline-none border-2 border-green-500   bg-transparent text-green-500 text-center py-6 placeholder-green-500 px-4 rounded-full"
+            <form class="flex flex-wrap items-center justify-center space-y-2 md:space-y-0 md:space-x-4 mt-12 md:mt-0"
+                action="" id="newsletter">
+                <input type="text" name="Name"
+                    class="w-full md:w-72 focus:outline-none border-2 border-green-500   bg-transparent text-green-500 text-center py-6 placeholder-green-500 px-4 rounded-full"
+                    placeholder="Name"> <input type="email" name="Email"
+                    class="w-full md:w-72 focus:outline-none border-2 border-green-500   bg-transparent text-green-500 text-center py-6 placeholder-green-500 px-4 rounded-full"
                     placeholder="Email Address">
                 <input type="hidden" name="Message" value="I want sign up to your newsletter.">
-                <button class="w-32 text-white py-6 px-4 rounded-full bg-green-500">
+                <button class="w-full md:w-32 text-white py-6 px-4 rounded-full bg-green-500">
                     Sign up
                 </button>
             </form>
@@ -562,7 +565,7 @@
                 // .from('.aboutLine', { scale: -1 }, '-=0.5')
                 .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
         } else {
-            about.to('.aboutCircle', { scale: 25 })
+            about.to('.aboutCircle', { scale: 50 })
                 // .from('.aboutLine', { scale: -1 }, '-=0.5')
                 .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
         }
@@ -608,7 +611,7 @@
                 // .from('.workLine', { scale: -1 }, '-=0.5')
                 .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
         } else {
-            work.to('.workCircle', { scale: 25 })
+            work.to('.workCircle', { scale: 50 })
                 // .from('.workLine', { scale: -1 }, '-=0.5')
                 .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
         }
@@ -712,7 +715,7 @@
                 // .from('.involvedLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
         } else {
-            involved.to('.involvedCircle', { scale: 25 })
+            involved.to('.involvedCircle', { scale: 50 })
                 // .from('.involvedLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
         }
