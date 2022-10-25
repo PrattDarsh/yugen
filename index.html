@@ -22,7 +22,7 @@
 
 
 
-    <div class="fixed max-w-7xl left-0 right-0 mx-auto bg-gray-900  transition duration-700  px-4 md:px-6   my-4 curvedFull w-full z-50 navbar"
+    <div class="fixed md:max-w-7xl left-0 right-0 mx-auto bg-gray-900  transition duration-700  px-4 md:px-6   my-4 curvedFull w-full z-50 navbar"
         id="navbar" onmouseover="showMenu.reverse()">
         <div class=" flex justify-between items-center text-white py-2 md:py-6 z-50">
             <div class="">
@@ -125,7 +125,7 @@
             <div class="text-center text-purple-700 z-40">
                 <p class="text-4xl md:text-5xl aboutTitle secHeading">About<span class="cursive text-4xl md:text-5xl">
                         Us</span></p>
-                <div class="h-px bg-purple-700 aboutLine"></div>
+                <div class="h-1 w-32 mx-auto mt-4 bg-purple-700 aboutLine"></div>
                 <p class="max-w-2xl leading-loose md:leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">Yugen is an
                     education-centered
                     organization
@@ -152,7 +152,7 @@
             <div class="p-2 bg-yellow-200 rounded-full absolute workCircle z-30"></div>
             <div class="text-center text-yellow-500 z-40">
                 <p class="text-4xl md:text-5xl workTitle secHeading">Our <span class="cursive">Work</span></p>
-                <div class="h-px bg-yellow-500 workLine"></div>
+                <div class="h-1 w-32 mx-auto mt-4 bg-yellow-500 workLine"></div>
                 <p class="max-w-2xl leading-loose md:leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">There are many
                     layers
                     to improving the
@@ -176,7 +176,7 @@
             <div class="p-2 bg-pink-300 rounded-full absolute eventsCircle z-30"></div>
             <div class="text-center text-pink-500 z-40">
                 <p class="text-4xl md:text-5xl eventsTitle secHeading">Events & <span class="cursive">Blogs</span></p>
-                <div class="h-px bg-pink-500 eventsLine"></div>
+                <div class="h-1 w-32 mx-auto mt-4 bg-pink-500 eventsLine"></div>
                 <p class="max-w-2xl leading-loose md:leading-loose p-4 md:p-0 md:text-lg mt-6 mb-16">We are very happy
                     to
                     know your thoughts
@@ -206,7 +206,7 @@
                     <p class="text-4xl md:text-5xl involvedTitle secHeading" id="headerSlate">Get <span
                             class="cursive">Involved</span>
                     </p>
-                    <div class="h-px bg-green-500 involvedLine"></div>
+                    <div class="h-1 w-32 mx-auto mt-4 bg-green-500 involvedLine"></div>
 
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-32 py-12 text-xl">
 
@@ -594,7 +594,7 @@
                 // .from('.aboutLine', { scale: -1 }, '-=0.5')
                 .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
         } else {
-            about.to('.aboutCircle', { scale: 35 })
+            about.to('.aboutCircle', { scale: 25 })
                 // .from('.aboutLine', { scale: -1 }, '-=0.5')
                 .to('.aboutCircle', { onStart: () => purple(), onReverseComplete: () => purple() })
         }
@@ -607,8 +607,8 @@
             document.getElementById('navbar').classList.toggle('bg-purple-700')
             document.body.classList.toggle('bg-black')
             document.body.classList.toggle('bg-purple-300')
-            document.getElementById('menu').classList.toggle('text-white')
-            document.getElementById('menu').classList.toggle('text-purple-600')
+            // document.getElementById('menu').classList.toggle('text-white')
+            // document.getElementById('menu').classList.toggle('text-purple-600')
 
         }
 
@@ -645,7 +645,7 @@
                 // .from('.workLine', { scale: -1 }, '-=0.5')
                 .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
         } else {
-            work.to('.workCircle', { scale: 35 })
+            work.to('.workCircle', { scale: 25 })
                 // .from('.workLine', { scale: -1 }, '-=0.5')
                 .to('.workCircle', { onStart: () => changeBG(), onReverseComplete: () => changeBG() })
         }
@@ -656,8 +656,8 @@
             document.getElementById('navbar').classList.toggle('bg-yellow-500')
             document.body.classList.toggle('bg-purple-300')
             document.body.classList.toggle('bg-yellow-200')
-            document.getElementById('menu').classList.toggle('text-purple-600')
-            document.getElementById('menu').classList.toggle('text-yellow-500')
+            // document.getElementById('menu').classList.toggle('text-purple-600')
+            // document.getElementById('menu').classList.toggle('text-yellow-500')
 
         }
 
@@ -704,7 +704,7 @@
             gsap.from('.caption', { opacity: 0, y: -30, })
 
 
-            events.to('.eventsCircle', { scale: 35 })
+            events.to('.eventsCircle', { scale: 25 })
                 // .from('.eventsLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => pink(), onReverseComplete: () => pink() })
         }
@@ -715,8 +715,8 @@
             document.getElementById('navbar').classList.toggle('bg-pink-500')
             document.body.classList.toggle('bg-yellow-200')
             document.body.classList.toggle('bg-pink-300')
-            document.getElementById('menu').classList.toggle('text-yellow-500')
-            document.getElementById('menu').classList.toggle('text-pink-500')
+            // document.getElementById('menu').classList.toggle('text-yellow-500')
+            // document.getElementById('menu').classList.toggle('text-pink-500')
         }
 
 
@@ -754,7 +754,7 @@
                 // .from('.involvedLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
         } else {
-            involved.to('.involvedCircle', { scale: 35 })
+            involved.to('.involvedCircle', { scale: 25 })
                 // .from('.involvedLine', { scale: -1 }, '-=0.5')
                 .to('.eventsCircle', { onStart: () => green(), onReverseComplete: () => green() })
         }
@@ -766,8 +766,8 @@
             document.getElementById('navbar').classList.toggle('bg-green-500')
             document.body.classList.toggle('bg-pink-300')
             document.body.classList.toggle('bg-green-200')
-            document.getElementById('menu').classList.toggle('text-pink-500')
-            document.getElementById('menu').classList.toggle('text-green-600')
+            // document.getElementById('menu').classList.toggle('text-pink-500')
+            // document.getElementById('menu').classList.toggle('text-green-600')
         }
 
 
