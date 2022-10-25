@@ -275,7 +275,7 @@
 
 
         let showMenu = gsap.timeline().pause()
-        showMenu.to('.navbar', { opacity: 0, })
+        showMenu.to('.navbar', { y: -30, opacity: 0, duration: 0.2 })
 
         window.onscroll = function () {
             showMenu.reverse()
@@ -288,15 +288,9 @@
 
 
         function newMenu() {
-            document.getElementById('all').classList.toggle('hidden')
-            document.getElementById('newmenu').classList.toggle('hidden')
-            document.body.classList.toggle('bg-black')
-            document.body.classList.toggle('bg-green-500')
-            document.getElementById('yugen_white').classList.toggle('hidden')
-            document.getElementById('yugen_black').classList.toggle('hidden')
             document.getElementById('menu').classList.toggle('hidden')
             document.getElementById('close').classList.toggle('hidden')
-            // document.getElementById('menu').classList.replace('text-white', 'text-black')
+            document.getElementById('drawer').classList.toggle('hidden')
         }
 
 

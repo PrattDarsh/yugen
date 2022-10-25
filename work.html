@@ -20,85 +20,72 @@
 <body class="bg-black text-white overflow-x-hidden transition duration-700">
 
 
-    <div class="bg-yellow-400 md:bg-transparent fixed w-full z-50 navbar" onmouseover="showMenu.reverse()">
-        <div class=" flex justify-between px-4 md:px-8 items-center space-x-12 text-white py-2 md:py-6 z-50">
+    <div class="fixed max-w-7xl left-0 right-0 mx-auto bg-gray-900  px-4 md:px-6   my-4 curvedFull w-full z-50 navbar"
+        onmouseover="showMenu.reverse()">
+        <div class=" flex justify-between items-center text-white py-2 md:py-6 z-50">
             <div class="">
                 <a href="index.html">
-                    <img src="images/logo_white.png" class="h-16 md:h-24 " id="yugen_white" alt="">
-                    <img src="images/logo.png" class="h-16 md:h-24 hidden" id="yugen_black" alt="">
+                    <img src="images/logo_white.png" class="h-16 md:h-22 " id="yugen_white" alt="">
+                    <!-- <img src="images/logo.png" class="h-16 md:h-24 hidden" id="yugen_black" alt=""> -->
                 </a>
 
             </div>
 
 
 
-            <div class="">
-
-
-                <button class="hamburger" onclick="newMenu()"><svg id="menu" class="fill-current text-white h-8 md:h-12"
-                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div class=" text-gray-400 items-center justify-center md:flex">
+                <div class="space-x-6 flex-wrap md:flex hidden">
+                    <a href="about.html" class="hover:text-purple-700 transition delay-45">
+                        <p>About us</p>
+                    </a>
+                    <a href="work.html" class="hover:text-purple-700 transition delay-45">
+                        <p>Our work</p>
+                    </a>
+                    <a href="events.html" class="hover:text-purple-700 transition delay-45">
+                        <p>Events and Blogs</p>
+                    </a>
+                    <a href="index.html#involved" class="hover:text-purple-700 transition delay-45">
+                        <p>Get involved</p>
+                    </a>
+                </div>
+                <button class="hamburger md:hidden" onclick="newMenu()"><svg id="menu"
+                        class="fill-current text-white h-8 md:h-10" clip-rule="evenodd" fill-rule="evenodd"
+                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
                             fill-rule="nonzero" />
                     </svg></button>
-                <button class="hamburger " onclick="newMenu()"><svg id="close" class="h-8 md:h-12 hidden"
-                        clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <button class="hamburger " onclick="newMenu()"><svg id="close"
+                        class="fill-current text-white h-8 md:h-12 hidden" clip-rule="evenodd" fill-rule="evenodd"
+                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
                     </svg></button>
+
             </div>
+
+        </div>
+        <div class="space-x-6  text-white px-4 py-4 hidden" id="drawer">
+            <a href="about.html" class="hover:text-purple-700 transition delay-45">
+                <p>About us</p>
+            </a>
+            <a href="work.html" class="hover:text-purple-700 transition delay-45">
+                <p>Our work</p>
+            </a>
+            <a href="events.html" class="hover:text-purple-700 transition delay-45">
+                <p>Events and Blogs</p>
+            </a>
+            <a href="index.html#involved" class="hover:text-purple-700 transition delay-45">
+                <p>Get involved</p>
+            </a>
         </div>
     </div>
-    <section class=" hidden font-bold newMenu   px-4 md:px-12" id="newmenu">
-        <div class="h-screen flex flex-wrap items-end text-black  md:pt-32 pb-6  justify-between">
-            <div class="text-4xl md:text-8xl ">
-                <a href="about.html">
-                    <p class="py-4 hover:text-white transition duration-300">About Us</p>
-                </a>
-                <a href="work.html">
-                    <p class="py-4 hover:text-white transition duration-300">Our Work</p>
-                </a>
-                <a href="events.html">
-                    <p class="py-4 hover:text-white transition duration-300">Events and Blog</p>
-                </a>
-                <a href="index.html#involved">
-                    <p class="py-4 hover:text-white transition duration-300">Get Involved</p>
-                </a>
 
-            </div>
-            <div class="">
-                <div class="space-x-6 flex">
-                    <div
-                        class="border-2 border-black rounded-full p-4 md:p-10 hover:bg-white hover:border-white transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                        </svg>
-                    </div>
-                    <div
-                        class="border-2 border-black rounded-full p-4 md:p-10 hover:bg-white hover:border-white transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12" viewBox="0 0 24 24">
-                            <path
-                                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                        </svg>
-                    </div>
-                    <div
-                        class="border-2 border-black rounded-full p-4 md:p-10 hover:bg-white hover:border-white transition duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12" viewBox="0 0 24 24">
-                            <path
-                                d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
-                        </svg>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-
-    </section>
     <section id="all">
-        <div class="py-32 text-center title">
+        <div class="py-48 text-center title">
             <p class="text-4xl md:text-5xl eventsTitle">Our <span class="cursive ">Work</span></p>
             <div class="bg-yellow-500 mx-auto h-px mt-8 w-32 line"></div>
             <div class="grid grid-cols-2 gap-y-4 md:flex items-center md:space-x-24 justify-center mt-12 text-gray-400">
@@ -343,7 +330,7 @@
 
 
         let showMenu = gsap.timeline().pause()
-        showMenu.to('.navbar', { opacity: 0, })
+        showMenu.to('.navbar', { y: -30, opacity: 0, duration: 0.2 })
 
         window.onscroll = function () {
             showMenu.reverse()
@@ -356,15 +343,9 @@
 
 
         function newMenu() {
-            document.getElementById('all').classList.toggle('hidden')
-            document.getElementById('newmenu').classList.toggle('hidden')
-            document.body.classList.toggle('bg-black')
-            document.body.classList.toggle('bg-yellow-400')
-            document.getElementById('yugen_white').classList.toggle('hidden')
-            document.getElementById('yugen_black').classList.toggle('hidden')
             document.getElementById('menu').classList.toggle('hidden')
             document.getElementById('close').classList.toggle('hidden')
-            // document.getElementById('menu').classList.replace('text-white', 'text-black')
+            document.getElementById('drawer').classList.toggle('hidden')
         }
 
 
@@ -378,7 +359,7 @@
             let b4t = gsap.timeline({
                 scrollTrigger: {
                     trigger: '#b4t',
-                    scrub: true,
+                    scrub: 1,
                     start: 'top center'
                 }
             })
@@ -390,7 +371,7 @@
             let spag = gsap.timeline({
                 scrollTrigger: {
                     trigger: '#spag',
-                    scrub: true,
+                    scrub: 1,
                     start: 'top center'
                 }
             })
@@ -401,7 +382,7 @@
             let story = gsap.timeline({
                 scrollTrigger: {
                     trigger: '#story',
-                    scrub: true,
+                    scrub: 1,
                     start: 'top center'
                 }
             })
