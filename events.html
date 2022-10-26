@@ -348,9 +348,9 @@
         let showMenu = gsap.timeline().pause()
         showMenu.to('.navbar', { y: -30, opacity: 0, duration: 0.2 })
 
-        window.onscroll = function () {
-            showMenu.reverse()
-        }
+        // window.onscroll = function () {
+        //     showMenu.reverse()
+        // }
 
         setInterval(function () {
             showMenu.play()
