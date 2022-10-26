@@ -22,12 +22,12 @@
 
 
 
-    <div class="fixed md:max-w-7xl left-0 right-0 mx-auto bg-gray-900  transition duration-700  px-4 md:px-6   my-4 curvedFull w-full z-50 navbar"
+    <div class="fixed  left-0 right-0  bg-black md:bg-transparent transition duration-700  px-4 md:px-12   my-4 curvedFull w-full z-50 navbar"
         id="navbar" onmouseover="showMenu.reverse()">
         <div class=" flex justify-between items-center text-white py-2 md:py-6 z-50">
             <div class="">
                 <a href="index.html">
-                    <img src="images/logo_white.png" class="h-16 md:h-22 " id="yugen_white" alt="">
+                    <img src="images/logo_white.png" class="h-16 md:h-24 " id="yugen_white" alt="">
                     <!-- <img src="images/logo.png" class="h-16 md:h-24 hidden" id="yugen_black" alt=""> -->
                 </a>
 
@@ -534,26 +534,26 @@
 
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-        // var sec = 0
+        var sec = 0
 
 
 
 
-        // function changeLogo() {
-        //     switch (sec) {
-        //         case 1: document.getElementById("yugen_white").src = "images/yg_purple.png";
-        //             break;
-        //         case 2: document.getElementById("yugen_white").src = "images/yg_yellow.png";
-        //             break;
-        //         case 3: document.getElementById("yugen_white").src = "images/yg_pink.png";
-        //             break;
-        //         case 4: document.getElementById("yugen_white").src = "images/yg_green.png";
-        //             break;
+        function changeLogo() {
+            switch (sec) {
+                case 1: document.getElementById("yugen_white").src = "images/yg_purple.png";
+                    break;
+                case 2: document.getElementById("yugen_white").src = "images/yg_yellow.png";
+                    break;
+                case 3: document.getElementById("yugen_white").src = "images/yg_pink.png";
+                    break;
+                case 4: document.getElementById("yugen_white").src = "images/yg_green.png";
+                    break;
 
-        //         default: document.getElementById("yugen_white").src = "images/logo.png";
-        //     }
+                default: document.getElementById("yugen_white").src = "images/logo.png";
+            }
 
-        // }
+        }
 
 
 
@@ -601,10 +601,10 @@
 
 
         function purple() {
-            // sec = 1
-            // changeLogo()
-            document.getElementById('navbar').classList.toggle('bg-gray-900')
-            document.getElementById('navbar').classList.toggle('bg-purple-700')
+            sec = 1
+            changeLogo()
+            // document.getElementById('navbar').classList.toggle('bg-gray-900')
+            // document.getElementById('navbar').classList.toggle('bg-purple-700')
             document.body.classList.toggle('bg-black')
             document.body.classList.toggle('bg-purple-300')
             // document.getElementById('menu').classList.toggle('text-white')
@@ -652,8 +652,10 @@
 
 
         function changeBG() {
-            document.getElementById('navbar').classList.toggle('bg-purple-700')
-            document.getElementById('navbar').classList.toggle('bg-yellow-500')
+            sec = 2
+            changeLogo()
+            // document.getElementById('navbar').classList.toggle('bg-purple-700')
+            // document.getElementById('navbar').classList.toggle('bg-yellow-500')
             document.body.classList.toggle('bg-purple-300')
             document.body.classList.toggle('bg-yellow-200')
             // document.getElementById('menu').classList.toggle('text-purple-600')
@@ -711,8 +713,10 @@
 
 
         function pink() {
-            document.getElementById('navbar').classList.toggle('bg-yellow-500')
-            document.getElementById('navbar').classList.toggle('bg-pink-500')
+            sec = 3
+            changeLogo()
+            // document.getElementById('navbar').classList.toggle('bg-yellow-500')
+            // document.getElementById('navbar').classList.toggle('bg-pink-500')
             document.body.classList.toggle('bg-yellow-200')
             document.body.classList.toggle('bg-pink-300')
             // document.getElementById('menu').classList.toggle('text-yellow-500')
@@ -762,8 +766,10 @@
 
 
         function green() {
-            document.getElementById('navbar').classList.toggle('bg-pink-500')
-            document.getElementById('navbar').classList.toggle('bg-green-500')
+            sec = 4
+            changeLogo()
+            // document.getElementById('navbar').classList.toggle('bg-pink-500')
+            // document.getElementById('navbar').classList.toggle('bg-green-500')
             document.body.classList.toggle('bg-pink-300')
             document.body.classList.toggle('bg-green-200')
             // document.getElementById('menu').classList.toggle('text-pink-500')
