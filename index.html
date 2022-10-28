@@ -18,7 +18,7 @@
 
 
 
-<body class="overflow-x-hidden text-white bg-black transition duration-700">
+<body class="overflow-x-hidden bg-black transition duration-700">
 
 
 
@@ -466,53 +466,49 @@
 
 
 
-        <section class="mt-12 py-8 bg-green-500 mx-4 md:mx-6 my-6 curvedFull px-4 md:px-8 ">
+        <section class="mt-12 py-8 bg-gray-900 text-gray-500 px-4 md:px-8 mx-4 md:mx-6 my-6 curvedFull">
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 md:gap-y-0 gap-x-4  pt-12 ">
-                <div class="space-y-6">
-                    <p class="font-bold text-xl">Explore</p>
-                    <p><a href="about.html">About us</a></p>
-                    <p><a href="work.html">Our work</a></p>
-                    <p><a href="events.html">Events and blogs</a></p>
-                    <p><a href="index.html#involved">Get involved</a></p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-12  pt-12">
+                <div class="">
+                    <div class="space-y-4">
+                        <a href="index.html"><img class="p-2 md:mx-auto h-16 md:h-24 rounded-full bg-white"
+                                src="images/logo.png" alt=""></a>
+                        <p class="md:text-center">&copy;2022 All rights reserved</p>
+                    </div>
                 </div>
-                <div class="space-y-6">
-                    <p class="font-bold text-xl">Legal</p>
-                    <p><a href="privacy.html">Privacy policy</a></p>
-                    <p><a href="tandc.html">Terms and conditions</a></p>
-                    <p><a href="refund.html">Refund policy</a></p>
+
+                <div class="space-y-2">
+                    <p class="font-bold text-xl text-white">Explore</p>
+                    <p class="hover:text-white"><a href="about.html">About us</a></p>
+                    <p class="hover:text-white"><a href="work.html">Our work</a></p>
+                    <p class="hover:text-white"><a href="events.html">Events and blogs</a></p>
+                    <p class="hover:text-white"><a href="index.html#involved">Get involved</a></p>
+                </div>
+                <div class="space-y-2">
+                    <p class="font-bold text-xl text-white">Legal</p>
+                    <p class="hover:text-white"><a href="privacy.html">Privacy policy</a></p>
+                    <p class="hover:text-white"><a href="tandc.html">Terms and conditions</a></p>
+                    <p class="hover:text-white"><a href="refund.html">Refund policy</a></p>
 
                 </div>
-                <div class="space-y-6">
-                    <p class="font-bold text-xl">Socials</p>
-                    <p><a href="https://www.instagram.com/yugen.education/" target="_blank">Instagram</a></p>
-                    <p><a href="https://m.facebook.com/YugenEdu/" target="_blank">Facebook</a></p>
-                    <p><a href="mailto:admin@yugen.org.in" target="_blank">Mail</a></p>
 
-                </div>
+
 
                 <div class="space-y-12">
-                    <div class="space-y-6">
-                        <p class="font-bold text-xl">Contact Us</p>
+                    <div class="space-y-2">
+                        <p class="font-bold text-xl text-white">Visit</p>
                         <p class="leading-loose">Yugen Education Foundation<br>
                             C-404, Meenakshi Mangalam,<br>
                             2nd Main Bannerghatta Road, Begur,<br>
-                            Uttarahalli Hobli,
-                            Bengaluru,<br>
+                            Hobli,
+                            Bengaluru,
                             Karnataka 560076
                         </p>
                     </div>
 
                 </div>
 
-                <div class="mt-12">
-                    <a href="index.html"><img class="p-2 h-32 rounded-full bg-white" src="images/logo.png" alt=""></a>
-                </div>
-                <div class="hidden md:block"></div>
-                <div class="hidden md:block"></div>
-                <div class="mt-12">
-                    <p class="mt-12">&copy;2022 All rights reserved</p>
-                </div>
+
 
             </div>
 
@@ -658,6 +654,8 @@
             // document.getElementById('navbar').classList.toggle('bg-yellow-500')
             document.body.classList.toggle('bg-purple-300')
             document.body.classList.toggle('bg-yellow-200')
+            document.getElementById('menu_items').classList.toggle('text-purple-600')
+            document.getElementById('menu_items').classList.toggle('text-yellow-500')
             // document.getElementById('menu').classList.toggle('text-purple-600')
             // document.getElementById('menu').classList.toggle('text-yellow-500')
 
@@ -719,6 +717,8 @@
             // document.getElementById('navbar').classList.toggle('bg-pink-500')
             document.body.classList.toggle('bg-yellow-200')
             document.body.classList.toggle('bg-pink-300')
+            document.getElementById('menu_items').classList.toggle('text-yellow-500')
+            document.getElementById('menu_items').classList.toggle('text-pink-600')
             // document.getElementById('menu').classList.toggle('text-yellow-500')
             // document.getElementById('menu').classList.toggle('text-pink-500')
         }
@@ -772,6 +772,8 @@
             // document.getElementById('navbar').classList.toggle('bg-green-500')
             document.body.classList.toggle('bg-pink-300')
             document.body.classList.toggle('bg-green-200')
+            document.getElementById('menu_items').classList.toggle('text-pink-600')
+            document.getElementById('menu_items').classList.toggle('text-green-500')
             // document.getElementById('menu').classList.toggle('text-pink-500')
             // document.getElementById('menu').classList.toggle('text-green-600')
         }
